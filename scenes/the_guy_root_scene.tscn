@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://dpdgxfjdkjtu0"]
+
+[ext_resource type="Script" uid="uid://cxr8ri44jlfdg" path="res://code/do-you-punch-the-guy-main.gd" id="1_dpvq8"]
+[ext_resource type="Texture2D" uid="uid://cgr27a1b8end5" path="res://assets/black-background.png" id="1_fxs5o"]
+[ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://assets/theGuyBody.png" id="2_o84ic"]
+[ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://assets/theGuyface.png" id="3_dpvq8"]
+[ext_resource type="Texture2D" uid="uid://6wxse0tkv7q8" path="res://assets/punch-arm.png" id="4_267bx"]
+[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://assets/pow-effect.png" id="6_267bx"]
+[ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://assets/theGuyfacePunched.png" id="7_kir64"]
+
+[node name="The Guy Root Scene" type="Node2D"]
+script = ExtResource("1_dpvq8")
+
+[node name="background" type="Sprite2D" parent="."]
+
+[node name="BlackBackground" type="Sprite2D" parent="background"]
+position = Vector2(576, 320.49997)
+scale = Vector2(1.3384176, 1.3939899)
+texture = ExtResource("1_fxs5o")
+
+[node name="theAction" type="Sprite2D" parent="."]
+
+[node name="TheGuyface" type="Sprite2D" parent="theAction"]
+z_index = 1
+position = Vector2(836, 249)
+scale = Vector2(2, 2)
+texture = ExtResource("3_dpvq8")
+
+[node name="PunchArm" type="Sprite2D" parent="theAction"]
+z_index = 3
+position = Vector2(977, 732)
+scale = Vector2(2, 2)
+texture = ExtResource("4_267bx")
+
+[node name="TheGuyBody" type="Sprite2D" parent="theAction"]
+position = Vector2(837, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("2_o84ic")
+
+[node name="PowEffect" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 2
+position = Vector2(910, 292)
+texture = ExtResource("6_267bx")
+
+[node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
+visible = false
+position = Vector2(845, 249)
+scale = Vector2(2.1323528, 1.9565217)
+texture = ExtResource("7_kir64")
+
+[node name="Question" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 57.0
+offset_right = 357.0
+offset_bottom = 177.0
+scale = Vector2(2, 2)
+text = "Question X: BLAH NLAH BLAH, Do you Punch the Guy?"
+autowrap_mode = 3
+
+[node name="YesButton" type="Button" parent="."]
+offset_left = 43.0
+offset_top = 383.0
+offset_right = 120.0
+offset_bottom = 424.0
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="."]
+offset_left = 44.0
+offset_top = 442.0
+offset_right = 111.0
+offset_bottom = 490.0
+text = "No"
+
+[node name="Option 3" type="Button" parent="."]
+offset_left = 42.0
+offset_top = 506.0
+offset_right = 545.0
+offset_bottom = 555.0
+text = "Option 3"
