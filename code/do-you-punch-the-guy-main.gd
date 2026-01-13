@@ -4,7 +4,6 @@ var timesTheGuyWasPunched = 0
 var isAsshole = 0
 var isNice = 0
 var hitsKids = 0
-var hitsAdult = 0
 var barfight = 0
 var rudabega = 0
 var win = 0
@@ -18,6 +17,12 @@ var currentQuestion: Variant;
 var nextQuestionIndex  = 1 ;
 var questionIndexes: Array = []
 var rng = RandomNumberGenerator.new()
+@onready var questionScenes = {"question2":preload("res://scenes/question2.tscn")};
+@onready var yesButton = $YesButton;
+@onready var noButton = $NoButton;
+@onready var option3button = $"Option 3";
+@onready var nextButton = $NextButton;
+@onready var punchArm = $theAction/PunchArm;
 
 enum Tags {  
 	ASSHOLE,
@@ -35,13 +40,13 @@ enum Tags {
 	LOSE
 }  
 
-func _ready() -> void:
-	$"YesButton".pressed.connect(_yes_pressed)
-	$"NoButton".pressed.connect(_no_pressed)
-	$"Option 3".pressed.connect(_option_3_pressed)
-	$NextButton.pressed.connect(_nextButtonPressed)
-	$"Option 3".hide();
-	rng.randomize() 
+func _ready():
+	yesButton.pressed.connect(_yes_pressed);
+	noButton.pressed.connect(_no_pressed);
+	option3button.pressed.connect(_option_3_pressed);
+	nextButton.pressed.connect(_nextButtonPressed);
+	option3button.hide();
+	rng.randomize()
 
 	for i in range(2, 101):
 		questionIndexes.append(i);
@@ -60,31 +65,34 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
+	currentQuestionIndex = 1;
 	currentQuestion = questionInfo[currentQuestionIndex];
+	if(currentQuestionIndex > 1):
+		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
 	$Question.text = "Question" + str(currentQuestionIndex) + ": " + currentQuestion.question
 	if !currentQuestion.yes:
-		$"YesButton".hide()
+		yesButton.hide()
 	else:
-		$"YesButton".show()
+		yesButton.show()
 	if !currentQuestion.no:
-		$"NoButton".hide()
+		noButton.hide()
 	else:
-		$"NoButton".show()
+		noButton.show()
 	if !currentQuestion.option3:
-		$"Option 3".hide()
+		option3button.hide()
 	else:
-		$"Option 3".show()
+		option3button.show()
 	#TODO modify the visuals
 	
 func animatePunch():
-	var initialX = $theAction/PunchArm.position.x;
-	var initialY = $theAction/PunchArm.position.y;
+	var initialX = punchArm.position.x;
+	var initialY = punchArm.position.y;
 	var initialPosition = Vector2(initialX, initialY)
-	var newYPosition = $theAction/PunchArm.position.y - 250;
-	var newXPosition = $theAction/PunchArm.position.x - 100;
+	var newYPosition = punchArm.position.y - 250;
+	var newXPosition = punchArm.position.x - 100;
 	var newPosition = Vector2(newXPosition, newYPosition )
 
-	$theAction/PunchArm.position = $theAction/PunchArm.position.lerp(newPosition, 1 - exp(-4))
+	punchArm.position = punchArm.position.lerp(newPosition, 1 - exp(-4))
 	await get_tree().create_timer(.25).timeout
 	$theAction/PowEffect.show();
 	$theAction/TheGuyface.hide();
@@ -92,34 +100,34 @@ func animatePunch():
 	await get_tree().create_timer(.25).timeout
 	$theAction/PowEffect.hide();
 	await get_tree().create_timer(.25).timeout
-	$theAction/PunchArm.position = $theAction/PunchArm.position.lerp(initialPosition, 1 - exp(-4))
+	punchArm.position = punchArm.position.lerp(initialPosition, 1 - exp(-4))
 	
 func _yes_pressed():	
-	$"YesButton".hide()
-	$"NoButton".hide()
-	$"Option 3".hide()
+	yesButton.hide()
+	noButton.hide()
+	option3button.hide()
 	animatePunch()
 	tallyResults('yes')
-	$NextButton.show()
+	nextButton.show()
 	
 func _no_pressed():
-	$"YesButton".hide()
-	$"NoButton".hide()
-	$"Option 3".hide()
+	yesButton.hide()
+	noButton.hide()
+	option3button.hide()
 	#animateNoPunchIfNeeded()
 	tallyResults('no')
-	$NextButton.show()
+	nextButton.show()
 	
 func _option_3_pressed():
-	$"YesButton".hide()
-	$"NoButton".hide()
-	$"Option 3".hide()
+	yesButton.hide()
+	noButton.hide()
+	option3button.hide()
 	#animateOption3IfNeeded()
 	tallyResults('option3')
-	$NextButton.show()
+	nextButton.show()
 	
 func _nextButtonPressed():
-	$NextButton.hide()
+	nextButton.hide()
 	changeQuestion()
 	
 func tallyResults(buttonPressed: String):
@@ -144,8 +152,6 @@ func tallyResults(buttonPressed: String):
 				isNice += 1
 			Tags.HITSKIDS:
 				hitsKids += 1
-			Tags.HITSADULTS:
-				hitsAdult += 1
 			Tags.BARFIGHT: 
 				barfight += 1
 			Tags.RUDABEGA:
@@ -177,8 +183,8 @@ var questionInfo: Dictionary[int, Variant] = {
 		"yes": true,
 		"no": true,
 		"option3":false,
-		"yesTags":["child", "mean"],
-		"noTags":["nice"],
+		"yesTags":[Tags.HITSKIDS, Tags.ASSHOLE],
+		"noTags":[Tags.NICE],
 		"option3Tags":[],
 		"special":{},
 		"isActive": true
