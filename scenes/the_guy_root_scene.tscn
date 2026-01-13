@@ -78,3 +78,11 @@ offset_top = 506.0
 offset_right = 545.0
 offset_bottom = 555.0
 text = "Option 3"
+
+[node name="NextButton" type="Button" parent="."]
+visible = false
+offset_left = 51.0
+offset_top = 511.0
+offset_right = 119.0
+offset_bottom = 552.0
+text = "Next"

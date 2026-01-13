@@ -14,15 +14,32 @@ var understandable = 0
 var crime = 0
 var party = 0
 var currentQuestionIndex;
-var currentQuestion;
+var currentQuestion: Variant;
 var nextQuestionIndex  = 1 ;
 var questionIndexes: Array = []
 var rng = RandomNumberGenerator.new()
+
+enum Tags {  
+	ASSHOLE,
+	NICE,
+	HITSKIDS,
+	HITSADULTS,
+	BARFIGHT,
+	RUDABEGA,
+	WIN,
+	PANIC,
+	SPACE,
+	UNDERSTANDABLE,
+	CRIME,
+	PARTY,
+	LOSE
+}  
 
 func _ready() -> void:
 	$"YesButton".pressed.connect(_yes_pressed)
 	$"NoButton".pressed.connect(_no_pressed)
 	$"Option 3".pressed.connect(_option_3_pressed)
+	$NextButton.pressed.connect(_nextButtonPressed)
 	$"Option 3".hide();
 	rng.randomize() 
 
@@ -34,7 +51,6 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	
 	pass
 	
 func changeQuestion() -> void:
@@ -83,20 +99,68 @@ func _yes_pressed():
 	$"NoButton".hide()
 	$"Option 3".hide()
 	animatePunch()
-	#tallyResults()
-	#changeQuestion() or do we want a next button
+	tallyResults('yes')
+	$NextButton.show()
 	
 func _no_pressed():
-	print('')
+	$"YesButton".hide()
+	$"NoButton".hide()
+	$"Option 3".hide()
 	#animateNoPunchIfNeeded()
-	#tallyResults()
-	#changeResults()
+	tallyResults('no')
+	$NextButton.show()
 	
 func _option_3_pressed():
-	print('')
+	$"YesButton".hide()
+	$"NoButton".hide()
+	$"Option 3".hide()
 	#animateOption3IfNeeded()
-	#tallyResults()
-	#changeResults()
+	tallyResults('option3')
+	$NextButton.show()
+	
+func _nextButtonPressed():
+	$NextButton.hide()
+	changeQuestion()
+	
+func tallyResults(buttonPressed: String):
+	var tags
+	if(buttonPressed == 'yes'):
+		tags = currentQuestion.yesTags
+	if(buttonPressed == 'no'):
+		tags = currentQuestion.noTags
+	if (buttonPressed == 'option3'):
+		tags = currentQuestion.option3Tags
+	if(tags):
+		match tags:
+			Tags.LOSE:
+				_gameLoss()
+			Tags.WIN:
+				win += 1
+				if(win > 10):
+					winTheGame()
+			Tags.ASSHOLE:
+				isAsshole +=1
+			Tags.NICE:
+				isNice += 1
+			Tags.HITSKIDS:
+				hitsKids += 1
+			Tags.HITSADULTS:
+				hitsAdult += 1
+			Tags.BARFIGHT: 
+				barfight += 1
+			Tags.RUDABEGA:
+				rudabega += 1
+				if(rudabega == 10):
+					secretRudabegaLevel()
+				
+func secretRudabegaLevel():
+	print("Secret Rudabega Level")
+				
+func _gameLoss():
+	print("you lose!")
+	
+func winTheGame():
+	print("win")
 	
 var questionInfo: Dictionary[int, Variant] = {
 	1: {
@@ -104,8 +168,8 @@ var questionInfo: Dictionary[int, Variant] = {
 		"yes": true,
 		"no": true,
 		"option3": false,
-		"yesTags":["mean", "win"],
-		"noTags":["lose"],
+		"yesTags":[Tags.WIN],
+		"noTags":[Tags.LOSE],
 		"isActive":true
 	},	
 	2: {
