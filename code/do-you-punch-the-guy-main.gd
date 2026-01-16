@@ -17,7 +17,10 @@ var currentQuestion: Variant;
 var nextQuestionIndex  = 1 ;
 var questionIndexes: Array = []
 var rng = RandomNumberGenerator.new()
-@onready var questionScenes = {"question2":preload("res://scenes/question2.tscn")};
+var questionInfo = {}
+var playerInventory: = [];
+
+@onready var questionScenes = {"question2":preload("res://scenes/question2.tscn"), "question3":preload("res://scenes/question3.tscn")};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
 @onready var option3button = $"Option 3";
@@ -41,12 +44,14 @@ enum Tags {
 }  
 
 func _ready():
+	loadQuestions();
 	yesButton.pressed.connect(_yes_pressed);
 	noButton.pressed.connect(_no_pressed);
 	option3button.pressed.connect(_option_3_pressed);
 	nextButton.pressed.connect(_nextButtonPressed);
 	option3button.hide();
 	rng.randomize()
+	
 
 	for i in range(2, 101):
 		questionIndexes.append(i);
@@ -55,9 +60,14 @@ func _ready():
 	changeQuestion();
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+#func _process(_delta: float) -> void:
 	
+func loadQuestions():
+	var filePath = "res://data/questions.json"
+	if FileAccess.file_exists(filePath):
+		var dataFile = FileAccess.open(filePath, FileAccess.READ)
+		questionInfo = JSON.parse_string(dataFile.get_as_text())
+
 func changeQuestion() -> void:
 	if questionIndexes.is_empty():
 		print("All numbers have been used!");
@@ -65,10 +75,12 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex = 1;
-	currentQuestion = questionInfo[currentQuestionIndex];
+	currentQuestionIndex = 3;
+	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
+	if currentQuestion.onQuestion:
+		processGameAction(currentQuestion.onQuestion)
 	$Question.text = "Question" + str(currentQuestionIndex) + ": " + currentQuestion.question
 	if !currentQuestion.yes:
 		yesButton.hide()
@@ -82,7 +94,6 @@ func changeQuestion() -> void:
 		option3button.hide()
 	else:
 		option3button.show()
-	#TODO modify the visuals
 	
 func animatePunch():
 	var initialX = punchArm.position.x;
@@ -130,6 +141,18 @@ func _nextButtonPressed():
 	nextButton.hide()
 	changeQuestion()
 	
+func processGameAction(gameActions: Dictionary):
+	if(gameActions.inventory):
+		modifyInventory('add', gameActions.inventory)
+		
+func modifyInventory(addOrRemove: String, itemName: String):
+	if(addOrRemove == 'add'):
+		playerInventory.append(itemName)
+	if(addOrRemove == 'remove'):
+		playerInventory.erase(itemName)
+	$PlayerInventory.displayInventory(playerInventory);
+		
+		
 func tallyResults(buttonPressed: String):
 	var tags
 	if(buttonPressed == 'yes'):
@@ -168,25 +191,4 @@ func _gameLoss():
 func winTheGame():
 	print("win")
 	
-var questionInfo: Dictionary[int, Variant] = {
-	1: {
-		"question":"Do you punch the guy?",
-		"yes": true,
-		"no": true,
-		"option3": false,
-		"yesTags":[Tags.WIN],
-		"noTags":[Tags.LOSE],
-		"isActive":true
-	},	
-	2: {
-		"question":"A guy walks by with a large bundle of balloons, do you punch the guy?",
-		"yes": true,
-		"no": true,
-		"option3":false,
-		"yesTags":[Tags.HITSKIDS, Tags.ASSHOLE],
-		"noTags":[Tags.NICE],
-		"option3Tags":[],
-		"special":{},
-		"isActive": true
-	},	
-}
+ 

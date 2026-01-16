@@ -1,0 +1,850 @@
+{
+	"1": {
+		"question":"Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3": false,
+		"yesTags":["WIN"],
+		"noTags":["LOSE"],
+		"isActive":true
+	},	
+	"2": {
+		"question":"A guy walks by with a large bundle of balloons, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3":false,
+		"yesTags":["HITSKIDS", "ASSHOLE"],
+		"noTags":["NICE"],
+		"isActive": true
+	},	
+	"3": {
+		"question":"You enter a tavern. The bartender gives you a beer, a guy pulls up a chair next to you. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3":false,
+		"yesTags":["BARFIGHT", "MEAN"],
+		"noTags":["PARTY"],
+		"onQuestion":{"inventory":"BEER"},
+		"isActive": true
+	},	
+	"4": {
+		"question":"A guy is sitting with his feet dangling in the pool, eating crackers. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3":false,
+		"yesTags":["ASSHOLE", "HITSKIDS"],
+		"noTags":[],
+		"isActive": true
+	},	
+	"5": {
+		"question":"There is a guy, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3": "RUTABAGA",
+		"yesTags":["ASSHOLE"],
+		"noTags":[],
+		"option3Tags":["RUTABAGA"],
+		"onOption3":{"RUTABAGA": 1},
+		"isActive": true
+	},	
+	"6": {
+		"question":"You finally, after hours of grinding, made it to the boss guy, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["WIN"],
+		"noTags":["LOSE"],
+		"isActive": true
+	},
+	"7": {
+		"question":"You are at the grocery store, shopping for rutabagas, when a guy grabs the best one. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3": "RUTABAGA",
+		"yesTags":["ASSHOLE", "RUTABAGA"],
+		"noTags":[],
+		"onEnvironment":{"RUTABAGA": 1},
+		"isActive": true
+	},		
+	"8": {
+		"question":"A guy is on the jungle gym but you want a turn, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["HITSKIDS", "ASSHOLE"],
+		"noTags":["NICE"],
+		"isActive": true
+	},	
+	"9": {
+		"question":"There is a knock at your door, you open the door and there is a guy, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["ASSHOLE"],
+		"noTags":[],
+		"isActive": true
+	},		
+	"10": {
+		"question":"Oh man, it's Gary what an asshole, do you punch the guy?",
+		"yes": true,
+		"no": false,
+		"yesTags":["ASSHOLE"],
+		"noTags":[],
+		"isActive": true
+	},		
+	"11": {
+		"question":"Grammar Nazi, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["ASSHOLE"],
+		"noTags":[],
+		"isActive": true
+	},
+	"12": {
+		"question":"June 28, 1997 Tyson vs Holyfield, Tyson comes in on the aggressive, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["WIN"],
+		"noTags":[],
+		"isActive": true
+	},
+	"13": {
+		"question":"A purple dinosaur guy sings \"I love you, you love me...\" Do you punch the G-U-Y, with a big fat fist in the face from me to you!",
+		"yes": true,
+		"no": true,
+		"yesTags":["MEAN"],
+		"noTags":[],
+		"isActive": true
+	},
+	"14": {
+		"question":"It's totally pitch black, you hear a guy behind you, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["PANIC"],
+		"noTags":[],
+		"isActive": true
+	},
+	"15": {
+		"question":"A baby guy has an ice cream, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3":"YOU MONSTER!",
+		"yesTags":["MEAN", "HITSKIDS"],
+		"noTags":["NICE"],
+		"onOption3": {},
+		"onYes": {"inventory": "ICECREAM"},
+		"isActive": true
+	},
+	"16": {
+		"question":"Darkness falls, you are home alone. Crickets chirp all around your house. Suddenly the power goes out. The neighbors are fine, it's just you. You head to the garadge and check the fuse box. Nothing is out of the ordinary. You check your land line (which you have for some reason, get with the program nobody has those anymore) the line is dead, someone has cut it.  Suddenly from around the corner there is a GUY! DO YOU PUNCH THE GUY!??:!?!?!?>",
+		"yes": true,
+		"no": true,
+		"yesTags":["PANIC", "WIN"],
+		"noTags":["LOSE"],
+		"onQuestion": {"setTimer": 10},
+		"isActive": true
+	},
+	"17": {
+		"question":"Seriously though, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"18": {
+		"question":"Deep within the temple, the Holy Grail is within your reach, you slowly and carefully reach out to grab it, just as your hand meets the grail, so does the hand of another guy, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["ASSHOLE", "WIN"],
+		"noTags":["LOSE"],
+		"onYes": {"inventory": "HOLYGRAIL"},
+		"isActive": true
+	},
+	"19": {
+		"question":"The zombie apocalypse has arrived, society is in total chaos, a guy shambles up to you. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["PANIC"],
+		"noTags":["LOSE"],
+		"onQuestion": {"setTimer": 30},
+		"isActive": true
+	},
+	"20": {
+		"question":"Space... the final frontier, these are the voyages of the DO YOU PUNCH THE GUY?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"21": {
+		"question":"You are on planet Zurn with your away team, the captain decides to remove his shirt in a gratuatist beefcake manner, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["ASSHOLE", "UNDERSTANDABLE"],
+		"noTags":[],
+		"isActive": true
+	},
+	"22": {
+		"question":"You see a guy with a taco truck, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3": "WAIT, THEY HAVE TACOS?!",
+		"yesTags":["ASSHOLE"],
+		"noTags":[],
+		"onOption3":{"inventory":"TACO"},
+		"isActive": true
+	},
+	"23": {
+		"question":"You head to the club to get your dance on. A guy says \"What'll ya have?\" do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3": "Gimmie a beer",
+		"yesTags":["ASSHOLE", "BARFIGHT"],
+		"noTags":[],
+		"onOption3":{"shop":{"BEER": 1, "PUNCH": 1}},
+		"isActive": true
+	},
+	"24": {
+		"question":"Some guy tries to kiss your girlfriend, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["ASSHOLE"],
+		"noTags":[],
+		"onYes":{"animate":{"show":"wordBubbleDaddy"}},
+		"isActive": true
+	},
+	"25": {
+		"question":"A guy punches you, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["ASSHOLE", "WIN"],
+		"noTags":["LOSE"],
+		"onQuestion": {"setTimer": 15, "onTimerUp":"animateGuyPunchYouAndLose"},
+		"isActive": true
+	},
+	"26": {
+		"question":"Machine gun fire all around, explosions overhead, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["WIN"],
+		"noTags":["LOSE"],
+		"isActive": true
+	},
+	"27": {
+		"question":"The guy at StoreBunks asks your name and for your order. The cup comes back with the name 'Rutabaga', do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["WIN"],
+		"noTags":["LOSE"],
+		"onQuestion":{"inventory":"COFFEE"},
+		"isActive": true
+	},
+	"28": {
+		"question":"$500,000,000... do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3": "Phone a friend",
+		"yesTags":["MEAN", "UNDERSTANDABLE"],
+		"noTags":[],
+		"onOption3":{"animate":"PhonePunch", "money":500000000},
+		"onYes":{"money":500000000},
+		"isActive": true
+	},
+	"29": {
+		"question":"That damn guy is trying to milk you again, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["UNDERSTANDABLE"],
+		"noTags":[],
+		"isActive": true
+	},
+	"30": {
+		"question":"Flying Crane Strike beats Flickering Tiger Palm! Counter with Mantis Claw, or do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["WIN"],
+		"noTags":[],
+		"isActive": true
+	},
+	"31": {
+		"question":"That bully guy is picking on you again, trying to steal your rutabaga money. Do you wimp out or do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"onQuestion":{"money": 5},
+		"onNo":{"run":"loseAllMoney"},
+		"yesTags":["WIN"],
+		"noTags":["WIMP"],
+		"isActive": true
+	},
+	"32": {
+		"question":"High Noon... 10 paces then DRAW! (or do you punch the guy?)",
+		"yes": true,
+		"no": true,
+		"yesTags":["WIN"],
+		"noTags":["LOSE"],
+		"onQuestion":{"timer": 10},
+		"onTimerUp":{"run":"getShotAndLose"},
+		"isActive": true
+	},
+	"33": {
+		"question":"You and your crew are amidst a jewel heist.  The guy is about to round the corner and spot your friend who is dangling between a bunch of laser alarms, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["CRIME", "UNDERSTANDABLE"],
+		"noTags":[],
+		"isActive": true
+	},
+	"34": {
+		"question":"You are sitting on a bus, there is a guy. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["MEAN"],
+		"noTags":[],
+		"isActive": true
+	},
+	"35": {
+		"question":"You are at your friend's birthday party and there is a guy you don't know. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["MEAN", "BARFIGHT"],
+		"noTags":[],
+		"isActive": true
+	},
+	"36": {
+		"question":"Bear hunting in the cold crisp winter dawn.  You see a guy sitting next to a tree, you think he might be staring at you directly. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"onYes":"was this guy the bear?",
+		"isActive": true
+	},
+	"37": {
+		"question":"Beer Run, everyone chips in except one guy, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["UNDERSTANDABLE"],
+		"noTags":[],
+		"isActive": true
+	},
+	"38": {
+		"question":"Awwwww look at the cute wittle guy....Awwww. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["ASSHOLE", "HITSKIDS"],
+		"noTags":[],
+		"isActive": true
+	},	
+	"39": {
+		"question":"a guy is building somthing, Do you punch the guy?	       this one needs more depth",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"40": {
+		"question":"Guy Fieri, do you punch the Guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["ASSHOLE", "UNDERSTANDABLE"],
+		"noTags":[],
+		"isActive": true
+	},
+	"41": {
+		"question":"You see the same guy over and over again, Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"42": {
+		"question":"HEY! I know that guy, Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"43": {
+		"question":"A guy eats a sandwitch, Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"44": {
+		"question":"A guy is monologing again, Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["WIN"],
+		"noTags":[],
+		"isActive": true
+	},
+	"45": {
+		"question":"\"Ahh, welcome\" the guy says as you enter the room, long flowing cape behind him. The room crackles with energy as he raises his hand and lightning arcs from his finger tips. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["LOSE"],
+		"noTags":[],
+		"isActive": true
+	},
+	"46": {
+		"question":"You're on a bridge, you see a guy, the guy is full of tension. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["LOSE"],
+		"noTags":[],
+		"isActive": true
+	},
+  	"47": {
+		"question":"30,000 leagues below sea level, you see a guy. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["MEAN"],
+		"noTags":[],
+		"isActive": true
+	},
+	"48": {
+		"question":"No one is looking. do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["MEAN"],
+		"noTags":[],
+		"isActive": true
+	},
+	"49": {
+		"question":"Chickens lurk around you and a guy is there too. do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"50": {
+		"question":"Under article 4, section 3 of the Individual Accosting Act of 1834, an individual who has wronged you ( hitherto referred to as \"the guy\") is fully within your rights to direct a single or series of blows, (hitherto referred to as \"punch\") at as retribution for aformentioned wrongdoings. Do you wish to exercise your authority to \"punch\" \"the guy\"?",
+		"yes": true,
+		"no": true,
+		"yesTags":["UNDERSTANDABLE"],
+		"noTags":[],
+		"isActive": true
+	},
+	"51": {
+		"question":"Paper, guys, paper guys. Do you punch the guys?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"onYes":{"animate":"holePunchAnimation"},
+		"isActive": true
+	},
+	"52": {
+		"question":"Do you guy the punch?",
+		"yes": true,
+		"no": true,
+		"yesTags":["BARFIGHT"],
+		"noTags":[],
+		"onYes":{"animate":"makeFunOfTheGuyAndGetPunched"},
+		"isActive": true
+	},
+	"53": {
+		"question":"Ehhhh, a TOUGHT GUY Eh? Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["LOSE"],
+		"noTags":[],
+		"isActive": true
+	},
+	"54": {
+		"question":"A guy wakes you up at 7 am to get you out of bed for school, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["MEAN"],
+		"noTags":[],
+		"isActive": true
+	},
+	"55": {
+		"question":"In the future, the year 2000. Fortune 500 companies rule the world.  A guy walks up to you, hand in his trench coat. He smells of cat piss and Taco Gong(TM), do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["UNDERSTANDABLE", "PANIC"],
+		"onQuestion":{"setTImer": 30},
+		"noTags":[],
+		"isActive": true
+	},
+	"56": {
+		"question":"Quick Do you punch the guy?!",
+		"yes": true,
+		"no": true,
+		"yesTags":["PANIC", "MEAN", "WIN"],
+		"noTags":["LOSE"],
+		"onQuestion":{"setTImer": 5},
+		"onTimerEnd":{"animate":"getPunchedAndLose"},
+		"isActive": true
+	},
+	"57": {
+		"question":"THOUSANDS OF YEARS AGO, BEFORE THE DAWN OF MANKIND. There is a guy, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"58": {
+		"question":"Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["PARTY", "NICE"],
+		"noTags":[],
+		"onYes": {"inventory":"PUNCH"},
+		"isActive": true
+	},
+	"59": {
+		"question":"Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["LOSE"],
+		"noTags":[],
+		"onQuestionLoad": {"animate": "hideTheGuyAndShowMirror"},
+		"onYes":{"animate":"punchSelfAndDie"},
+		"isActive": true
+	},
+	"60": {
+		"question":"GUY- abbreviation-Guyana (international car registration)",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},					
+	"61": {
+		"question":"You are signing in the opera and the next word is guy, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"onYes":{"animate":"playOperaClip"},
+		"isActive": true
+	},
+	"62": {
+		"question":"You are in an elevator, the buttons read, 1, 2, 3, 4, Guy, and Roof, do you punch thr guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"63": {
+		"question":"A guy is shopping at a craft store, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"64": {
+		"question":"You're at the party again, things are getting crazy.",
+		"yes": "Punch the punch?",
+		"no": "Guy the guy?!",
+		"option3": "The the the!!!!!",
+		"yesTags":["PARTY"],
+		"noTags":["PARTY"],
+		"option3Tags":["PARTY"],
+		"isActive": true
+	},
+	"65": {
+		"question":"Do you Biff the Bro?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},					
+	"66": {
+		"question":"Long long ago, in a galaxy far far away, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},					
+	"67": {
+		"question":"This summer, one man....one guy....do you punch the guy? coming to theaters Febuary First",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"68": {
+		"question":"Hey, my guy!				if you punch the guy, the guy is you",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"69": {
+		"question":"Hello welcom to the Shop, Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3": "Shop",
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true,
+		"onOption3":{"shop":{"RUTABAGA": 1, }}
+	},
+	"70": {
+		"question":"The guy has a dollar, do you punc the guy?",
+		"yes": true,
+		"no": true,
+		"yesTags":["MEAN", "CRIME"],
+		"noTags":[],
+		"onYes":{"money":1},
+		"isActive": true
+	},	
+	"71": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"72": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"73": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"74": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"75": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"76": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"77": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"78": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"79": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"80": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"81": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"82": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"83": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"84": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"85": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"86": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"87": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"88": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"89": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"90": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"91": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"92": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"93": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"94": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"95": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"96": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"97": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"98": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"99": {
+		"question":"",
+		"yes": true,
+		"no": true,
+		"yesTags":[],
+		"noTags":[],
+		"isActive": true
+	},
+	"100": {
+		"question":"SECRET RUTABEGA LEVEL, do you punch the guy?",
+		"yes": "Rutabaga",
+		"no": "Rutabaga",
+		"option3": "Rutabaga",
+		"OnQuestion":{"animate":"Rutabaga"},
+		"onYes":{"goToLevel":"SecretRutabagaLevel"},
+		"onNo":{"goToLevel":"SecretRutabagaLevel"},
+		"onOption3":{"goToLevel":"SecretRutabagaLevel"},
+		"isActive": {"Rutabaga": 10}
+	},
+}
