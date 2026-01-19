@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://die3p5ibahhei"]
+
+[ext_resource type="Texture2D" uid="uid://c42d6basuithe" path="res://assets/question4/pool.png" id="1_ls6fl"]
+[ext_resource type="Texture2D" uid="uid://c5onhkdluyppw" path="res://assets/question4/cracker.png" id="2_bnihy"]
+
+[node name="Question4" type="Node2D"]
+
+[node name="Pool" type="Sprite2D" parent="."]
+position = Vector2(240, 278)
+scale = Vector2(2.8975005, 1.5199999)
+texture = ExtResource("1_ls6fl")
+
+[node name="Cracker" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(661, 467)
+scale = Vector2(7.265625, 6.09375)
+texture = ExtResource("2_bnihy")

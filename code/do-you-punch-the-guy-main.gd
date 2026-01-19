@@ -20,7 +20,11 @@ var rng = RandomNumberGenerator.new()
 var questionInfo = {}
 var playerInventory: = [];
 
-@onready var questionScenes = {"question2":preload("res://scenes/question2.tscn"), "question3":preload("res://scenes/question3.tscn")};
+@onready var questionScenes = {
+	"question2":preload("res://scenes/question2.tscn"), 
+	"question3":preload("res://scenes/question3.tscn"),
+	"question4":preload("res://scenes/question4.tscn"),
+	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
 @onready var option3button = $"Option 3";
@@ -75,13 +79,13 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex = 3;
+	currentQuestionIndex = 4;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
 	if currentQuestion.onQuestion:
 		processGameAction(currentQuestion.onQuestion)
-	$Question.text = "Question" + str(currentQuestionIndex) + ": " + currentQuestion.question
+	$Question.text = "Question " + str(currentQuestionIndex) + ": " + currentQuestion.question
 	if !currentQuestion.yes:
 		yesButton.hide()
 	else:

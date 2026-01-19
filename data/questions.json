@@ -6,6 +6,7 @@
 		"option3": false,
 		"yesTags":["WIN"],
 		"noTags":["LOSE"],
+		"onQuestion":false,
 		"isActive":true
 	},	
 	"2": {
@@ -15,10 +16,11 @@
 		"option3":false,
 		"yesTags":["HITSKIDS", "ASSHOLE"],
 		"noTags":["NICE"],
+		"onQuestion":false,
 		"isActive": true
 	},	
 	"3": {
-		"question":"You enter a tavern. The bartender gives you a beer, a guy pulls up a chair next to you. Do you punch the guy?",
+		"question":"You enter a tavern. The bartender gives you a beer. A guy pulls up a chair next to you. Do you punch the guy?",
 		"yes": true,
 		"no": true,
 		"option3":false,
@@ -34,6 +36,7 @@
 		"option3":false,
 		"yesTags":["ASSHOLE", "HITSKIDS"],
 		"noTags":[],
+		"onQuestion":false,
 		"isActive": true
 	},	
 	"5": {
