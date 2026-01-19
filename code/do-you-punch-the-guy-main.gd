@@ -24,6 +24,8 @@ var playerInventory: = [];
 	"question2":preload("res://scenes/question2.tscn"), 
 	"question3":preload("res://scenes/question3.tscn"),
 	"question4":preload("res://scenes/question4.tscn"),
+	"question5":preload("res://scenes/question5.tscn"),
+	"question6":preload("res://scenes/question6.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -79,7 +81,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex = 4;
+	currentQuestionIndex = 6;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -97,6 +99,7 @@ func changeQuestion() -> void:
 	if !currentQuestion.option3:
 		option3button.hide()
 	else:
+		option3button.text = currentQuestion.option3
 		option3button.show()
 	
 func animatePunch():
@@ -123,6 +126,7 @@ func _yes_pressed():
 	option3button.hide()
 	animatePunch()
 	tallyResults('yes')
+	#SHOW TEARDOWN TEXT
 	nextButton.show()
 	
 func _no_pressed():
@@ -131,14 +135,19 @@ func _no_pressed():
 	option3button.hide()
 	#animateNoPunchIfNeeded()
 	tallyResults('no')
+	#SHOW TEARDOWN TEXT
 	nextButton.show()
 	
 func _option_3_pressed():
 	yesButton.hide()
 	noButton.hide()
 	option3button.hide()
+	if currentQuestion.onOption3:
+		processGameAction(currentQuestion.onOption3)
 	#animateOption3IfNeeded()
+	
 	tallyResults('option3')
+	#SHOW TEARDOWN TEXT
 	nextButton.show()
 	
 func _nextButtonPressed():
@@ -183,16 +192,17 @@ func tallyResults(buttonPressed: String):
 				barfight += 1
 			Tags.RUDABEGA:
 				rudabega += 1
-				if(rudabega == 10):
-					secretRudabegaLevel()
 				
 func secretRudabegaLevel():
+	#goToSecretRudabagaLevel
 	print("Secret Rudabega Level")
 				
 func _gameLoss():
+	#loseTheGame
 	print("you lose!")
 	
 func winTheGame():
+	#winTheGame
 	print("win")
 	
  

@@ -32,7 +32,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("3_dpvq8")
 
 [node name="PunchArm" type="Sprite2D" parent="theAction"]
-z_index = 4
+z_index = 5
 position = Vector2(977, 732)
 scale = Vector2(2, 2)
 texture = ExtResource("4_267bx")
@@ -45,7 +45,7 @@ texture = ExtResource("2_o84ic")
 
 [node name="PowEffect" type="Sprite2D" parent="theAction"]
 visible = false
-z_index = 3
+z_index = 4
 position = Vector2(910, 292)
 texture = ExtResource("6_267bx")
 
@@ -87,7 +87,7 @@ text = "No"
 z_index = 10
 offset_left = 42.0
 offset_top = 482.0
-offset_right = 545.0
+offset_right = 130.0
 offset_bottom = 531.0
 text = "Option 3"
 

@@ -7,6 +7,8 @@
 		"yesTags":["WIN"],
 		"noTags":["LOSE"],
 		"onQuestion":false,
+		"onYes": false,
+		"onNo": false,
 		"isActive":true
 	},	
 	"2": {
@@ -17,6 +19,8 @@
 		"yesTags":["HITSKIDS", "ASSHOLE"],
 		"noTags":["NICE"],
 		"onQuestion":false,
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},	
 	"3": {
@@ -27,6 +31,8 @@
 		"yesTags":["BARFIGHT", "MEAN"],
 		"noTags":["PARTY"],
 		"onQuestion":{"inventory":"BEER"},
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},	
 	"4": {
@@ -37,25 +43,34 @@
 		"yesTags":["ASSHOLE", "HITSKIDS"],
 		"noTags":[],
 		"onQuestion":false,
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},	
 	"5": {
 		"question":"There is a guy, do you punch the guy?",
 		"yes": true,
 		"no": true,
-		"option3": "RUTABAGA",
+		"option3": "Rutabaga",
 		"yesTags":["ASSHOLE"],
 		"noTags":[],
 		"option3Tags":["RUTABAGA"],
-		"onOption3":{"RUTABAGA": 1},
+		"onQuestion":false,
+		"onYes": false,
+		"onNo": false,	
+		"onOption3":{"inventory":"RUTABAGA"},
 		"isActive": true
 	},	
 	"6": {
 		"question":"You finally, after hours of grinding, made it to the boss guy, do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3":false,
 		"yesTags":["WIN"],
 		"noTags":["LOSE"],
+		"onQuestion":false,
+		"onYes": false,
+		"onNo": false,	
 		"isActive": true
 	},
 	"7": {
