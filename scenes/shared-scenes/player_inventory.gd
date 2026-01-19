@@ -32,7 +32,6 @@ func displayInventory(playerInventory: Array):
 	playerInventory.sort()
 	for inventoryItem in playerInventory:
 		itemsObject[inventoryItem].quantity += 1 
-	print(itemsObject)
 	for item in itemsObject:
 		if(itemsObject[item].sprite.hidden && itemsObject[item].quantity > 0):
 			itemsObject[item].sprite.show()

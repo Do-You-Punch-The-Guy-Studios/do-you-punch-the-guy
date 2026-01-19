@@ -26,30 +26,32 @@ texture = ExtResource("1_fxs5o")
 [node name="theAction" type="Sprite2D" parent="."]
 
 [node name="TheGuyface" type="Sprite2D" parent="theAction"]
-z_index = 1
+z_index = 2
 position = Vector2(836, 249)
 scale = Vector2(2, 2)
 texture = ExtResource("3_dpvq8")
 
 [node name="PunchArm" type="Sprite2D" parent="theAction"]
-z_index = 3
+z_index = 4
 position = Vector2(977, 732)
 scale = Vector2(2, 2)
 texture = ExtResource("4_267bx")
 
 [node name="TheGuyBody" type="Sprite2D" parent="theAction"]
+z_index = 1
 position = Vector2(837, 430)
 scale = Vector2(2, 2)
 texture = ExtResource("2_o84ic")
 
 [node name="PowEffect" type="Sprite2D" parent="theAction"]
 visible = false
-z_index = 2
+z_index = 3
 position = Vector2(910, 292)
 texture = ExtResource("6_267bx")
 
 [node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
 visible = false
+z_index = 2
 position = Vector2(845, 249)
 scale = Vector2(2.1323528, 1.9565217)
 texture = ExtResource("7_kir64")

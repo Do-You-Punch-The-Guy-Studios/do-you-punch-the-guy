@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://css13yeldf4qh"]
+[gd_scene load_steps=3 format=3 uid="uid://css13yeldf4qh"]
+
+[ext_resource type="Texture2D" uid="uid://dn5pkyp0wf1df" path="res://assets/question3/bar.png" id="1_h80gh"]
+[ext_resource type="Texture2D" uid="uid://dxj3gd4mi3h5j" path="res://assets/items/beer.png" id="2_2tru6"]
 
 [node name="Question3" type="Node2D"]
+
+[node name="Bar" type="Sprite2D" parent="."]
+position = Vector2(365, 313)
+scale = Vector2(1.8175, 2.28125)
+texture = ExtResource("1_h80gh")
+
+[node name="Beer" type="Sprite2D" parent="Bar"]
+position = Vector2(-95.460785, -20.821915)
+scale = Vector2(0.5502063, 0.43835613)
+texture = ExtResource("2_2tru6")
+
+[node name="Beer2" type="Sprite2D" parent="Bar"]
+position = Vector2(107.01512, -8.986298)
+scale = Vector2(0.5502063, 0.43835613)
+texture = ExtResource("2_2tru6")
+flip_h = true
