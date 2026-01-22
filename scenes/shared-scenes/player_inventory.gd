@@ -28,6 +28,7 @@ func onInit():
 	#pass
 
 func displayInventory(playerInventory: Array):
+	print("displayInventory")
 	onInit()
 	playerInventory.sort()
 	for inventoryItem in playerInventory:
@@ -37,5 +38,6 @@ func displayInventory(playerInventory: Array):
 			itemsObject[item].sprite.show()
 		if(itemsObject[item].quantityLabel.hidden && itemsObject[item].quantity > 1):
 			itemsObject[item].quantityLabel.show()
-			
+			itemsObject[item].quantityLabel.text = "x " + str(itemsObject[item].quantity)
+
 		

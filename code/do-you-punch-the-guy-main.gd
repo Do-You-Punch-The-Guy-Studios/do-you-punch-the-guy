@@ -118,7 +118,7 @@ func animatePunch():
 	await get_tree().create_timer(.25).timeout
 	punchArm.position = punchArm.position.lerp(initialPosition, 1 - exp(-4))
 	
-func _yes_pressed():	
+func _yes_pressed():
 	yesButton.hide()
 	noButton.hide()
 	option3button.hide()
@@ -157,12 +157,13 @@ func processGameAction(gameActions: Dictionary):
 		modifyInventory('add', gameActions.inventory)
 		
 func modifyInventory(addOrRemove: String, itemName: String):
+	print("modifyInventory")
 	if(addOrRemove == 'add'):
 		playerInventory.append(itemName)
 	if(addOrRemove == 'remove'):
 		playerInventory.erase(itemName)
+	print(playerInventory)
 	$PlayerInventory.displayInventory(playerInventory);
-		
 		
 func tallyResults(buttonPressed: String):
 	var tags
@@ -189,7 +190,7 @@ func tallyResults(buttonPressed: String):
 			Tags.BARFIGHT: 
 				barfight += 1
 			Tags.RUDABEGA:
-				rudabega += 1	
+				rudabega += 1
 				
 func getARutabaga():
 	if !alreadyDoneThis:

@@ -34,59 +34,60 @@ text = "X 2"
 
 [node name="Icecream" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(283, 593)
+position = Vector2(690.00006, 593)
 scale = Vector2(0.815, 0.695)
 texture = ExtResource("2_6uo77")
 
 [node name="IceCreamQuantity" type="Label" parent="Icecream"]
 visible = false
-offset_left = 63.888885
-offset_top = -38.1679
-offset_right = 106.01851
-offset_bottom = -14.2493515
+offset_left = 45.39868
+offset_top = -28.777004
+offset_right = 87.528305
+offset_bottom = -4.8584557
 scale = Vector2(3, 3)
 text = "X 2"
 
 [node name="Punch" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(365, 579)
+position = Vector2(560, 578)
+scale = Vector2(0.9, 0.855)
 texture = ExtResource("3_1tuda")
 
 [node name="PunchQuantity" type="Label" parent="Punch"]
 visible = false
-offset_left = 126.27777
-offset_top = -92.10675
-offset_right = 168.4074
-offset_bottom = -68.1882
+offset_left = 47.0
+offset_top = -13.0
+offset_right = 89.12962
+offset_bottom = 10.918549
 scale = Vector2(3, 3)
 text = "X 2"
 
 [node name="Rutabaga" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(227.00002, 613)
+position = Vector2(267, 602)
 scale = Vector2(0.845, 0.69)
 texture = ExtResource("4_6hsmk")
 
 [node name="RutabagaQuantity" type="Label" parent="Rutabaga"]
 visible = false
-offset_left = 63.888885
-offset_top = -38.1679
-offset_right = 106.01851
-offset_bottom = -14.2493515
+offset_left = 34.31952
+offset_top = -37.68112
+offset_right = 76.44914
+offset_bottom = -13.762573
 scale = Vector2(3, 3)
 text = "X 2"
 
 [node name="Taco" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(477.00006, 596)
-scale = Vector2(0.655, 0.745)
+position = Vector2(426.00003, 597)
+scale = Vector2(0.5574996, 0.61250013)
 texture = ExtResource("5_fo2pn")
 
 [node name="TacoQuantity" type="Label" parent="Taco"]
 visible = false
-offset_left = 63.888885
-offset_top = -38.1679
-offset_right = 106.01851
-offset_bottom = -14.2493515
+offset_left = 100.763245
+offset_top = -26.84574
+offset_right = 151.1449
+offset_bottom = -2.479742
 scale = Vector2(3, 3)
 text = "X 2"
