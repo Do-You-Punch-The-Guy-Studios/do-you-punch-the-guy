@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d02j5ph3744in"]
+
+[ext_resource type="Texture2D" uid="uid://duvkxno3ung3l" path="res://assets/question12/mikeTysonFace.png" id="1_40grj"]
+[ext_resource type="Texture2D" uid="uid://dxgmd057anmp4" path="res://assets/question12/mikeTysonHurtFace.png" id="2_vtt1a"]
+
+[node name="Question12" type="Node2D"]
+
+[node name="MikeTysonFace" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(838, 252)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_40grj")
+
+[node name="MikeTysonHurtFace" type="Sprite2D" parent="."]
+visible = false
+z_index = 3
+position = Vector2(841, 253)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_vtt1a")

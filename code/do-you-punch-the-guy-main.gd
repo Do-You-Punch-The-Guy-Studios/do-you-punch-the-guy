@@ -32,6 +32,7 @@ var alreadyDoneThis = false;
 	"question9":preload("res://scenes/question9.tscn"),
 	"question10":preload("res://scenes/question10.tscn"),
 	"question11":preload("res://scenes/question11.tscn"),
+	"question12":preload("res://scenes/question12.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -83,7 +84,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex = 11;
+	currentQuestionIndex = 12;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -116,7 +117,7 @@ func animatePunch():
 	await get_tree().create_timer(.25).timeout
 	$theAction/PowEffect.show();
 	$theAction/TheGuyface.hide();
-	$theAction/TheGuyfacePunched.show();	
+	$theAction/TheGuyfacePunched.show();
 	await get_tree().create_timer(.25).timeout
 	$theAction/PowEffect.hide();
 	await get_tree().create_timer(.25).timeout
@@ -126,6 +127,8 @@ func _yes_pressed():
 	yesButton.hide()
 	noButton.hide()
 	option3button.hide()
+	if (currentQuestion.onYes):
+		processGameAction(currentQuestion.onYes)
 	animatePunch()
 	tallyResults('yes')
 	#SHOW TEARDOWN TEXT
@@ -135,7 +138,8 @@ func _no_pressed():
 	yesButton.hide()
 	noButton.hide()
 	option3button.hide()
-	#animateNoPunchIfNeeded()
+	if (currentQuestion.onNo):
+		processGameAction(currentQuestion.onNo)
 	tallyResults('no')
 	#SHOW TEARDOWN TEXT
 	nextButton.show()

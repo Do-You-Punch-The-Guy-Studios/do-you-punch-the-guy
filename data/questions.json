@@ -137,8 +137,12 @@
 		"question":"June 28, 1997 Tyson vs Holyfield, Tyson comes in on the aggressive, do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["WIN"],
-		"noTags":[],
+		"noTags":["LOSE"],
+		"onQuestion": false,
+		"onYes": {"animate":"TysonTKO"},
+		"onNo": {"animate":"TysonPunch"},
 		"isActive": true
 	},
 	"13": {
