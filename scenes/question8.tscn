@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn3lrvuru1ml"]
+
+[ext_resource type="Texture2D" uid="uid://v2iuah485huf" path="res://assets/question8/jungleGym.png" id="1_3r0tt"]
+
+[node name="Question8" type="Node2D"]
+
+[node name="JungleGym" type="Sprite2D" parent="."]
+position = Vector2(321.25, -142.24998)
+scale = Vector2(1.3012499, 1.1970832)
+texture = ExtResource("1_3r0tt")

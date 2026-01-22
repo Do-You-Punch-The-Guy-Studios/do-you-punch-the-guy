@@ -89,8 +89,12 @@
 		"question":"A guy is on the jungle gym but you want a turn, do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["HITSKIDS", "ASSHOLE"],
 		"noTags":["NICE"],
+		"onQuestion": false,
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},	
 	"9": {
