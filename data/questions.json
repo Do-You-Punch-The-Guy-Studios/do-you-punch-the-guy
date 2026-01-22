@@ -77,10 +77,12 @@
 		"question":"You are at the grocery store, shopping for rutabagas, when a guy grabs the best one. Do you punch the guy?",
 		"yes": true,
 		"no": true,
-		"option3": "RUTABAGA",
-		"yesTags":["ASSHOLE", "RUTABAGA"],
+		"option3": false,
+		"yesTags":["ASSHOLE"],
 		"noTags":[],
-		"onEnvironment":{"RUTABAGA": 1},
+		"onQuestion": false,
+		"onYes": {"inventory":"RUTABAGA"},
+		"onNo": false,
 		"isActive": true
 	},		
 	"8": {

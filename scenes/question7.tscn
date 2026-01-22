@@ -1,0 +1,355 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyfupj1u70f5g"]
+
+[ext_resource type="Texture2D" uid="uid://mg2gtc8cocdd" path="res://assets/items/Rudabega.png" id="1_13t32"]
+[ext_resource type="Texture2D" uid="uid://dn5pkyp0wf1df" path="res://assets/question3/bar.png" id="1_dka3t"]
+[ext_resource type="Script" uid="uid://ccbla1qxrsttj" path="res://scenes/pile_of_rutabagas.gd" id="1_qqub8"]
+
+[node name="Question7" type="Node2D"]
+
+[node name="PileOfRutabagas" type="Container" parent="."]
+offset_left = 437.3363
+offset_top = 400.27246
+offset_right = 477.3363
+offset_bottom = 440.27246
+script = ExtResource("1_qqub8")
+
+[node name="Rudabega21" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-126, 0)
+rotation = -0.53747743
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega22" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-178, 8)
+rotation = 0.82008356
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega23" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-54.99997, -1)
+rotation = -0.68999183
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega24" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(9, -6)
+rotation = 0.9185661
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega25" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-101, 12.9999695)
+rotation = 1.2005655
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega26" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-142, -19)
+rotation = 1.1339269
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega27" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-48, -22)
+rotation = -0.83128875
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega28" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-1.999939, 2)
+rotation = -0.376978
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega29" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(35, 5)
+rotation = 0.49122685
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega30" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-15, -25)
+rotation = 2.0035512
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega31" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(89.3363, 1.2724609)
+rotation = -0.53747743
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega32" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(37.336304, 9.272461)
+rotation = 0.82008356
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega33" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(160.3363, 0.27246094)
+rotation = -0.68999183
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega35" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(114.3363, 14.27243)
+rotation = 1.2005655
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega36" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(73.3363, -17.72754)
+rotation = 1.1339269
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega37" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(167.3363, -20.72754)
+rotation = -0.83128875
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega7" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 1
+position = Vector2(-215.33632, -1.2724609)
+rotation = -0.53747743
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega3" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 1
+position = Vector2(-267.3363, 6.727539)
+rotation = 0.82008356
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 1
+position = Vector2(-144.33627, -2.272461)
+rotation = -0.68999183
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega2" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 1
+position = Vector2(-80.3363, -7.272461)
+rotation = 0.9185661
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega4" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-190.3363, 11.727509)
+rotation = 1.2005655
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega5" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 1
+position = Vector2(-231.3363, -20.27246)
+rotation = 1.1339269
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega6" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-137.3363, -23.27246)
+rotation = -0.83128875
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega8" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-91.33624, 0.72753906)
+rotation = -0.376978
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega9" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-54.336304, 3.727539)
+rotation = 0.49122685
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega10" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-104.3363, -26.27246)
+rotation = 2.0035512
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega11" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 1
+rotation = -0.53747743
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega12" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 1
+position = Vector2(-52, 8)
+rotation = 0.82008356
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega13" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 1
+position = Vector2(71.00003, -1)
+rotation = -0.68999183
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega14" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 1
+position = Vector2(135, -6)
+rotation = 0.9185661
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega15" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(25, 12.9999695)
+rotation = 1.2005655
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega16" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 1
+position = Vector2(-16, -19)
+rotation = 1.1339269
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega17" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(78, -22)
+rotation = -0.83128875
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega18" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(124.00006, 2)
+rotation = -0.376978
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega19" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(161, 5)
+rotation = 0.49122685
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega20" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(111, -25)
+rotation = 2.0035512
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega34" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-165, -46)
+rotation = -0.53747743
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega38" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-217, -38)
+rotation = 0.82008356
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega39" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-93.99997, -47)
+rotation = -0.68999183
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega40" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-30, -52)
+rotation = 0.9185661
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega41" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-140, -33.00003)
+rotation = 1.2005655
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega42" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-181, -65)
+rotation = 1.1339269
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega43" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-87, -68)
+rotation = -0.83128875
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega44" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-40.99994, -44)
+rotation = -0.376978
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega45" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-4, -41)
+rotation = 0.49122685
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega46" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-54, -71)
+rotation = 2.0035512
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega47" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-49, -71)
+rotation = -0.53747743
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega48" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-101, -63)
+rotation = 0.82008356
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega49" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(22.00003, -72)
+rotation = -0.68999183
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega50" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(86, -77)
+rotation = 0.9185661
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega51" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-24, -58.00003)
+rotation = 1.2005655
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega52" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(-65, -90)
+rotation = 1.1339269
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega53" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(29, -93)
+rotation = -0.83128875
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega54" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(75.00006, -69)
+rotation = -0.376978
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega55" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(112, -66)
+rotation = 0.49122685
+texture = ExtResource("1_13t32")
+
+[node name="Rudabega56" type="Sprite2D" parent="PileOfRutabagas"]
+z_index = 2
+position = Vector2(62, -96)
+rotation = 2.0035512
+texture = ExtResource("1_13t32")
+
+[node name="Bar" type="Sprite2D" parent="."]
+position = Vector2(357, 421.00003)
+scale = Vector2(1.7825, 1.875)
+texture = ExtResource("1_dka3t")
+metadata/_edit_lock_ = true

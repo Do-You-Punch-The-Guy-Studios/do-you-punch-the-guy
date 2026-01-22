@@ -19,6 +19,7 @@ var questionIndexes: Array = []
 var rng = RandomNumberGenerator.new()
 var questionInfo = {}
 var playerInventory: = [];
+var alreadyDoneThis = false;
 
 @onready var questionScenes = {
 	"question2":preload("res://scenes/question2.tscn"), 
@@ -26,6 +27,7 @@ var playerInventory: = [];
 	"question4":preload("res://scenes/question4.tscn"),
 	"question5":preload("res://scenes/question5.tscn"),
 	"question6":preload("res://scenes/question6.tscn"),
+	"question7":preload("res://scenes/question7.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -57,16 +59,12 @@ func _ready():
 	nextButton.pressed.connect(_nextButtonPressed);
 	option3button.hide();
 	rng.randomize()
-	
 
 	for i in range(2, 101):
 		questionIndexes.append(i);
 	
 	questionIndexes.shuffle();
 	changeQuestion();
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(_delta: float) -> void:
 	
 func loadQuestions():
 	var filePath = "res://data/questions.json"
@@ -81,7 +79,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex = 6;
+	currentQuestionIndex = 7;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -191,7 +189,13 @@ func tallyResults(buttonPressed: String):
 			Tags.BARFIGHT: 
 				barfight += 1
 			Tags.RUDABEGA:
-				rudabega += 1
+				rudabega += 1	
+				
+func getARutabaga():
+	if !alreadyDoneThis:
+		modifyInventory('add', "RUTABAGA")
+		alreadyDoneThis = true;
+
 				
 func secretRudabegaLevel():
 	#goToSecretRudabagaLevel
