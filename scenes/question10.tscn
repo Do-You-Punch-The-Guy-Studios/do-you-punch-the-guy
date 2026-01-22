@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpktdl528qbfw"]
+
+[ext_resource type="Texture2D" uid="uid://dir7gj04igw2u" path="res://assets/question10/glasses.png" id="1_q8jsy"]
+[ext_resource type="Texture2D" uid="uid://dh6qblpplmjg5" path="res://assets/question10/pocket.png" id="2_cym22"]
+[ext_resource type="Texture2D" uid="uid://ceytn6u7c7ru1" path="res://assets/question10/combover.png" id="3_ryo5n"]
+
+[node name="Question10" type="Node2D"]
+
+[node name="Glasses" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(810, 201)
+texture = ExtResource("1_q8jsy")
+
+[node name="Pocket" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(914, 488)
+texture = ExtResource("2_cym22")
+
+[node name="Combover" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(813.5, 111.5)
+scale = Vector2(1.3385416, 1.0104166)
+texture = ExtResource("3_ryo5n")

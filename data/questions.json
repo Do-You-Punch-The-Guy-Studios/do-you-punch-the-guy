@@ -113,16 +113,24 @@
 		"question":"Oh man, it's Gary what an asshole, do you punch the guy?",
 		"yes": true,
 		"no": false,
+		"option3": false,
 		"yesTags":["ASSHOLE"],
 		"noTags":[],
+		"onQuestion": false,
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},		
 	"11": {
-		"question":"Grammar Nazi, do you punch the guy?",
+		"question":"grammmar nazi do youpunch the guy",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["ASSHOLE"],
 		"noTags":[],
+		"onQuestion":false,
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},
 	"12": {

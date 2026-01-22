@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://dm4udnislw74a"]
+
+[ext_resource type="Texture2D" uid="uid://dvg1oidjm7xg" path="res://assets/question11/caps.png" id="1_vqud3"]
+[ext_resource type="Texture2D" uid="uid://d0d5er4kaqwo2" path="res://assets/question11/comma.png" id="2_0aotr"]
+[ext_resource type="Texture2D" uid="uid://ba2e3tnnh5xv1" path="res://assets/question11/delete.png" id="3_0ea0m"]
+[ext_resource type="Texture2D" uid="uid://b3euak1eug7ye" path="res://assets/question11/questionmark.png" id="4_47r85"]
+[ext_resource type="Texture2D" uid="uid://c67j2k2e33cbf" path="res://assets/question11/space.png" id="5_4fpwf"]
+
+[node name="Question11" type="Node2D"]
+
+[node name="Caps" type="Sprite2D" parent="."]
+z_index = 11
+position = Vector2(253, 96.99999)
+scale = Vector2(0.6875, 0.7083333)
+texture = ExtResource("1_vqud3")
+
+[node name="Caps2" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(437.99997, 99.00001)
+scale = Vector2(0.75, 0.8020833)
+texture = ExtResource("1_vqud3")
+
+[node name="Comma" type="Sprite2D" parent="."]
+position = Vector2(543, 83)
+scale = Vector2(0.48958334, 0.5416667)
+texture = ExtResource("2_0aotr")
+
+[node name="Delete" type="Sprite2D" parent="."]
+z_index = 11
+position = Vector2(361, 54)
+texture = ExtResource("3_0ea0m")
+
+[node name="Questionmark" type="Sprite2D" parent="."]
+position = Vector2(341.99997, 136)
+scale = Vector2(0.5833333, 0.6145833)
+texture = ExtResource("4_47r85")
+
+[node name="Space" type="Sprite2D" parent="."]
+position = Vector2(99, 136)
+scale = Vector2(0.46875, 0.48958334)
+texture = ExtResource("5_4fpwf")
