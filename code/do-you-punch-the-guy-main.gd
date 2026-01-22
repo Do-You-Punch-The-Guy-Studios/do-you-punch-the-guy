@@ -29,6 +29,7 @@ var alreadyDoneThis = false;
 	"question6":preload("res://scenes/question6.tscn"),
 	"question7":preload("res://scenes/question7.tscn"),
 	"question8":preload("res://scenes/question8.tscn"),
+	"question9":preload("res://scenes/question9.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -80,7 +81,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex = 8;
+	currentQuestionIndex = 9;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())

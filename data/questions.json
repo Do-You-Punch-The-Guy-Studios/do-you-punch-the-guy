@@ -101,8 +101,12 @@
 		"question":"There is a knock at your door, you open the door and there is a guy, do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["ASSHOLE"],
 		"noTags":[],
+		"onQuestion": false,
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},		
 	"10": {
