@@ -163,6 +163,9 @@ func _nextButtonPressed():
 func processGameAction(gameActions: Dictionary):
 	if(gameActions.inventory):
 		modifyInventory('add', gameActions.inventory)
+	if(gameActions.animate):
+		#TODO: ANIMATE
+		print(gameActions.animate)
 		
 func modifyInventory(addOrRemove: String, itemName: String):
 	if(addOrRemove == 'add'):
