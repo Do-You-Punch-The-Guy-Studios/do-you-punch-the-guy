@@ -33,6 +33,7 @@ var alreadyDoneThis = false;
 	"question10":preload("res://scenes/question10.tscn"),
 	"question11":preload("res://scenes/question11.tscn"),
 	"question12":preload("res://scenes/question12.tscn"),
+	"question13":preload("res://scenes/question13.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -84,7 +85,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex = 12;
+	currentQuestionIndex = 13;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -175,10 +176,12 @@ func modifyInventory(addOrRemove: String, itemName: String):
 	$PlayerInventory.displayInventory(playerInventory);
 	
 func animateScene(sceneName):
-		if("TysonKO"):
+		if(sceneName == "TysonKO"):
 			$Question12/MikeTysonFace.hide();
 			$Question12/MikeTysonHurtFace.show();
-			
+		if(sceneName == "PurpleDinoTKO"):
+			$Question13/Purpledinoface.hide();
+			$Question13/PurpleDinoPunched.show();
 		
 func tallyResults(buttonPressed: String):
 	var tags
