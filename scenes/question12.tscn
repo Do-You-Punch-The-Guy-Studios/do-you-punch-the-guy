@@ -14,6 +14,6 @@ texture = ExtResource("1_40grj")
 [node name="MikeTysonHurtFace" type="Sprite2D" parent="."]
 visible = false
 z_index = 3
-position = Vector2(841, 253)
-scale = Vector2(0.7, 0.7)
+position = Vector2(842.55, 252.00002)
+scale = Vector2(0.73259807, 0.7)
 texture = ExtResource("2_vtt1a")

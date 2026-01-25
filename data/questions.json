@@ -58,7 +58,7 @@
 		"onQuestion":false,
 		"onYes": false,
 		"onNo": false,	
-		"onOption3":{"inventory":"RUTABAGA"},
+		"onOption3":{"inventory":"RUTABAGA", "animate": false},
 		"isActive": true
 	},	
 	"6": {
@@ -70,7 +70,7 @@
 		"noTags":["LOSE"],
 		"onQuestion":false,
 		"onYes": false,
-		"onNo": {"animate":"VillainKill"},	
+		"onNo": {"animate":"VillainKill", "inventory": false},	
 		"isActive": true
 	},
 	"7": {
@@ -81,7 +81,7 @@
 		"yesTags":["ASSHOLE"],
 		"noTags":[],
 		"onQuestion": false,
-		"onYes": {"inventory":"RUTABAGA"},
+		"onYes": {"inventory":"RUTABAGA", "animate": false},
 		"onNo": false,
 		"isActive": true
 	},		

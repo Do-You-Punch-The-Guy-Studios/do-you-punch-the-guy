@@ -127,9 +127,10 @@ func _yes_pressed():
 	yesButton.hide()
 	noButton.hide()
 	option3button.hide()
-	if (currentQuestion.onYes):
-		processGameAction(currentQuestion.onYes)
 	animatePunch()
+	if (currentQuestion.onYes):
+		await get_tree().create_timer(0.5).timeout
+		processGameAction(currentQuestion.onYes)
 	tallyResults('yes')
 	#SHOW TEARDOWN TEXT
 	nextButton.show()
@@ -164,8 +165,7 @@ func processGameAction(gameActions: Dictionary):
 	if(gameActions.inventory):
 		modifyInventory('add', gameActions.inventory)
 	if(gameActions.animate):
-		#TODO: ANIMATE
-		print(gameActions.animate)
+		animateScene(gameActions.animate)
 		
 func modifyInventory(addOrRemove: String, itemName: String):
 	if(addOrRemove == 'add'):
@@ -173,6 +173,12 @@ func modifyInventory(addOrRemove: String, itemName: String):
 	if(addOrRemove == 'remove'):
 		playerInventory.erase(itemName)
 	$PlayerInventory.displayInventory(playerInventory);
+	
+func animateScene(sceneName):
+		if("TysonKO"):
+			$Question12/MikeTysonFace.hide();
+			$Question12/MikeTysonHurtFace.show();
+			
 		
 func tallyResults(buttonPressed: String):
 	var tags
