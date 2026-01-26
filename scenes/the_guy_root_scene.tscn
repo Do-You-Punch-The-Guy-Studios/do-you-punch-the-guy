@@ -46,7 +46,8 @@ texture = ExtResource("2_o84ic")
 [node name="PowEffect" type="Sprite2D" parent="theAction"]
 visible = false
 z_index = 4
-position = Vector2(910, 292)
+position = Vector2(843, 254.75)
+scale = Vector2(1.1240741, 1.1207455)
 texture = ExtResource("6_267bx")
 
 [node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]

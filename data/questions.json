@@ -161,8 +161,12 @@
 		"question":"It's totally pitch black, you hear a guy behind you, do you punch the guy?",
 		"yes": true,
 		"no": true,
-		"yesTags":["PANIC"],
+		"option3": false,
+		"yesTags":[],
 		"noTags":[],
+		"onQuestion":false,
+		"onYes": false,
+		"onNo":false,
 		"isActive": true
 	},
 	"15": {

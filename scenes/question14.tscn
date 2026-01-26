@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnhj83tv6eyw"]
+
+[ext_resource type="Texture2D" uid="uid://cgr27a1b8end5" path="res://assets/black-background.png" id="1_gdk77"]
+
+[node name="Question14" type="Node2D"]
+
+[node name="BlackBackground" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1095.75, 325.25)
+scale = Vector2(1.0633937, 1.0742905)
+texture = ExtResource("1_gdk77")
