@@ -95,8 +95,8 @@ text = "Option 3"
 
 [node name="NextButton" type="Button" parent="."]
 visible = false
-offset_left = 48.0
-offset_top = 485.0
-offset_right = 116.0
-offset_bottom = 526.0
+offset_left = 51.0
+offset_top = 511.0
+offset_right = 119.0
+offset_bottom = 552.0
 text = "Next"

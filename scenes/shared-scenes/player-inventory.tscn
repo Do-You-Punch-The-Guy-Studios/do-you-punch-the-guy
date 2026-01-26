@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://byq300qt4sjkt"]
+[gd_scene load_steps=8 format=3 uid="uid://byq300qt4sjkt"]
 
 [ext_resource type="Script" uid="uid://cmjvatvultk05" path="res://scenes/shared-scenes/player_inventory.gd" id="1_6uo77"]
 [ext_resource type="Texture2D" uid="uid://dxj3gd4mi3h5j" path="res://assets/items/beer.png" id="1_bnfq8"]
@@ -6,88 +6,112 @@
 [ext_resource type="Texture2D" uid="uid://3am6c3o0ie6n" path="res://assets/items/Punch.png" id="3_1tuda"]
 [ext_resource type="Texture2D" uid="uid://mg2gtc8cocdd" path="res://assets/items/Rudabega.png" id="4_6hsmk"]
 [ext_resource type="Texture2D" uid="uid://nsgaf6mtqe14" path="res://assets/items/taco.png" id="5_fo2pn"]
+[ext_resource type="Texture2D" uid="uid://ua1incwr5lqd" path="res://assets/inventory-background.png" id="7_1tuda"]
 
 [node name="PlayerInventory" type="Node2D"]
+position = Vector2(0, 50)
 script = ExtResource("1_6uo77")
 
 [node name="Inventory" type="Label" parent="."]
+z_index = 1
 offset_left = 4.0
-offset_top = 580.0
+offset_top = 582.0
 offset_right = 340.0
-offset_bottom = 644.0
+offset_bottom = 646.0
 text = "Inventory:"
+metadata/_edit_use_anchors_ = true
 
 [node name="Beer" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(141, 603)
+z_index = 1
+position = Vector2(141, 605)
 scale = Vector2(0.72, 0.655)
 texture = ExtResource("1_bnfq8")
 
 [node name="BeerQuantity" type="Label" parent="Beer"]
 visible = false
+z_index = 1
 offset_left = 63.888885
 offset_top = -38.1679
 offset_right = 106.01851
 offset_bottom = -14.2493515
 scale = Vector2(3, 3)
 text = "X 2"
+metadata/_edit_use_anchors_ = true
 
 [node name="Icecream" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(690.00006, 593)
+z_index = 1
+position = Vector2(690, 597)
 scale = Vector2(0.815, 0.695)
 texture = ExtResource("2_6uo77")
 
 [node name="IceCreamQuantity" type="Label" parent="Icecream"]
 visible = false
+z_index = 1
 offset_left = 45.39868
 offset_top = -28.777004
 offset_right = 87.528305
 offset_bottom = -4.8584557
 scale = Vector2(3, 3)
 text = "X 2"
+metadata/_edit_use_anchors_ = true
 
 [node name="Punch" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(560, 578)
+z_index = 1
+position = Vector2(560, 580)
 scale = Vector2(0.9, 0.855)
 texture = ExtResource("3_1tuda")
 
 [node name="PunchQuantity" type="Label" parent="Punch"]
 visible = false
+z_index = 1
 offset_left = 47.0
 offset_top = -13.0
 offset_right = 89.12962
 offset_bottom = 10.918549
 scale = Vector2(3, 3)
 text = "X 2"
+metadata/_edit_use_anchors_ = true
 
 [node name="Rutabaga" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(267, 602)
+z_index = 1
+position = Vector2(267.00003, 615)
 scale = Vector2(0.845, 0.69)
 texture = ExtResource("4_6hsmk")
 
 [node name="RutabagaQuantity" type="Label" parent="Rutabaga"]
 visible = false
-offset_left = 34.31952
-offset_top = -37.68112
-offset_right = 76.44914
-offset_bottom = -13.762573
+z_index = 1
+offset_left = 35.502914
+offset_top = -53.623154
+offset_right = 77.63254
+offset_bottom = -29.704605
 scale = Vector2(3, 3)
 text = "X 2"
+metadata/_edit_use_anchors_ = true
 
 [node name="Taco" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(426.00003, 597)
+z_index = 1
+position = Vector2(426.00003, 599)
 scale = Vector2(0.5574996, 0.61250013)
 texture = ExtResource("5_fo2pn")
 
 [node name="TacoQuantity" type="Label" parent="Taco"]
 visible = false
+z_index = 1
 offset_left = 100.763245
 offset_top = -26.84574
 offset_right = 151.1449
 offset_bottom = -2.479742
 scale = Vector2(3, 3)
 text = "X 2"
+metadata/_edit_use_anchors_ = true
+
+[node name="InventoryBackground" type="Sprite2D" parent="."]
+position = Vector2(425.49994, 297.12497)
+scale = Vector2(0.37082937, 0.40080687)
+texture = ExtResource("7_1tuda")

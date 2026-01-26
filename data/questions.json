@@ -176,8 +176,11 @@
 		"option3":"YOU MONSTER!",
 		"yesTags":["MEAN", "HITSKIDS"],
 		"noTags":["NICE"],
-		"onOption3": {},
-		"onYes": {"inventory": "ICECREAM"},
+		"onQuestion": false,
+		"option3Tags":["NICE"],
+		"onOption3": false,
+		"onYes": {"inventory": "ICECREAM", "animate": false},
+		"onNo": false,
 		"isActive": true
 	},
 	"16": {
