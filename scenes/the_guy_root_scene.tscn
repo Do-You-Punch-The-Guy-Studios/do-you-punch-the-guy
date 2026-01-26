@@ -59,16 +59,16 @@ scale = Vector2(2.1323528, 1.9565217)
 texture = ExtResource("7_kir64")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-custom_minimum_size = Vector2(600, 250)
+custom_minimum_size = Vector2(300, 150)
 offset_left = 39.0
 offset_top = 57.0
-offset_right = 644.0
-offset_bottom = 298.0
+offset_right = 364.5
+offset_bottom = 207.0
 scale = Vector2(2, 2)
 
 [node name="Question" type="Label" parent="ScrollContainer"]
 z_index = 10
-custom_minimum_size = Vector2(600, 250)
+custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
 text = "Question X: BLAH NLAH BLAH, Do you Punch the Guy?"
 autowrap_mode = 3

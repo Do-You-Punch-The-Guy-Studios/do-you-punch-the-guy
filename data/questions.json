@@ -1,6 +1,7 @@
 {
 	"1": {
 		"question":"Do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3": false,
@@ -13,6 +14,7 @@
 	},	
 	"2": {
 		"question":"A guy walks by with a large bundle of balloons, do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3":false,
@@ -25,6 +27,7 @@
 	},	
 	"3": {
 		"question":"You enter a tavern. The bartender gives you a beer. A guy pulls up a chair next to you. Do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3":false,
@@ -37,6 +40,7 @@
 	},	
 	"4": {
 		"question":"A guy is sitting with his feet dangling in the pool, eating crackers. Do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3":false,
@@ -49,6 +53,7 @@
 	},	
 	"5": {
 		"question":"There is a guy, do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3": "Rutabaga",
@@ -63,6 +68,7 @@
 	},	
 	"6": {
 		"question":"You finally, after hours of grinding, made it to the boss guy, do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3":false,
@@ -75,6 +81,7 @@
 	},
 	"7": {
 		"question":"You are at the grocery store, shopping for rutabagas, when a guy grabs the best one. Do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3": false,
@@ -87,6 +94,7 @@
 	},		
 	"8": {
 		"question":"A guy is on the jungle gym but you want a turn, do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3": false,
@@ -99,6 +107,7 @@
 	},	
 	"9": {
 		"question":"There is a knock at your door, you open the door and there is a guy, do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3": false,
@@ -111,6 +120,7 @@
 	},		
 	"10": {
 		"question":"Oh man, it's Gary what an asshole, do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": false,
 		"option3": false,
@@ -123,6 +133,7 @@
 	},		
 	"11": {
 		"question":"grammmar nazi do youpunch the guy",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3": false,
@@ -135,6 +146,7 @@
 	},
 	"12": {
 		"question":"June 28, 1997 Tyson vs Holyfield, Tyson comes in on the aggressive, do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3": false,
@@ -147,6 +159,7 @@
 	},
 	"13": {
 		"question":"A purple dinosaur guy sings \"I love you, you love me...\" Do you punch the G-U-Y, with a big fat fist in the face from me to you!",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3": false,
@@ -159,6 +172,7 @@
 	},
 	"14": {
 		"question":"It's totally pitch black, you hear a guy behind you, do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3": false,
@@ -171,6 +185,7 @@
 	},
 	"15": {
 		"question":"A baby guy has an ice cream, do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
 		"option3":"YOU MONSTER!",
@@ -185,6 +200,7 @@
 	},
 	"16": {
 		"question":"Darkness falls, you are home alone. Crickets chirp all around your house. Suddenly the power goes out. The neighbors are fine, it's just you. You head to the garadge and check the fuse box. Nothing is out of the ordinary. You check your land line (which you have for some reason, get with the program nobody has those anymore) the line is dead, someone has cut it.  Suddenly from around the corner there is a GUY! DO YOU PUNCH THE GUY!??:!?!?!?>",
+		"isLong": true,
 		"yes": true,
 		"no": true,
 		"option3": false,
