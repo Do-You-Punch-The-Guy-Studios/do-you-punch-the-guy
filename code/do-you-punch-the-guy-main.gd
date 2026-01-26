@@ -69,7 +69,7 @@ func _ready():
 	option3button.hide();
 	rng.randomize()
 
-	for i in range(2, 101):
+	for i in range(2, 17):
 		questionIndexes.append(i);
 	
 	questionIndexes.shuffle();
@@ -82,22 +82,20 @@ func loadQuestions():
 		questionInfo = JSON.parse_string(dataFile.get_as_text())
 
 func changeQuestion() -> void:
+	#if(currentQuestionIndex > 1):
+		#self.remove_child($Question)
 	if questionIndexes.is_empty():
 		print("All numbers have been used!");
 		
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex = 11;
+	#currentQuestionIndex = 16;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
 	if currentQuestion.onQuestion:
 		processGameAction(currentQuestion.onQuestion)
-	if currentQuestionIndex == 16:
-		$ScrollContainer.scale = Vector2(1,1)
-	else:
-		$ScrollContainer.scale = Vector2(2, 2)
 	$ScrollContainer/Question.text = "Question " + str(currentQuestionIndex) + ": " + currentQuestion.question
 	if !currentQuestion.yes:
 		yesButton.hide()
@@ -167,6 +165,8 @@ func _option_3_pressed():
 	
 func _nextButtonPressed():
 	nextButton.hide()
+	$theAction/TheGuyface.show();
+	$theAction/TheGuyfacePunched.hide();
 	changeQuestion()
 	
 func processGameAction(gameActions: Dictionary):

@@ -11,7 +11,7 @@
 		"onYes": false,
 		"onNo": false,
 		"isActive":true
-	},	
+		},	
 	"2": {
 		"question":"A guy walks by with a large bundle of balloons, do you punch the guy?",
 		"isLong": false,
