@@ -30,7 +30,7 @@
 		"option3":false,
 		"yesTags":["BARFIGHT", "MEAN"],
 		"noTags":["PARTY"],
-		"onQuestion":{"inventory":"BEER", "animate": false},
+		"onQuestion":{"inventory":"BEER", "animate": false, "setTimer": false},
 		"onYes": false,
 		"onNo": false,
 		"isActive": true
@@ -58,7 +58,7 @@
 		"onQuestion":false,
 		"onYes": false,
 		"onNo": false,	
-		"onOption3":{"inventory":"RUTABAGA", "animate": false},
+		"onOption3":{"inventory":"RUTABAGA", "animate": false, "setTimer": false},
 		"isActive": true
 	},	
 	"6": {
@@ -70,7 +70,7 @@
 		"noTags":["LOSE"],
 		"onQuestion":false,
 		"onYes": false,
-		"onNo": {"animate":"VillainKill", "inventory": false},	
+		"onNo": {"animate":"VillainKill", "inventory": false, "setTimer": false},	
 		"isActive": true
 	},
 	"7": {
@@ -81,7 +81,7 @@
 		"yesTags":["ASSHOLE"],
 		"noTags":[],
 		"onQuestion": false,
-		"onYes": {"inventory":"RUTABAGA", "animate": false},
+		"onYes": {"inventory":"RUTABAGA", "animate": false, "setTimer": false},
 		"onNo": false,
 		"isActive": true
 	},		
@@ -141,8 +141,8 @@
 		"yesTags":["WIN"],
 		"noTags":["LOSE"],
 		"onQuestion": false,
-		"onYes": {"animate":"TysonTKO", "inventory": false},
-		"onNo": {"animate":"TysonPunch", "inventory":false},
+		"onYes": {"animate":"TysonTKO", "inventory": false, "setTimer": false},
+		"onNo": {"animate":"TysonPunch", "inventory":false, "setTimer": false},
 		"isActive": true
 	},
 	"13": {
@@ -153,7 +153,7 @@
 		"yesTags":["UNDERSTANDABLE", "MEAN", "HITSKIDS"],
 		"noTags":[],
 		"onQuestion": false,
-		"onYes": {"animate":"PurpleDinoTKO", "inventory": false},
+		"onYes": {"animate":"PurpleDinoTKO", "inventory": false, "setTimer": false},
 		"onNo":false,
 		"isActive": true
 	},
@@ -179,7 +179,7 @@
 		"onQuestion": false,
 		"option3Tags":["NICE"],
 		"onOption3": false,
-		"onYes": {"inventory": "ICECREAM", "animate": false},
+		"onYes": {"inventory": "ICECREAM", "animate": false, "setTimer": false},
 		"onNo": false,
 		"isActive": true
 	},
@@ -187,9 +187,13 @@
 		"question":"Darkness falls, you are home alone. Crickets chirp all around your house. Suddenly the power goes out. The neighbors are fine, it's just you. You head to the garadge and check the fuse box. Nothing is out of the ordinary. You check your land line (which you have for some reason, get with the program nobody has those anymore) the line is dead, someone has cut it.  Suddenly from around the corner there is a GUY! DO YOU PUNCH THE GUY!??:!?!?!?>",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["PANIC", "WIN"],
 		"noTags":["LOSE"],
-		"onQuestion": {"setTimer": 10},
+		"onQuestion": {"setTimer": 10, "inventory": false, "animate": false},
+		"onYes":false,
+		"onNo": false,
+		"onTimerUp":["LOSE"],
 		"isActive": true
 	},
 	"17": {

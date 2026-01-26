@@ -36,6 +36,7 @@ var alreadyDoneThis = false;
 	"question13":preload("res://scenes/question13.tscn"),
 	"question14":preload("res://scenes/question14.tscn"),
 	"question15":preload("res://scenes/question15.tscn"),
+	"question16":preload("res://scenes/question16.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -87,13 +88,17 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex = 15;
+	currentQuestionIndex = 1;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
 	if currentQuestion.onQuestion:
 		processGameAction(currentQuestion.onQuestion)
-	$Question.text = "Question " + str(currentQuestionIndex) + ": " + currentQuestion.question
+	if currentQuestionIndex == 16:
+		$ScrollContainer.scale = Vector2(1,1)
+	else:
+		$ScrollContainer.scale = Vector2(2, 2)
+	$ScrollContainer/Question.text = "Question " + str(currentQuestionIndex) + ": " + currentQuestion.question
 	if !currentQuestion.yes:
 		yesButton.hide()
 	else:
