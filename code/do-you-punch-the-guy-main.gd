@@ -12,7 +12,7 @@ var space = 0
 var understandable = 0
 var crime = 0
 var party = 0
-var currentQuestionIndex;
+var currentQuestionIndex = 0;
 var currentQuestion: Variant;
 var nextQuestionIndex  = 1 ;
 var questionIndexes: Array = []
@@ -82,15 +82,18 @@ func loadQuestions():
 		questionInfo = JSON.parse_string(dataFile.get_as_text())
 
 func changeQuestion() -> void:
-	#if(currentQuestionIndex > 1):
-		#self.remove_child($Question)
+	if(currentQuestionIndex > 1):
+		var path = "Question%d" % currentQuestionIndex
+		var node = get_node_or_null(path)
+		if(node):
+			node.queue_free()
 	if questionIndexes.is_empty():
 		print("All numbers have been used!");
 		
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex = 3;
+	#currentQuestionIndex = 3;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
