@@ -214,10 +214,15 @@
 	},
 	"17": {
 		"question":"Seriously though, do you punch the guy?",
+		"isLong": false,
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":[],
 		"noTags":[],
+		"onQuestion": false,
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},
 	"18": {
