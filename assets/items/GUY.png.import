@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dafbavpocsp5"
-path="res://.godot/imported/HolyGrail.png-8d519486864c3184dc839c97ecee3b45.ctex"
+uid="uid://mosynb5yi4pl"
+path="res://.godot/imported/GUY.png-7087adabdd4cf3690138601ae5645ce6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/question18/HolyGrail.png"
-dest_files=["res://.godot/imported/HolyGrail.png-8d519486864c3184dc839c97ecee3b45.ctex"]
+source_file="res://assets/items/GUY.png"
+dest_files=["res://.godot/imported/GUY.png-7087adabdd4cf3690138601ae5645ce6.ctex"]
 
 [params]
 
