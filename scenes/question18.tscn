@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://boihbky25hgbi"]
+
+[ext_resource type="Texture2D" uid="uid://db13radvlavuq" path="res://assets/question18/adventurerHat.png" id="1_in4tr"]
+[ext_resource type="Texture2D" uid="uid://dafbavpocsp5" path="res://assets/question18/HolyGrail.png" id="2_t6y12"]
+[ext_resource type="Texture2D" uid="uid://bakq6sjqhqid6" path="res://assets/question18/Plinth.png" id="3_4p2he"]
+[ext_resource type="Texture2D" uid="uid://c8ujmi2nvq5nl" path="res://assets/question18/VestHalf.png" id="4_666si"]
+
+[node name="Question18" type="Node2D"]
+position = Vector2(306, 177)
+
+[node name="AdventurerHat" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(614, 61)
+scale = Vector2(1.2233334, 1.1566666)
+texture = ExtResource("1_in4tr")
+
+[node name="HolyGrail" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(154, 226)
+texture = ExtResource("2_t6y12")
+
+[node name="Plinth" type="Sprite2D" parent="."]
+position = Vector2(171, 277)
+scale = Vector2(0.655, 0.63666666)
+texture = ExtResource("3_4p2he")
+
+[node name="VestHalf" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(490, 255)
+scale = Vector2(0.62833333, 0.5033333)
+texture = ExtResource("4_666si")
+
+[node name="VestHalf2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(610.00006, 257)
+scale = Vector2(0.7150001, 0.5166667)
+texture = ExtResource("4_666si")
+flip_h = true

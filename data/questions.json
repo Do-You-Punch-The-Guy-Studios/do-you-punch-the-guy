@@ -225,13 +225,17 @@
 		"onNo": false,
 		"isActive": true
 	},
-	"18": {
+	"18": { 
 		"question":"Deep within the temple, the Holy Grail is within your reach, you slowly and carefully reach out to grab it, just as your hand meets the grail, so does the hand of another guy, do you punch the guy?",
+		"isLong": true,
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["ASSHOLE", "WIN"],
 		"noTags":["LOSE"],
-		"onYes": {"inventory": "HOLYGRAIL"},
+		"onQuestion": false,
+		"onYes": {"inventory": "HOLYGRAIL", "setTimer": false, "animate": false},
+		"onNo": false,
 		"isActive": true
 	},
 	"19": {
