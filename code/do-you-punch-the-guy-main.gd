@@ -43,6 +43,8 @@ var alreadyDoneThis = false;
 @onready var option3button = $"Option 3";
 @onready var nextButton = $NextButton;
 @onready var punchArm = $theAction/PunchArm;
+@onready var timerText = $TimerText;
+@onready var timer = $TimerText/Timer;
 
 enum Tags {  
 	ASSHOLE,
@@ -75,6 +77,16 @@ func _ready():
 	questionIndexes.shuffle();
 	changeQuestion();
 	
+func _process(delta):
+	if(timerText && timerText.visible):
+		timerText.text = "%02d:%02d" % timeLeft()
+	
+func timeLeft():
+	var time_left = timer.time_left;
+	var minute = floor(time_left / 60)
+	var seconds = int(time_left) % 60
+	return [minute, seconds]
+	
 func loadQuestions():
 	var filePath = "res://data/questions.json"
 	if FileAccess.file_exists(filePath):
@@ -93,7 +105,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =12;
+	currentQuestionIndex =16;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -133,6 +145,7 @@ func animatePunch():
 	punchArm.position = punchArm.position.lerp(initialPosition, 1 - exp(-4))
 	
 func _yes_pressed():
+	timer.stop()
 	yesButton.hide()
 	noButton.hide()
 	option3button.hide()
@@ -145,6 +158,7 @@ func _yes_pressed():
 	nextButton.show()
 	
 func _no_pressed():
+	timer.stop()
 	yesButton.hide()
 	noButton.hide()
 	option3button.hide()
@@ -155,6 +169,7 @@ func _no_pressed():
 	nextButton.show()
 	
 func _option_3_pressed():
+	timer.stop()
 	yesButton.hide()
 	noButton.hide()
 	option3button.hide()
@@ -168,6 +183,7 @@ func _option_3_pressed():
 	
 func _nextButtonPressed():
 	nextButton.hide()
+	timerText.hide()
 	$theAction/TheGuyface.show();
 	$theAction/TheGuyfacePunched.hide();
 	changeQuestion()
@@ -177,6 +193,8 @@ func processGameAction(gameActions: Dictionary):
 		modifyInventory('add', gameActions.inventory)
 	if(gameActions.animate):
 		animateScene(gameActions.animate)
+	if(gameActions.setTimer):
+		setTimer(gameActions.setTimer)
 		
 func modifyInventory(addOrRemove: String, itemName: String):
 	if(addOrRemove == 'add'):
@@ -194,6 +212,13 @@ func animateScene(sceneName):
 		if(sceneName == "PurpleDinoTKO"):
 			$Question13/Purpledinoface.hide();
 			$Question13/PurpleDinoPunched.show();
+			
+func setTimer(numberOfSeconds):
+	
+		timer.wait_time = numberOfSeconds
+		timer.one_shot = true
+		timerText.show()
+		timer.start()
 		
 func tallyResults(buttonPressed: String):
 	var tags
@@ -231,7 +256,10 @@ func getARutabaga():
 func secretRudabegaLevel():
 	#goToSecretRudabagaLevel
 	print("Secret Rudabega Level")
-				
+
+func _on_timer_timeout():
+	_gameLoss()
+	
 func _gameLoss():
 	#loseTheGame
 	print("you lose!")

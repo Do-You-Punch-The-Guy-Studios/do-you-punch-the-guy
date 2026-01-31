@@ -105,3 +105,14 @@ offset_top = 485.0
 offset_right = 116.0
 offset_bottom = 526.0
 text = "Next"
+
+[node name="TimerText" type="Label" parent="."]
+visible = false
+offset_left = 384.0
+offset_top = 361.0
+offset_right = 419.4
+offset_bottom = 384.0
+scale = Vector2(5, 5)
+text = "1:00"
+
+[node name="Timer" type="Timer" parent="TimerText"]
