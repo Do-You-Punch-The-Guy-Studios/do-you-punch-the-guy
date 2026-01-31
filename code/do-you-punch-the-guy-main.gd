@@ -77,7 +77,7 @@ func _ready():
 	questionIndexes.shuffle();
 	changeQuestion();
 	
-func _process(delta):
+func _process(_delta):
 	if(timerText && timerText.visible):
 		timerText.text = "%02d:%02d" % timeLeft()
 	
@@ -214,9 +214,9 @@ func animateScene(sceneName):
 			$Question13/PurpleDinoPunched.show();
 			
 func setTimer(numberOfSeconds):
-	
 		timer.wait_time = numberOfSeconds
 		timer.one_shot = true
+		timer.timeout.connect(_on_timer_timeout)
 		timerText.show()
 		timer.start()
 		
@@ -261,7 +261,6 @@ func _on_timer_timeout():
 	_gameLoss()
 	
 func _gameLoss():
-	#loseTheGame
 	print("you lose!")
 	
 func winTheGame():

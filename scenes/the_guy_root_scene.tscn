@@ -116,3 +116,4 @@ scale = Vector2(5, 5)
 text = "1:00"
 
 [node name="Timer" type="Timer" parent="TimerText"]
+one_shot = true
