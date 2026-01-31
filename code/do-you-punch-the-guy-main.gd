@@ -93,7 +93,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	#currentQuestionIndex = 3;
+	currentQuestionIndex =12;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -188,7 +188,7 @@ func modifyInventory(addOrRemove: String, itemName: String):
 	$PlayerInventory.displayInventory(playerInventory);
 	
 func animateScene(sceneName):
-		if(sceneName == "TysonKO"):
+		if(sceneName == "TysonTKO"):
 			$Question12/MikeTysonFace.hide();
 			$Question12/MikeTysonHurtFace.show();
 		if(sceneName == "PurpleDinoTKO"):
