@@ -6,7 +6,7 @@
 [node name="Question3" type="Node2D"]
 
 [node name="Bar" type="Sprite2D" parent="."]
-position = Vector2(365, 313)
+position = Vector2(365, 371.00003)
 scale = Vector2(1.8175, 2.28125)
 texture = ExtResource("1_h80gh")
 
