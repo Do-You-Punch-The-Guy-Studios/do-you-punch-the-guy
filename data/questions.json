@@ -242,9 +242,12 @@
 		"question":"The zombie apocalypse has arrived, society is in total chaos, a guy shambles up to you. Do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["PANIC"],
 		"noTags":["LOSE"],
-		"onQuestion": {"setTimer": 30},
+		"onQuestion": {"setTimer": 30, "inventory": false,  "animate": false},
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},
 	"20": {
