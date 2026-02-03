@@ -13,12 +13,14 @@ func updateInventory(addOrRemove: String, itemName: String):
 			addItemToInventory(itemName)
 			createItemIconAndNumberAsset(itemName)
 		else:
+			addItemToInventory(itemName)
 			updateItemNumberValue(itemName)
 	elif(addOrRemove=="remove"):
 		if(inventoryState[itemName] == 0):
 			removeItemFromInventory(itemName)
 			createItemIconAndNumberAsset(itemName)
 		else:
+			removeItemFromInventory(itemName)
 			updateItemNumberValue(itemName)
 		
 func addItemToInventory(itemName:String):
@@ -33,18 +35,31 @@ func removeItemFromInventory(itemName:String):
 		
 func createItemIconAndNumberAsset(itemName):
 	var texture_display = TextureRect.new()
+	if(itemName != "HOLYGRAIL"):
+		var label = Label.new();
+		label.name = itemName + 'label'
+		label.text = 'x 1'
+		label.scale = Vector2(3, 3)
+		label.position = Vector2(100, 10)
+		label.z_index = 5
+		texture_display.add_child(label)
+	
 	texture_display.name = itemName
 	texture_display.texture = assets[itemName]
 	texture_display.z_index = 5
 	texture_display.scale = Vector2(0.7, 0.7)
+	texture_display.position = Vector2(0, 500)
 	# WHY CANT I RESIZE SHIT?!?!?!?!
 	#texture_display.mouse_entered.connect(_on_mouse_entered)
 	#texture_display.mouse_exited.connect(_on_mouse_exited)
 	inventoryContainer.add_child(texture_display)
 	
 func updateItemNumberValue(itemName):
-	print(itemName)
-	
+	var path = "ScrollContainer/Inventory/%s/%slabel" % [itemName, itemName]
+	var node = get_node_or_null(path)	
+	print(node)
+	if node:
+		node.text='x ' + str(inventoryState[itemName])
 func _ready() -> void:
 	onInit()
 
