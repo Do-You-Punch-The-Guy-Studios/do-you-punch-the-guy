@@ -113,7 +113,7 @@ func changeQuestion() -> void:
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
 	if currentQuestion.onQuestion:
 		processGameAction(currentQuestion.onQuestion)
-	$ScrollContainer/Question.text = "Question " + str(currentQuestionIndex) + ": " + currentQuestion.question
+	$ScrollContainer/Question.text = currentQuestion.question
 	if !currentQuestion.yes:
 		yesButton.hide()
 	else:
