@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu11rgp32w8n1"]
+
+[ext_resource type="Texture2D" uid="uid://bj3xcep8j3vb6" path="res://assets/question21/theGuyBodyShirtless.png" id="1_qhn6r"]
+
+[node name="Question21" type="Node2D"]
+
+[node name="TheGuyBodyShirtless" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(837, 457)
+scale = Vector2(0.6641124, 0.68115944)
+texture = ExtResource("1_qhn6r")

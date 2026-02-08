@@ -266,8 +266,12 @@
 		"question":"You are on planet Zurn with your away team, the captain decides to remove his shirt in a gratuatist beefcake manner, do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["ASSHOLE", "UNDERSTANDABLE"],
 		"noTags":[],
+		"onQuestion": false,
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},
 	"22": {
