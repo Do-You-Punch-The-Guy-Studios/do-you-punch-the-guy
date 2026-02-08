@@ -246,7 +246,7 @@
 		"yesTags":["PANIC"],
 		"noTags":["LOSE"],
 		"onQuestion": {"setTimer": 30, "inventory": false,  "animate": false},
-		"onYes": false,
+		"onYes": {"setTimer": false, "inventory": false,  "animate": "punchZombie"},
 		"onNo": false,
 		"isActive": true
 	},

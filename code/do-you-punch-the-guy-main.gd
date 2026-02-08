@@ -39,6 +39,7 @@ var alreadyDoneThis = false;
 	"question16":preload("res://scenes/question16.tscn"),
 	"question17":preload("res://scenes/question17.tscn"),
 	"question18":preload("res://scenes/question18.tscn"),
+	"question19":preload("res://scenes/question19.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -107,7 +108,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =7;
+	currentQuestionIndex =19;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -214,6 +215,10 @@ func animateScene(sceneName):
 		if(sceneName == "PurpleDinoTKO"):
 			$Question13/Purpledinoface.hide();
 			$Question13/PurpleDinoPunched.show();
+		if(sceneName == "punchZombie"):
+			$theAction/TheGuyfacePunched.hide();
+			$Question19/ZombietheGuyface.hide();
+			$Question19/TheGuyStump.show();
 			
 func setTimer(numberOfSeconds):
 		timer.wait_time = numberOfSeconds
