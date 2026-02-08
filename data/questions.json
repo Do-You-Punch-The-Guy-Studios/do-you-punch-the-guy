@@ -254,8 +254,12 @@
 		"question":"Space... the final frontier, these are the voyages of the DO YOU PUNCH THE GUY?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":[],
 		"noTags":[],
+		"onQuestion": false,
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},
 	"21": {
