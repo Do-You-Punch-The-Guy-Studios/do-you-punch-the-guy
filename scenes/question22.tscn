@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8agfey2msdgc"]
+
+[ext_resource type="Texture2D" uid="uid://cxo2u2rgjq5qg" path="res://assets/question22/tacoTruck.png" id="1_r8tnb"]
+
+[node name="Question22" type="Node2D"]
+
+[node name="TacoTruck" type="Sprite2D" parent="."]
+position = Vector2(489, 394)
+scale = Vector2(0.58555555, 0.60555553)
+texture = ExtResource("1_r8tnb")

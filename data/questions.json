@@ -281,7 +281,11 @@
 		"option3": "WAIT, THEY HAVE TACOS?!",
 		"yesTags":["ASSHOLE"],
 		"noTags":[],
-		"onOption3":{"inventory":"TACO"},
+		"option3Tags":[],
+		"onOption3":{"inventory":"TACO","setTimer": false, "animate": false,},
+		"onQuestion": false,
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},
 	"23": {
