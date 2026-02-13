@@ -292,10 +292,14 @@
 		"question":"You head to the club to get your dance on. A guy says \"What'll ya have?\" do you punch the guy?",
 		"yes": true,
 		"no": true,
-		"option3": "Gimmie a beer",
+		"option3": "Whaddaya Got?",
 		"yesTags":["ASSHOLE", "BARFIGHT"],
 		"noTags":[],
+		"option3Tags":[],
 		"onOption3":{"shop":{"BEER": 1, "PUNCH": 1}},
+		"onQuestion": false,
+		"onYes": false,
+		"onNo": false,
 		"isActive": true
 	},
 	"24": {
