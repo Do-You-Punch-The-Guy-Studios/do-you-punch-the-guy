@@ -47,6 +47,7 @@ var alreadyDoneThis = false;
 	"question22":preload("res://scenes/question22.tscn"),
 	"question23":preload("res://scenes/question23.tscn"),
 	"question24":preload("res://scenes/question24.tscn"),
+	"question25":preload("res://scenes/question25.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -86,7 +87,7 @@ func _ready():
 	option3button.hide();
 	rng.randomize()
 
-	for i in range(2, 22):
+	for i in range(2, 25):
 		questionIndexes.append(i);
 	
 	questionIndexes.shuffle();
@@ -120,7 +121,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =24;
+	currentQuestionIndex =15;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -232,6 +233,7 @@ func modifyInventory(addOrRemove: String, itemName: String):
 	$PlayerInventory.updateInventory(addOrRemove, itemName);
 	
 func animateScene(sceneName):
+	#guyPunchesYou
 		if(sceneName == "TysonTKO"):
 			$Question12/MikeTysonFace.hide();
 			$Question12/MikeTysonHurtFace.show();
@@ -244,6 +246,8 @@ func animateScene(sceneName):
 			$Question19/TheGuyStump.show();
 		if(sceneName == "wordBubbleDaddy"):
 			$Question24/DadWordBaloon.show();
+		if(sceneName == "hideIceCream"):
+			$Question15/Icecream.hide();
 			
 func setTimer(numberOfSeconds):
 		timer.wait_time = numberOfSeconds

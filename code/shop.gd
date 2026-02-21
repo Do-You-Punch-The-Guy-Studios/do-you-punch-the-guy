@@ -8,7 +8,6 @@ var inventoryState = {"BEER":0, "ICECREAM":0, "PUNCH":0, "RUTABAGA":0, "TACO":0,
 
 func stockItems(shopInventory):
 	for item in shopInventory:
-		print(item)
 		createItemIconAndNumberAsset(item.item, item.quantity)
 		addItemToInventory(item.item)
 		updateItemNumberValue(item.quantity)
@@ -48,7 +47,6 @@ func createItemIconAndNumberAsset(itemName, quantity):
 func updateItemNumberValue(itemName):
 	var path = "ScrollContainer/Inventory/%s/%slabel" % [itemName, itemName]
 	var node = get_node_or_null(path)	
-	print(node)
 	if node:
 		node.text='x ' + str(inventoryState[itemName])
 func _ready() -> void:

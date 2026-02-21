@@ -194,7 +194,7 @@
 		"onQuestion": false,
 		"option3Tags":["NICE"],
 		"onOption3": false,
-		"onYes": {"inventory": "ICECREAM", "animate": false, "setTimer": false, "shop": false},
+		"onYes": {"inventory": "ICECREAM", "animate": "hideIceCream", "setTimer": false, "shop": false},
 		"onNo": false,
 		"isActive": true
 	},
@@ -318,9 +318,12 @@
 		"question":"A guy punches you, do you punch the guy?",
 		"yes": true,
 		"no": true,
-		"yesTags":["ASSHOLE", "WIN"],
+		"option3": false,
+		"yesTags":["WIN"],
 		"noTags":["LOSE"],
-		"onQuestion": {"setTimer": 15, "onTimerUp":"animateGuyPunchYouAndLose"},
+		"onQuestion": {"setTimer": 15, "animate":"guyPunchesYou", "shop": false, "inventory": false, },
+		"onYes":false,
+		"onNo": false,
 		"isActive": true
 	},
 	"26": {

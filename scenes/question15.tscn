@@ -8,19 +8,19 @@
 
 [node name="BabyHair" type="Sprite2D" parent="."]
 z_index = 3
-position = Vector2(818, 135.00002)
+position = Vector2(818, 114)
 scale = Vector2(0.3263889, 0.3090278)
 texture = ExtResource("1_fplqb")
 
 [node name="Tongue" type="Sprite2D" parent="."]
-z_index = 3
+z_index = 2
 position = Vector2(774.00006, 352.00003)
 scale = Vector2(0.5868056, 0.5347222)
 texture = ExtResource("2_7d4v1")
 flip_h = true
 
 [node name="Icecream" type="Sprite2D" parent="."]
-z_index = 4
+z_index = 3
 position = Vector2(755.99994, 424.00003)
 scale = Vector2(1.525, 1.57)
 texture = ExtResource("3_3oc1r")

@@ -1,11 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtq2bl47aa38t"]
+[gd_scene load_steps=3 format=3 uid="uid://dtq2bl47aa38t"]
 
-[ext_resource type="Script" uid="uid://cxr8ri44jlfdg" path="res://code/do-you-punch-the-guy-main.gd" id="1_l2kwh"]
 [ext_resource type="Texture2D" uid="uid://darqm8s6ym0sb" path="res://assets/question2/question2Bonnet.png" id="8_cqar8"]
 [ext_resource type="Texture2D" uid="uid://c0g6tcus7xse8" path="res://assets/question2/question2Balloons.png" id="9_blg0k"]
 
-[node name="The Guy Root Scene" type="Node2D"]
-script = ExtResource("1_l2kwh")
+[node name="Question2" type="Node2D"]
 
 [node name="Question2Bonnet" type="Sprite2D" parent="."]
 z_index = 2
