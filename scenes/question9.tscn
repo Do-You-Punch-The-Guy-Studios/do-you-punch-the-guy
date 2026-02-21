@@ -5,6 +5,7 @@
 [node name="Question9" type="Node2D"]
 
 [node name="Door" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(693, -453)
 scale = Vector2(1.8191667, 1.8783336)
 texture = ExtResource("1_sb0p6")

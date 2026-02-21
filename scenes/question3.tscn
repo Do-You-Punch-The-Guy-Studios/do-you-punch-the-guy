@@ -6,16 +6,19 @@
 [node name="Question3" type="Node2D"]
 
 [node name="Bar" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(365, 371.00003)
 scale = Vector2(1.8175, 2.28125)
 texture = ExtResource("1_h80gh")
 
 [node name="Beer" type="Sprite2D" parent="Bar"]
+z_index = 1
 position = Vector2(-95.460785, -20.821915)
 scale = Vector2(0.5502063, 0.43835613)
 texture = ExtResource("2_2tru6")
 
 [node name="Beer2" type="Sprite2D" parent="Bar"]
+z_index = 1
 position = Vector2(107.01512, -8.986298)
 scale = Vector2(0.5502063, 0.43835613)
 texture = ExtResource("2_2tru6")

@@ -349,6 +349,7 @@ rotation = 2.0035512
 texture = ExtResource("1_13t32")
 
 [node name="Bar" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(357, 421.00003)
 scale = Vector2(1.7825, 1.875)
 texture = ExtResource("1_dka3t")

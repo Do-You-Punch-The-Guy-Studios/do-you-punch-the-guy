@@ -124,7 +124,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =23;
+	#currentQuestionIndex =25;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -173,11 +173,11 @@ func _yes_pressed():
 	option3button.hide()
 	animatePunch()
 	if (currentQuestion.onYes):
-		await get_tree().create_timer(0.5).timeout
 		processGameAction(currentQuestion.onYes)
 	tallyResults('yes')
 	#SHOW TEARDOWN TEXT - Teardown text is a kind of animate
-	nextButton.show()
+	print(nextButton)
+	nextButton.show();
 	
 func _no_pressed():
 	timer.stop()
@@ -198,9 +198,7 @@ func _option_3_pressed():
 	if currentQuestion.onOption3:
 		processGameAction(currentQuestion.onOption3)
 	#animateOption3IfNeeded()#SHOW TEARDOWN TEXT - Teardown text is a kind of animate
-	
 	tallyResults('option3')
-	
 	nextButton.show()
 	
 func _nextButtonPressed():

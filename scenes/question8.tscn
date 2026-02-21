@@ -5,6 +5,7 @@
 [node name="Question8" type="Node2D"]
 
 [node name="JungleGym" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(321.25, -142.24998)
 scale = Vector2(1.3012499, 1.1970832)
 texture = ExtResource("1_3r0tt")

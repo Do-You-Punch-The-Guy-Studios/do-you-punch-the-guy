@@ -5,6 +5,7 @@
 [node name="Question22" type="Node2D"]
 
 [node name="TacoTruck" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(489, 394)
 scale = Vector2(0.58555555, 0.60555553)
 texture = ExtResource("1_r8tnb")

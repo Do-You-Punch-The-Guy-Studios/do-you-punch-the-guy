@@ -6,6 +6,7 @@
 [node name="Question4" type="Node2D"]
 
 [node name="Pool" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(240, 278)
 scale = Vector2(2.8975005, 1.5199999)
 texture = ExtResource("1_ls6fl")

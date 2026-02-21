@@ -8,6 +8,7 @@
 [node name="Question24" type="Node2D"]
 
 [node name="Guy" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(418.00003, 357.99994)
 scale = Vector2(0.4095607, 0.396861)
 texture = ExtResource("1_5whjl")
@@ -19,6 +20,7 @@ position = Vector2(858, 354)
 texture = ExtResource("2_6uy27")
 
 [node name="GirlHair" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(433.25, 384.75)
 scale = Vector2(0.41055554, 0.5194444)
 texture = ExtResource("3_ox1ha")

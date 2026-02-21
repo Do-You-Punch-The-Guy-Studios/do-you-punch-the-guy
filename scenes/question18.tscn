@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://boihbky25hgbi"]
 
 [ext_resource type="Texture2D" uid="uid://db13radvlavuq" path="res://assets/question18/adventurerHat.png" id="1_in4tr"]
-[ext_resource type="Texture2D" uid="uid://dafbavpocsp5" path="res://assets/question18/HolyGrail.png" id="2_t6y12"]
+[ext_resource type="Texture2D" uid="uid://dafbavpocsp5" path="res://assets/items/HolyGrail.png" id="2_t6y12"]
 [ext_resource type="Texture2D" uid="uid://bakq6sjqhqid6" path="res://assets/question18/Plinth.png" id="3_4p2he"]
 [ext_resource type="Texture2D" uid="uid://c8ujmi2nvq5nl" path="res://assets/question18/VestHalf.png" id="4_666si"]
 

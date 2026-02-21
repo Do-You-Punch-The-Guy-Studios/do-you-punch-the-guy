@@ -12,6 +12,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("8_cqar8")
 
 [node name="Question2Balloons" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(688, 263)
 scale = Vector2(4, 4)
 texture = ExtResource("9_blg0k")
