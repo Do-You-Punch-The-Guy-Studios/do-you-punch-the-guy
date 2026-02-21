@@ -297,9 +297,9 @@
 		"noTags":[],
 		"option3Tags":[],
 		"onOption3":{"shop":[{"item":"BEER", "quantity": 1}, {"item":"PUNCH", "quantity": 1}], "inventory": false, "animate": false, "setTimer":false},
-		"onQuestion": false,
-		"onYes": false,
-		"onNo": false,
+		"onQuestion": {"shop":false, "inventory": false, "animate": "lightSwitchRave", "setTimer":false},
+		"onYes": {"shop":false, "inventory": false, "animate": "lightSwitchRaveOff", "setTimer":false},
+		"onNo": {"shop":false, "inventory": false, "animate": "lightSwitchRaveOff", "setTimer":false},
 		"isActive": true
 	},
 	"24": {

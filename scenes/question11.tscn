@@ -10,32 +10,32 @@
 
 [node name="Caps" type="Sprite2D" parent="."]
 z_index = 11
-position = Vector2(253, 96.99999)
+position = Vector2(233, 96.99999)
 scale = Vector2(0.6875, 0.7083333)
 texture = ExtResource("1_vqud3")
 
 [node name="Caps2" type="Sprite2D" parent="."]
 z_index = 5
-position = Vector2(437.99997, 99.00001)
+position = Vector2(48, 100)
 scale = Vector2(0.75, 0.8020833)
 texture = ExtResource("1_vqud3")
 
 [node name="Comma" type="Sprite2D" parent="."]
-position = Vector2(543, 83)
+position = Vector2(286, 85)
 scale = Vector2(0.48958334, 0.5416667)
 texture = ExtResource("2_0aotr")
 
 [node name="Delete" type="Sprite2D" parent="."]
 z_index = 11
-position = Vector2(361, 54)
+position = Vector2(152, 63)
 texture = ExtResource("3_0ea0m")
 
 [node name="Questionmark" type="Sprite2D" parent="."]
-position = Vector2(341.99997, 136)
+position = Vector2(645, 85)
 scale = Vector2(0.5833333, 0.6145833)
 texture = ExtResource("4_47r85")
 
 [node name="Space" type="Sprite2D" parent="."]
-position = Vector2(99, 136)
+position = Vector2(399, 85)
 scale = Vector2(0.46875, 0.48958334)
 texture = ExtResource("5_4fpwf")

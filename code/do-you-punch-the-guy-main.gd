@@ -20,6 +20,7 @@ var rng = RandomNumberGenerator.new()
 var questionInfo = {}
 var playerInventory: = [];
 var alreadyDoneThis = false;
+var lightswitchRave = false;
 
 @onready var punchAudio = preload("res://assets/sound/797925__artninja__tmnt_2012_brad_myers_inspired_punches_04072025.wav")
 @onready var theShop = preload("res://scenes/shared-scenes/theShop.tscn")
@@ -96,6 +97,8 @@ func _ready():
 func _process(_delta):
 	if(timerText && timerText.visible):
 		timerText.text = "%02d:%02d" % timeLeft()
+	if(lightswitchRave):
+		doLightswitchRave()
 	
 func timeLeft():
 	var time_left = timer.time_left;
@@ -121,7 +124,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =15;
+	currentQuestionIndex =23;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -248,6 +251,10 @@ func animateScene(sceneName):
 			$Question24/DadWordBaloon.show();
 		if(sceneName == "hideIceCream"):
 			$Question15/Icecream.hide();
+		if(sceneName == "lightSwitchRave"):
+			lightswitchRave = true
+		if(sceneName == "lightSwitchRaveOff"):
+			lightswitchRave = false
 			
 func setTimer(numberOfSeconds):
 		timer.wait_time = numberOfSeconds
@@ -292,6 +299,35 @@ func getARutabaga():
 func secretRudabegaLevel():
 	#goToSecretRudabagaLevel
 	print("Secret Rudabega Level")
+
+func doLightswitchRave():
+	lightswitchRave = false
+	$background.color = Color("#000000")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#FED689")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#88FF89")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#83FCFE")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#8BB5FE")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#D78CFF")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#FF8CFF")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#D78CFF")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#8BB5FE")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#83FCFE")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#88FF89")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#FED689")
+	await get_tree().create_timer(0.1).timeout
+	$background.color = Color("#000000")
+	lightswitchRave = true
 
 func _on_timer_timeout():
 	_gameLoss()

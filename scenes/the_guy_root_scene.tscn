@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpdgxfjdkjtu0"]
+[gd_scene load_steps=8 format=3 uid="uid://dpdgxfjdkjtu0"]
 
 [ext_resource type="Script" uid="uid://cxr8ri44jlfdg" path="res://code/do-you-punch-the-guy-main.gd" id="1_dpvq8"]
-[ext_resource type="Texture2D" uid="uid://cgr27a1b8end5" path="res://assets/black-background.png" id="1_fxs5o"]
 [ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://assets/theGuyBody.png" id="2_o84ic"]
 [ext_resource type="PackedScene" uid="uid://byq300qt4sjkt" path="res://scenes/shared-scenes/player-inventory.tscn" id="2_sc6sm"]
 [ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://assets/theGuyface.png" id="3_dpvq8"]
@@ -17,12 +16,13 @@ visible = false
 z_index = 10
 position = Vector2(27, -4)
 
-[node name="background" type="Sprite2D" parent="."]
-
-[node name="BlackBackground" type="Sprite2D" parent="background"]
-position = Vector2(576, 320.49997)
-scale = Vector2(1.3384176, 1.3939899)
-texture = ExtResource("1_fxs5o")
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -126.0
+offset_top = -97.0
+offset_right = 1275.0
+offset_bottom = 736.0
+color = Color(0, 0, 0, 1)
 
 [node name="theAction" type="Sprite2D" parent="."]
 
