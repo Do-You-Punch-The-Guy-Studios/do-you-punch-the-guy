@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://byq300qt4sjkt"]
 
-[ext_resource type="Script" uid="uid://cmjvatvultk05" path="res://scenes/shared-scenes/player_inventory.gd" id="1_6uo77"]
+[ext_resource type="Script" uid="uid://cmjvatvultk05" path="res://code/player_inventory.gd" id="1_6uo77"]
 [ext_resource type="Texture2D" uid="uid://ua1incwr5lqd" path="res://assets/inventory-background.png" id="7_1tuda"]
 
 [node name="PlayerInventory" type="Node2D"]

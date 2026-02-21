@@ -1,20 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckp4hbjl760t7"]
+[gd_scene load_steps=3 format=3 uid="uid://ckp4hbjl760t7"]
 
 [ext_resource type="Texture2D" uid="uid://1knuqlkrc17" path="res://assets/shop.png" id="1_l4qg2"]
+[ext_resource type="Script" uid="uid://bt5d4n3uou5ac" path="res://code/shop.gd" id="2_abwb1"]
 
 [node name="TheShop" type="Node2D"]
+script = ExtResource("2_abwb1")
 
 [node name="Shop" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(575.00006, 320.50003)
-scale = Vector2(0.81222224, 1.0122223)
+position = Vector2(561.5, 361.5)
+scale = Vector2(0.6805556, 0.86777765)
 texture = ExtResource("1_l4qg2")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_left = -75.0
-offset_top = 56.0
-offset_right = 631.0
-offset_bottom = 440.0
+[node name="ShopItemsContainer" type="ScrollContainer" parent="."]
+offset_left = 22.0
+offset_top = 140.0
+offset_right = 636.0
+offset_bottom = 461.0
 
-[node name="ItemsForSale" type="BoxContainer" parent="ScrollContainer"]
+[node name="ItemsForSale" type="BoxContainer" parent="ShopItemsContainer"]
 layout_mode = 2

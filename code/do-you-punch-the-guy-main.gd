@@ -21,6 +21,8 @@ var questionInfo = {}
 var playerInventory: = [];
 var alreadyDoneThis = false;
 
+@onready var punchAudio = preload("res://assets/sound/797925__artninja__tmnt_2012_brad_myers_inspired_punches_04072025.wav")
+@onready var theShop = preload("res://scenes/shared-scenes/theShop.tscn")
 @onready var questionScenes = {
 	"question2":preload("res://scenes/question2.tscn"), 
 	"question3":preload("res://scenes/question3.tscn"),
@@ -43,6 +45,7 @@ var alreadyDoneThis = false;
 	"question20":preload("res://scenes/question20.tscn"),
 	"question21":preload("res://scenes/question21.tscn"),
 	"question22":preload("res://scenes/question22.tscn"),
+	"question23":preload("res://scenes/question23.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -77,7 +80,7 @@ func _ready():
 	option3button.hide();
 	rng.randomize()
 
-	for i in range(2, 17):
+	for i in range(2, 22):
 		questionIndexes.append(i);
 	
 	questionIndexes.shuffle();
@@ -111,7 +114,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =23;
+	currentQuestionIndex =22;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -141,6 +144,9 @@ func animatePunch():
 	var newPosition = Vector2(newXPosition, newYPosition )
 
 	punchArm.position = punchArm.position.lerp(newPosition, 1 - exp(-4))
+	
+	$AudioStreamPlayer2D.stream = punchAudio
+	$AudioStreamPlayer2D.play()
 	await get_tree().create_timer(.25).timeout
 	$theAction/PowEffect.show();
 	$theAction/TheGuyface.hide();
@@ -201,6 +207,14 @@ func processGameAction(gameActions: Dictionary):
 		animateScene(gameActions.animate)
 	if(gameActions.setTimer):
 		setTimer(gameActions.setTimer)
+	if(gameActions.shop):
+		openShop(gameActions.shop)
+		
+func openShop(shop):
+	$theAction/PunchArm.hide();
+	$ScrollContainer/Question.hide();
+	self.add_child(theShop.instantiate());
+	$TheShop.stockItems(shop);
 		
 func modifyInventory(addOrRemove: String, itemName: String):
 	if(addOrRemove == 'add'):

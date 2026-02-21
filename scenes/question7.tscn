@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://mg2gtc8cocdd" path="res://assets/items/Rudabega.png" id="1_13t32"]
 [ext_resource type="Texture2D" uid="uid://dn5pkyp0wf1df" path="res://assets/question3/bar.png" id="1_dka3t"]
-[ext_resource type="Script" uid="uid://ccbla1qxrsttj" path="res://scenes/pile_of_rutabagas.gd" id="1_qqub8"]
+[ext_resource type="Script" uid="uid://ccbla1qxrsttj" path="res://code/pile_of_rutabagas.gd" id="1_qqub8"]
 
 [node name="Question7" type="Node2D"]
 

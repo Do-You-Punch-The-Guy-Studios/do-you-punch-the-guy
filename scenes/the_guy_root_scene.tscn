@@ -117,3 +117,5 @@ text = "1:00"
 
 [node name="Timer" type="Timer" parent="TimerText"]
 one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

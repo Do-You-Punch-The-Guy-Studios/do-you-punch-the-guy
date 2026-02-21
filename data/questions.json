@@ -33,7 +33,7 @@
 		"option3":false,
 		"yesTags":["BARFIGHT", "MEAN"],
 		"noTags":["PARTY"],
-		"onQuestion":{"inventory":"BEER", "animate": false, "setTimer": false},
+		"onQuestion":{"inventory":"BEER", "animate": false, "setTimer": false, "shop": false},
 		"onYes": false,
 		"onNo": false,
 		"isActive": true
@@ -63,7 +63,7 @@
 		"onQuestion":false,
 		"onYes": false,
 		"onNo": false,	
-		"onOption3":{"inventory":"RUTABAGA", "animate": false, "setTimer": false},
+		"onOption3":{"inventory":"RUTABAGA", "animate": false, "setTimer": false, "shop": false},
 		"isActive": true
 	},	
 	"6": {
@@ -76,7 +76,7 @@
 		"noTags":["LOSE"],
 		"onQuestion":false,
 		"onYes": false,
-		"onNo": {"animate":"VillainKill", "inventory": false, "setTimer": false},	
+		"onNo": {"animate":"VillainKill", "inventory": false, "setTimer": false, "shop": false},	
 		"isActive": true
 	},
 	"7": {
@@ -88,7 +88,7 @@
 		"yesTags":["ASSHOLE"],
 		"noTags":[],
 		"onQuestion": false,
-		"onYes": {"inventory":"RUTABAGA", "animate": false, "setTimer": false},
+		"onYes": {"inventory":"RUTABAGA", "animate": false, "setTimer": false, "shop": false},
 		"onNo": false,
 		"isActive": true
 	},		
@@ -153,8 +153,8 @@
 		"yesTags":["WIN"],
 		"noTags":["LOSE"],
 		"onQuestion": false,
-		"onYes": {"animate":"TysonTKO", "inventory": false, "setTimer": false},
-		"onNo": {"animate":"TysonPunch", "inventory":false, "setTimer": false},
+		"onYes": {"animate":"TysonTKO", "inventory": false, "setTimer": false, "shop": false},
+		"onNo": {"animate":"TysonPunch", "inventory":false, "setTimer": false, "shop": false},
 		"isActive": true
 	},
 	"13": {
@@ -166,7 +166,7 @@
 		"yesTags":["UNDERSTANDABLE", "MEAN", "HITSKIDS"],
 		"noTags":[],
 		"onQuestion": false,
-		"onYes": {"animate":"PurpleDinoTKO", "inventory": false, "setTimer": false},
+		"onYes": {"animate":"PurpleDinoTKO", "inventory": false, "setTimer": false, "shop": false},
 		"onNo":false,
 		"isActive": true
 	},
@@ -194,7 +194,7 @@
 		"onQuestion": false,
 		"option3Tags":["NICE"],
 		"onOption3": false,
-		"onYes": {"inventory": "ICECREAM", "animate": false, "setTimer": false},
+		"onYes": {"inventory": "ICECREAM", "animate": false, "setTimer": false, "shop": false},
 		"onNo": false,
 		"isActive": true
 	},
@@ -206,7 +206,7 @@
 		"option3": false,
 		"yesTags":["PANIC", "WIN"],
 		"noTags":["LOSE"],
-		"onQuestion": {"setTimer": 10, "inventory": false, "animate": false},
+		"onQuestion": {"setTimer": 10, "inventory": false, "animate": false, "shop": false},
 		"onYes":false,
 		"onNo": false,
 		"onTimerUp":["LOSE"],
@@ -234,7 +234,7 @@
 		"yesTags":["ASSHOLE", "WIN"],
 		"noTags":["LOSE"],
 		"onQuestion": false,
-		"onYes": {"inventory": "HOLYGRAIL", "setTimer": false, "animate": false},
+		"onYes": {"inventory": "HOLYGRAIL", "setTimer": false, "animate": false, "shop": false},
 		"onNo": false,
 		"isActive": true
 	},
@@ -245,8 +245,8 @@
 		"option3": false,
 		"yesTags":["PANIC"],
 		"noTags":["LOSE"],
-		"onQuestion": {"setTimer": 30, "inventory": false,  "animate": false},
-		"onYes": {"setTimer": false, "inventory": false,  "animate": "punchZombie"},
+		"onQuestion": {"setTimer": 30, "inventory": false,  "animate": false, "shop": false},
+		"onYes": {"setTimer": false, "inventory": false,  "animate": "punchZombie", "shop": false},
 		"onNo": false,
 		"isActive": true
 	},
@@ -282,7 +282,7 @@
 		"yesTags":["ASSHOLE"],
 		"noTags":[],
 		"option3Tags":[],
-		"onOption3":{"inventory":"TACO","setTimer": false, "animate": false,},
+		"onOption3":{"inventory":"TACO","setTimer": false, "animate": false, "shop": false},
 		"onQuestion": false,
 		"onYes": false,
 		"onNo": false,
@@ -296,7 +296,7 @@
 		"yesTags":["ASSHOLE", "BARFIGHT"],
 		"noTags":[],
 		"option3Tags":[],
-		"onOption3":{"shop":{"BEER": 1, "PUNCH": 1}},
+		"onOption3":{"shop":[{"item":"BEER", "quantity": 1}, {"item":"PUNCH", "quantity": 1}], "inventory": false, "animate": false, "setTimer":false},
 		"onQuestion": false,
 		"onYes": false,
 		"onNo": false,
