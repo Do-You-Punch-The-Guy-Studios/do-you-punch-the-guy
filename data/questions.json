@@ -306,9 +306,12 @@
 		"question":"Some guy tries to kiss your girlfriend, do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["ASSHOLE"],
 		"noTags":[],
-		"onYes":{"animate":{"show":"wordBubbleDaddy"}},
+		"onQuestion":false,
+		"onYes":{"animate":"wordBubbleDaddy", "shop": false, "inventory": false, "setTimer":false},
+		"onNo": false,
 		"isActive": true
 	},
 	"25": {
@@ -695,7 +698,7 @@
 		"onOption3":{"shop":{"RUTABAGA": 1, }}
 	},
 	"70": {
-		"question":"The guy has a dollar, do you punc the guy?",
+		"question":"The guy has a dollar, do you punch the guy?",
 		"yes": true,
 		"no": true,
 		"yesTags":["MEAN", "CRIME"],
@@ -936,7 +939,7 @@
 		"isActive": true
 	},
 	"100": {
-		"question":"SECRET RUTABEGA LEVEL, do you punch the guy?",
+		"question":"SECRET RUTABAGA LEVEL! Do you punch the guy?",
 		"yes": "Rutabaga",
 		"no": "Rutabaga",
 		"option3": "Rutabaga",

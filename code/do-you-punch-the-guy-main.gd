@@ -46,6 +46,7 @@ var alreadyDoneThis = false;
 	"question21":preload("res://scenes/question21.tscn"),
 	"question22":preload("res://scenes/question22.tscn"),
 	"question23":preload("res://scenes/question23.tscn"),
+	"question24":preload("res://scenes/question24.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -54,6 +55,11 @@ var alreadyDoneThis = false;
 @onready var punchArm = $theAction/PunchArm;
 @onready var timerText = $TimerText;
 @onready var timer = $TimerText/Timer;
+@onready var theQuestion = $ScrollContainer/Question;
+@onready var audioPlayer = $AudioStreamPlayer2D;
+@onready var powEffectSprite = $theAction/PowEffect;
+@onready var theGuyFaceSprite = $theAction/TheGuyface;
+@onready var theGuyFacePunchedSprite = $theAction/TheGuyfacePunched;
 
 enum Tags {  
 	ASSHOLE,
@@ -114,13 +120,13 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =22;
+	currentQuestionIndex =24;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
 	if currentQuestion.onQuestion:
 		processGameAction(currentQuestion.onQuestion)
-	$ScrollContainer/Question.text = currentQuestion.question
+	theQuestion.text = currentQuestion.question
 	if !currentQuestion.yes:
 		yesButton.hide()
 	else:
@@ -145,14 +151,14 @@ func animatePunch():
 
 	punchArm.position = punchArm.position.lerp(newPosition, 1 - exp(-4))
 	
-	$AudioStreamPlayer2D.stream = punchAudio
-	$AudioStreamPlayer2D.play()
+	audioPlayer.stream = punchAudio
+	audioPlayer.play()
 	await get_tree().create_timer(.25).timeout
-	$theAction/PowEffect.show();
-	$theAction/TheGuyface.hide();
-	$theAction/TheGuyfacePunched.show();
+	powEffectSprite.show();
+	theGuyFaceSprite.hide();
+	theGuyFacePunchedSprite.show();
 	await get_tree().create_timer(.25).timeout
-	$theAction/PowEffect.hide();
+	powEffectSprite.hide();
 	await get_tree().create_timer(.25).timeout
 	punchArm.position = punchArm.position.lerp(initialPosition, 1 - exp(-4))
 	
@@ -166,7 +172,7 @@ func _yes_pressed():
 		await get_tree().create_timer(0.5).timeout
 		processGameAction(currentQuestion.onYes)
 	tallyResults('yes')
-	#SHOW TEARDOWN TEXT
+	#SHOW TEARDOWN TEXT - Teardown text is a kind of animate
 	nextButton.show()
 	
 func _no_pressed():
@@ -177,7 +183,7 @@ func _no_pressed():
 	if (currentQuestion.onNo):
 		processGameAction(currentQuestion.onNo)
 	tallyResults('no')
-	#SHOW TEARDOWN TEXT
+	#SHOW TEARDOWN TEXT - Teardown text is a kind of animate
 	nextButton.show()
 	
 func _option_3_pressed():
@@ -187,17 +193,17 @@ func _option_3_pressed():
 	option3button.hide()
 	if currentQuestion.onOption3:
 		processGameAction(currentQuestion.onOption3)
-	#animateOption3IfNeeded()
+	#animateOption3IfNeeded()#SHOW TEARDOWN TEXT - Teardown text is a kind of animate
 	
 	tallyResults('option3')
-	#SHOW TEARDOWN TEXT
+	
 	nextButton.show()
 	
 func _nextButtonPressed():
 	nextButton.hide()
 	timerText.hide()
-	$theAction/TheGuyface.show();
-	$theAction/TheGuyfacePunched.hide();
+	theGuyFaceSprite.show();
+	theGuyFacePunchedSprite.hide();
 	changeQuestion()
 	
 func processGameAction(gameActions: Dictionary):
@@ -211,8 +217,8 @@ func processGameAction(gameActions: Dictionary):
 		openShop(gameActions.shop)
 		
 func openShop(shop):
-	$theAction/PunchArm.hide();
-	$ScrollContainer/Question.hide();
+	punchArm.hide();
+	theQuestion.hide();
 	self.add_child(theShop.instantiate());
 	$TheShop.stockItems(shop);
 		
@@ -233,9 +239,11 @@ func animateScene(sceneName):
 			$Question13/Purpledinoface.hide();
 			$Question13/PurpleDinoPunched.show();
 		if(sceneName == "punchZombie"):
-			$theAction/TheGuyfacePunched.hide();
+			theGuyFacePunchedSprite.hide();
 			$Question19/ZombietheGuyface.hide();
 			$Question19/TheGuyStump.show();
+		if(sceneName == "wordBubbleDaddy"):
+			$Question24/DadWordBaloon.show();
 			
 func setTimer(numberOfSeconds):
 		timer.wait_time = numberOfSeconds

@@ -12,20 +12,6 @@ func stockItems(shopInventory):
 		createItemIconAndNumberAsset(item.item, item.quantity)
 		addItemToInventory(item.item)
 		updateItemNumberValue(item.quantity)
-	#if(addOrRemove == "add"):
-		#if(inventoryState[itemName] == 0):
-			#addItemToInventory(itemName)
-			
-		#else:
-			
-			
-	#elif(addOrRemove=="remove"):
-		#if(inventoryState[itemName] == 0):
-			#removeItemFromInventory(itemName)
-			#createItemIconAndNumberAsset(itemName)
-		#else:
-			#removeItemFromInventory(itemName)
-			#updateItemNumberValue(itemName)
 		
 func addItemToInventory(itemName:String):
 	inventoryState[itemName] += 1

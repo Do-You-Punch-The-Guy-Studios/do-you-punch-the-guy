@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://y8vg4o2j4j45"]
+
+[ext_resource type="Texture2D" uid="uid://mosynb5yi4pl" path="res://assets/items/GUY.png" id="1_5whjl"]
+[ext_resource type="Texture2D" uid="uid://cvbqqc36a28yf" path="res://assets/question24/moustache.png" id="2_6uy27"]
+[ext_resource type="Texture2D" uid="uid://dt70juewgedcb" path="res://assets/question24/girlHair.png" id="3_ox1ha"]
+[ext_resource type="Texture2D" uid="uid://cqbq4mqj0j4ml" path="res://assets/question24/dadWordBaloon.png" id="4_6uy27"]
+
+[node name="Question24" type="Node2D"]
+
+[node name="Guy" type="Sprite2D" parent="."]
+position = Vector2(418.00003, 357.99994)
+scale = Vector2(0.4095607, 0.396861)
+texture = ExtResource("1_5whjl")
+flip_h = true
+
+[node name="Moustache" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(858, 354)
+texture = ExtResource("2_6uy27")
+
+[node name="GirlHair" type="Sprite2D" parent="."]
+position = Vector2(433.25, 384.75)
+scale = Vector2(0.41055554, 0.5194444)
+texture = ExtResource("3_ox1ha")
+flip_h = true
+
+[node name="DadWordBaloon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(226, 314)
+texture = ExtResource("4_6uy27")
