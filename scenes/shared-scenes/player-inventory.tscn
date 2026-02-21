@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://ua1incwr5lqd" path="res://assets/inventory-background.png" id="7_1tuda"]
 
 [node name="PlayerInventory" type="Node2D"]
-position = Vector2(0, 50)
 script = ExtResource("1_6uo77")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
