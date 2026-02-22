@@ -20,6 +20,7 @@ position = Vector2(154, 226)
 texture = ExtResource("2_t6y12")
 
 [node name="Plinth" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(171, 277)
 scale = Vector2(0.655, 0.63666666)
 texture = ExtResource("3_4p2he")

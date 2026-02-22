@@ -49,6 +49,7 @@ var lightswitchRave = false;
 	"question23":preload("res://scenes/question23.tscn"),
 	"question24":preload("res://scenes/question24.tscn"),
 	"question25":preload("res://scenes/question25.tscn"),
+	"question26":preload("res://scenes/question26.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -124,7 +125,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	#currentQuestionIndex =25;
+	currentQuestionIndex =26;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -326,6 +327,16 @@ func doLightswitchRave():
 	await get_tree().create_timer(0.1).timeout
 	$background.color = Color("#000000")
 	lightswitchRave = true
+	
+func on_scrollbar_input(value):
+	var max_scroll_value = $ScrollContainer.scroll_vertical.max_value
+	print(max_scroll_value)
+	var container_height = $ScrollContainer.size.y
+	if value >= max_scroll_value - container_height - 5:
+		print('this')
+		if(currentQuestionIndex==16):
+			#playSound
+			modifyInventory('add', 'RUTABAGA')
 
 func _on_timer_timeout():
 	_gameLoss()

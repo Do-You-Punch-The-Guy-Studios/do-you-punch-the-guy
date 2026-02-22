@@ -330,8 +330,12 @@
 		"question":"Machine gun fire all around, explosions overhead, do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["WIN"],
 		"noTags":["LOSE"],
+		"onQuestion": {"setTimer": false, "animate":"gunfire", "shop": false, "inventory": false, },
+		"onYes":false,
+		"onNo": false,
 		"isActive": true
 	},
 	"27": {
@@ -344,13 +348,13 @@
 		"isActive": true
 	},
 	"28": {
-		"question":"$500,000,000... do you punch the guy?",
+		"question":"$500,000... do you punch the guy?",
 		"yes": true,
 		"no": true,
 		"option3": "Phone a friend",
 		"yesTags":["MEAN", "UNDERSTANDABLE"],
 		"noTags":[],
-		"onOption3":{"animate":"PhonePunch", "money":500000000},
+		"onOption3":{"animate":"PhonePunch"},
 		"onYes":{"money":500000000},
 		"isActive": true
 	},
