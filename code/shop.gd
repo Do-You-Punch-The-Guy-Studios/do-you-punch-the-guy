@@ -23,27 +23,31 @@ func removeItemFromInventory(itemName:String):
 		$TheShop.visible = false;
 		
 func createItemIconAndNumberAsset(itemName, quantity):
+	var grid = GridContainer.new()
+	grid.columns = 2
 	var texture_display = TextureRect.new()
-	if(itemName != "HOLYGRAIL"):
-		var label = Label.new();
-		label.name = itemName + 'label'
-		inventoryState[itemName] = quantity
-		label.text = 'x ' + str(int(inventoryState[itemName]))
-		label.scale = Vector2(3, 3)
-		label.position = Vector2(100, 10)
-		label.z_index = 5
-		texture_display.add_child(label)
-	
 	texture_display.name = itemName
 	texture_display.texture = assets[itemName]
 	texture_display.z_index = 5
 	texture_display.scale = Vector2(0.7, 0.7)
 	texture_display.position = Vector2(0, 500)
+	grid.add_child(texture_display)
+	if(itemName != "HOLYGRAIL"):
+		var label = Label.new();
+		label.name = itemName + 'label'
+		label.text = 'x ' + str(quantity)
+		label.scale = Vector2(3, 3)
+		#WHY DOESNT SCALE WORK
+		label.z_index = 5	
+		grid.add_child(label)
+	else:
+		var rectangle = ColorRect.new()
+		rectangle.color = Color("#504545")
+		grid.add_child(rectangle)
 	# WHY CANT I RESIZE SHIT?!?!?!?!
 	#texture_display.mouse_entered.connect(_on_mouse_entered)
 	#texture_display.mouse_exited.connect(_on_mouse_exited)
-	inventoryContainer.add_child(texture_display)
-	
+	inventoryContainer.add_child(grid)
 func updateItemNumberValue(itemName):
 	var path = "ScrollContainer/Inventory/%s/%slabel" % [itemName, itemName]
 	var node = get_node_or_null(path)	

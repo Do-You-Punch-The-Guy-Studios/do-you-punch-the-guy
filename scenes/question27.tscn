@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq57uvac4cnmm"]
+
+[ext_resource type="Texture2D" uid="uid://dxkfxejwasric" path="res://assets/question27/storbunksSmock.png" id="1_6bk6k"]
+
+[node name="Question27" type="Node2D"]
+
+[node name="StorbunksSmock" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(839.00006, 515)
+scale = Vector2(0.66155803, 0.6840278)
+texture = ExtResource("1_6bk6k")
