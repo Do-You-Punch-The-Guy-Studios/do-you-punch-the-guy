@@ -125,7 +125,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =3;
+	currentQuestionIndex =26;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -242,18 +242,20 @@ func animateScene(sceneName):
 		if(sceneName == "PurpleDinoTKO"):
 			$Question13/Purpledinoface.hide();
 			$Question13/PurpleDinoPunched.show();
+		if(sceneName == "hideIceCream"):
+			$Question15/Icecream.hide();
 		if(sceneName == "punchZombie"):
 			theGuyFacePunchedSprite.hide();
 			$Question19/ZombietheGuyface.hide();
 			$Question19/TheGuyStump.show();
 		if(sceneName == "wordBubbleDaddy"):
 			$Question24/DadWordBaloon.show();
-		if(sceneName == "hideIceCream"):
-			$Question15/Icecream.hide();
 		if(sceneName == "lightSwitchRave"):
 			lightswitchRave = true
 		if(sceneName == "lightSwitchRaveOff"):
 			lightswitchRave = false
+		if(sceneName == "gunfire"):
+			print('animateGunfire')
 			
 func setTimer(numberOfSeconds):
 		timer.wait_time = numberOfSeconds

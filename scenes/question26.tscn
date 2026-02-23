@@ -1,17 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://c18wc5qtnnerp"]
+[gd_scene load_steps=4 format=3 uid="uid://c18wc5qtnnerp"]
 
+[ext_resource type="Script" uid="uid://do845pek8s1pn" path="res://code/question_26.gd" id="1_hg5kg"]
 [ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://assets/pow-effect.png" id="1_qr8li"]
 [ext_resource type="Texture2D" uid="uid://b5n0yip1arq0n" path="res://assets/question26/armyHelmet.png" id="2_1st4v"]
 
 [node name="Question26" type="Node2D"]
+script = ExtResource("1_hg5kg")
 
 [node name="Explosion1" type="Sprite2D" parent="."]
+visible = false
 z_index = 1
 position = Vector2(288, 227)
 scale = Vector2(0.32407406, 0.3573744)
 texture = ExtResource("1_qr8li")
 
 [node name="Explosion2" type="Sprite2D" parent="."]
+visible = false
 z_index = 1
 position = Vector2(594, 338)
 scale = Vector2(0.37407407, 0.4319287)
@@ -21,3 +25,5 @@ texture = ExtResource("1_qr8li")
 z_index = 3
 position = Vector2(841, 120)
 texture = ExtResource("2_1st4v")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
