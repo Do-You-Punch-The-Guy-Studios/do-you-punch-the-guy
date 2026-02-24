@@ -61,9 +61,9 @@ func createItemIconAndNumberAsset(itemName):
 	inventoryContainer.add_child(grid)
 	
 func updateItemNumberValue(itemName):
+	#path needs to be updated
 	var path = "ScrollContainer/Inventory/%s/%slabel" % [itemName, itemName]
 	var node = get_node_or_null(path)	
-	print(node)
 	if node:
 		node.text='x ' + str(inventoryState[itemName])
 func _ready() -> void:

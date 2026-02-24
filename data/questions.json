@@ -333,18 +333,21 @@
 		"option3": false,
 		"yesTags":["WIN"],
 		"noTags":["LOSE"],
-		"onQuestion": {"setTimer": false, "animate":"gunfire", "shop": false, "inventory": false, },
+		"onQuestion": false,
 		"onYes":false,
 		"onNo": false,
 		"isActive": true
 	},
 	"27": {
-		"question":"The guy at StoreBunks asks your name and for your order. The cup comes back with the name 'Rutabaga', do you punch the guy?",
+		"question":"The guy at StoreBunks asks you for your name, and for your order. The cup comes back with the name 'Rutabaga', do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["WIN"],
 		"noTags":["LOSE"],
-		"onQuestion":{"inventory":"COFFEE"},
+		"onQuestion":{"inventory":"COFFEE","setTimer": false, "animate":false, "shop": false,},
+		"onYes":false,
+		"onNo": false,
 		"isActive": true
 	},
 	"28": {
@@ -354,8 +357,9 @@
 		"option3": "Phone a friend",
 		"yesTags":["MEAN", "UNDERSTANDABLE"],
 		"noTags":[],
-		"onOption3":{"animate":"PhonePunch"},
-		"onYes":{"money":500000000},
+		"onQuestion": false,
+		"onOption3":{"inventory":false,"setTimer": false, "shop": false,"animate":"PhonePunch"},
+		"onYes":{"money":500000, "inventory":false,"setTimer": false, "shop": false,"animate":false},
 		"isActive": true
 	},
 	"29": {

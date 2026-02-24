@@ -50,6 +50,8 @@ var lightswitchRave = false;
 	"question24":preload("res://scenes/question24.tscn"),
 	"question25":preload("res://scenes/question25.tscn"),
 	"question26":preload("res://scenes/question26.tscn"),
+	"question27":preload("res://scenes/question27.tscn"),
+	"question28":preload("res://scenes/question28.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -89,7 +91,7 @@ func _ready():
 	option3button.hide();
 	rng.randomize()
 
-	for i in range(2, 25):
+	for i in range(2, 28):
 		questionIndexes.append(i);
 	
 	questionIndexes.shuffle();
@@ -125,7 +127,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =26;
+	currentQuestionIndex =28;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -254,8 +256,6 @@ func animateScene(sceneName):
 			lightswitchRave = true
 		if(sceneName == "lightSwitchRaveOff"):
 			lightswitchRave = false
-		if(sceneName == "gunfire"):
-			print('animateGunfire')
 			
 func setTimer(numberOfSeconds):
 		timer.wait_time = numberOfSeconds

@@ -1,3 +1,46 @@
-[gd_scene format=3 uid="uid://bue3h1gj238tj"]
+[gd_scene load_steps=7 format=3 uid="uid://bue3h1gj238tj"]
+
+[ext_resource type="Texture2D" uid="uid://7vsphqsqv3d4" path="res://assets/question28/QuestionA.png" id="1_r5m0y"]
+[ext_resource type="Texture2D" uid="uid://ba8kjriy43xby" path="res://assets/question28/QuestionB.png" id="2_gtgwa"]
+[ext_resource type="Texture2D" uid="uid://dm6yvnqvbk3sw" path="res://assets/question28/QuestionC.png" id="2_ue6tx"]
+[ext_resource type="Texture2D" uid="uid://biwj45me8nukf" path="res://assets/question28/QuestionD.png" id="3_gtgwa"]
+[ext_resource type="Texture2D" uid="uid://dcibaaeeqkg1o" path="res://assets/question28/millionaireBoard.png" id="4_176td"]
+[ext_resource type="Texture2D" uid="uid://68h2wibrp7y3" path="res://assets/question28/questionBox.png" id="5_nfd5v"]
 
 [node name="Question28" type="Node2D"]
+
+[node name="QuestionA" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(197, 372.00003)
+scale = Vector2(0.62833333, 0.99333334)
+texture = ExtResource("1_r5m0y")
+
+[node name="QuestionB" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(200, 447)
+scale = Vector2(0.635, 1)
+texture = ExtResource("2_gtgwa")
+
+[node name="QuestionC" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(546.99994, 376.00003)
+scale = Vector2(0.535, 0.96666664)
+texture = ExtResource("2_ue6tx")
+
+[node name="QuestionD" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(549, 449.00006)
+scale = Vector2(0.5333335, 0.96666664)
+texture = ExtResource("3_gtgwa")
+
+[node name="MillionaireBoard" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(723, 204)
+scale = Vector2(0.5041666, 0.4238889)
+texture = ExtResource("4_176td")
+
+[node name="QuestionBox" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(291.5, 83.00001)
+scale = Vector2(0.9349999, 0.6564103)
+texture = ExtResource("5_nfd5v")
