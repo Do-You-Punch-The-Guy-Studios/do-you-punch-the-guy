@@ -415,8 +415,12 @@
 		"question":"You and your crew are amidst a jewel heist.  The guy is about to round the corner and spot your friend who is dangling between a bunch of laser alarms, do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["CRIME", "UNDERSTANDABLE"],
 		"noTags":[],
+		"onQuestion":false,
+		"onYes":false,
+		"onNo": false,
 		"isActive": true
 	},
 	"34": {
