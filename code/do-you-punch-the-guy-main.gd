@@ -94,7 +94,7 @@ func _ready():
 	option3button.hide();
 	rng.randomize()
 
-	for i in range(2, 31):
+	for i in range(2, 101):
 		questionIndexes.append(i);
 	
 	questionIndexes.shuffle();
