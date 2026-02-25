@@ -403,10 +403,12 @@
 		"question":"High Noon... 10 paces then DRAW! (or do you punch the guy?)",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["WIN"],
 		"noTags":["LOSE"],
-		"onQuestion":{"timer": 10},
-		"onTimerUp":{"run":"getShotAndLose"},
+		"onQuestion":{"inventory":false, "shop": false,"animate":false,"setTimer": 10},
+		"onYes":false,
+		"onNo": false,
 		"isActive": true
 	},
 	"33": {

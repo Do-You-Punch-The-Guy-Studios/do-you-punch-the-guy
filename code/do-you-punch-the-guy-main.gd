@@ -55,6 +55,7 @@ var lightswitchRave = false;
 	"question29":preload("res://scenes/question29.tscn"),
 	"question30":preload("res://scenes/question30.tscn"),
 	"question31":preload("res://scenes/question31.tscn"),
+	"question32":preload("res://scenes/question32.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -130,7 +131,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =31;
+	currentQuestionIndex =32;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
