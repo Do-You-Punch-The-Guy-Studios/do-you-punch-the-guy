@@ -391,8 +391,10 @@
 		"question":"That bully guy is picking on you again, trying to steal your rutabaga money. Do you wimp out or do you punch the guy?",
 		"yes": true,
 		"no": true,
-		"onQuestion":{"money": 5},
-		"onNo":{"run":"loseAllMoney"},
+		"option3": false,
+		"onQuestion":{"inventory":false,"setTimer": false, "shop": false,"animate":false, "money": 5},
+		"onNo":{"inventory":false,"setTimer": false, "shop": false,"animate":"loseAllMoney"},
+		"onYes":false,
 		"yesTags":["WIN"],
 		"noTags":["WIMP"],
 		"isActive": true
