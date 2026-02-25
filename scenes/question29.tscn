@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw2mvfft4135j"]
+
+[ext_resource type="Texture2D" uid="uid://dps8fax8auocy" path="res://assets/question29/cowPrintPunchArm.png" id="1_fdijj"]
+[ext_resource type="Texture2D" uid="uid://c3gokv1kc54fi" path="res://assets/question29/farmerHat.png" id="2_oineo"]
+[ext_resource type="Texture2D" uid="uid://cwuqahoegwai2" path="res://assets/question29/farmerHayPiece.png" id="3_1f7hd"]
+[ext_resource type="Texture2D" uid="uid://dwietjggoo8i8" path="res://assets/question29/farmerOveralls.png" id="4_o33vf"]
+
+[node name="Question29" type="Node2D"]
+
+[node name="CowPrintPunchArm" type="Sprite2D" parent="."]
+z_index = 6
+position = Vector2(1006, 679)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_fdijj")
+
+[node name="FarmerHat" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(798, 21)
+texture = ExtResource("2_oineo")
+
+[node name="FarmerHayPiece" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(691, 319)
+texture = ExtResource("3_1f7hd")
+
+[node name="FarmerOveralls" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(836, 432.00003)
+scale = Vector2(0.78623897, 0.68310386)
+texture = ExtResource("4_o33vf")

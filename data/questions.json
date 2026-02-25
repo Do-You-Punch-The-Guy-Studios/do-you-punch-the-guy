@@ -360,22 +360,31 @@
 		"onQuestion": false,
 		"onOption3":{"inventory":false,"setTimer": false, "shop": false,"animate":"PhonePunch"},
 		"onYes":{"money":500000, "inventory":false,"setTimer": false, "shop": false,"animate":false},
+		"onNo": false,
 		"isActive": true
 	},
 	"29": {
 		"question":"That damn guy is trying to milk you again, do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["UNDERSTANDABLE"],
 		"noTags":[],
+		"onYes":{"inventory":false,"setTimer": false, "shop": false,"animate":"cowPunchArm"},
+		"onNo": false,
+		"onQuestion": false,
 		"isActive": true
 	},
 	"30": {
 		"question":"Flying Crane Strike beats Flickering Tiger Palm! Counter with Mantis Claw, or do you punch the guy?",
 		"yes": true,
 		"no": true,
+		"option3": false,
 		"yesTags":["WIN"],
-		"noTags":[],
+		"noTags":["LOSE"],
+		"onYes":false,
+		"onNo": false,
+		"onQuestion": false,
 		"isActive": true
 	},
 	"31": {

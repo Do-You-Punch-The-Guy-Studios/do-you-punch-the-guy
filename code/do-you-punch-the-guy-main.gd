@@ -52,6 +52,8 @@ var lightswitchRave = false;
 	"question26":preload("res://scenes/question26.tscn"),
 	"question27":preload("res://scenes/question27.tscn"),
 	"question28":preload("res://scenes/question28.tscn"),
+	"question29":preload("res://scenes/question29.tscn"),
+	"question30":preload("res://scenes/question30.tscn"),
 	};
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
@@ -91,7 +93,7 @@ func _ready():
 	option3button.hide();
 	rng.randomize()
 
-	for i in range(2, 28):
+	for i in range(2, 29):
 		questionIndexes.append(i);
 	
 	questionIndexes.shuffle();
@@ -127,7 +129,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =28;
+	currentQuestionIndex =30;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
