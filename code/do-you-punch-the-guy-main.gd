@@ -20,6 +20,7 @@ var rng = RandomNumberGenerator.new()
 var questionInfo = {}
 var playerInventory: = [];
 var alreadyDoneThis = false;
+var lightswitchRave = false;
 
 @onready var punchAudio = preload("res://assets/sound/797925__artninja__tmnt_2012_brad_myers_inspired_punches_04072025.wav")
 @onready var theShop = preload("res://scenes/shared-scenes/theShop.tscn")
@@ -105,8 +106,11 @@ func _ready():
 func _process(_delta):
 	if(timerText && timerText.visible):
 		timerText.text = "%02d:%02d" % timeLeft()
-	if(currentQuestionIndex == 23):
+	if(currentQuestionIndex == 23 && lightswitchRave):
+		print('rave')
 		doLightswitchRave()
+	elif(currentQuestionIndex == 23):
+		print('pauseRave')
 	else:
 		$background.color = Color("#000000")
 	
@@ -134,7 +138,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =25;
+	#currentQuestionIndex =23;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -187,7 +191,6 @@ func _yes_pressed():
 		processGameAction(currentQuestion.onYes)
 	tallyResults('yes')
 	#SHOW TEARDOWN TEXT - Teardown text is a kind of animate
-	print(nextButton)
 	nextButton.show();
 	
 func _no_pressed():
@@ -215,6 +218,8 @@ func _option_3_pressed():
 func _nextButtonPressed():
 	nextButton.hide()
 	timerText.hide()
+	lightswitchRave = false;
+	$background.color = Color("#000000")
 	theGuyFaceSprite.show();
 	theGuyFacePunchedSprite.hide();
 	changeQuestion()
@@ -260,6 +265,8 @@ func animateScene(sceneName):
 			$Question19/TheGuyStump.show();
 		if(sceneName == "wordBubbleDaddy"):
 			$Question24/DadWordBaloon.show();
+		if(sceneName == "lightswitchRave"):
+			lightswitchRave = true;
 			
 func setTimer(numberOfSeconds):
 		timer.wait_time = numberOfSeconds
@@ -306,6 +313,7 @@ func secretRudabegaLevel():
 	print("Secret Rudabega Level")
 
 func doLightswitchRave():
+	lightswitchRave = false;
 	$background.color = Color("#000000")
 	await get_tree().create_timer(0.1).timeout
 	$background.color = Color("#FED689")
@@ -331,6 +339,7 @@ func doLightswitchRave():
 	$background.color = Color("#FED689")
 	await get_tree().create_timer(0.1).timeout
 	$background.color = Color("#000000")
+	lightswitchRave = true;
 	
 func on_scrollbar_input(value):
 	var max_scroll_value = $ScrollContainer.scroll_vertical.max_value
