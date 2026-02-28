@@ -12,7 +12,7 @@ scale = Vector2(0.68333334, 0.6308333)
 texture = ExtResource("1_d5ajq")
 
 [node name="VillainBodysuit" type="Sprite2D" parent="."]
-z_index = 1
+z_index = 2
 position = Vector2(831.75, 131.99995)
 scale = Vector2(0.7470834, 0.7033333)
 texture = ExtResource("2_65ed3")

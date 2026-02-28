@@ -20,7 +20,6 @@ var rng = RandomNumberGenerator.new()
 var questionInfo = {}
 var playerInventory: = [];
 var alreadyDoneThis = false;
-var lightswitchRave = false;
 
 @onready var punchAudio = preload("res://assets/sound/797925__artninja__tmnt_2012_brad_myers_inspired_punches_04072025.wav")
 @onready var theShop = preload("res://scenes/shared-scenes/theShop.tscn")
@@ -97,7 +96,7 @@ func _ready():
 	option3button.hide();
 	rng.randomize()
 
-	for i in range(2, 101):
+	for i in range(2, 32):
 		questionIndexes.append(i);
 	
 	questionIndexes.shuffle();
@@ -106,8 +105,10 @@ func _ready():
 func _process(_delta):
 	if(timerText && timerText.visible):
 		timerText.text = "%02d:%02d" % timeLeft()
-	if(lightswitchRave):
+	if(currentQuestionIndex == 23):
 		doLightswitchRave()
+	else:
+		$background.color = Color("#000000")
 	
 func timeLeft():
 	var time_left = timer.time_left;
@@ -133,7 +134,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =33;
+	currentQuestionIndex =25;
 	currentQuestion = questionInfo[str(currentQuestionIndex)];
 	if(currentQuestionIndex > 1):
 		self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
@@ -181,6 +182,7 @@ func _yes_pressed():
 	noButton.hide()
 	option3button.hide()
 	animatePunch()
+	await get_tree().create_timer(.25).timeout
 	if (currentQuestion.onYes):
 		processGameAction(currentQuestion.onYes)
 	tallyResults('yes')
@@ -258,10 +260,6 @@ func animateScene(sceneName):
 			$Question19/TheGuyStump.show();
 		if(sceneName == "wordBubbleDaddy"):
 			$Question24/DadWordBaloon.show();
-		if(sceneName == "lightSwitchRave"):
-			lightswitchRave = true
-		if(sceneName == "lightSwitchRaveOff"):
-			lightswitchRave = false
 			
 func setTimer(numberOfSeconds):
 		timer.wait_time = numberOfSeconds
@@ -308,7 +306,6 @@ func secretRudabegaLevel():
 	print("Secret Rudabega Level")
 
 func doLightswitchRave():
-	lightswitchRave = false
 	$background.color = Color("#000000")
 	await get_tree().create_timer(0.1).timeout
 	$background.color = Color("#FED689")
@@ -334,7 +331,6 @@ func doLightswitchRave():
 	$background.color = Color("#FED689")
 	await get_tree().create_timer(0.1).timeout
 	$background.color = Color("#000000")
-	lightswitchRave = true
 	
 func on_scrollbar_input(value):
 	var max_scroll_value = $ScrollContainer.scroll_vertical.max_value

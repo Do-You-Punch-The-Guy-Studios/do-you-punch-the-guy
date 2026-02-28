@@ -26,13 +26,13 @@ scale = Vector2(0.655, 0.63666666)
 texture = ExtResource("3_4p2he")
 
 [node name="VestHalf" type="Sprite2D" parent="."]
-z_index = 1
+z_index = 2
 position = Vector2(490, 255)
 scale = Vector2(0.62833333, 0.5033333)
 texture = ExtResource("4_666si")
 
 [node name="VestHalf2" type="Sprite2D" parent="."]
-z_index = 1
+z_index = 2
 position = Vector2(610.00006, 257)
 scale = Vector2(0.7150001, 0.5166667)
 texture = ExtResource("4_666si")

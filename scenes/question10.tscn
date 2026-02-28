@@ -7,7 +7,7 @@
 [node name="Question10" type="Node2D"]
 
 [node name="Glasses" type="Sprite2D" parent="."]
-z_index = 2
+z_index = 4
 position = Vector2(810, 201)
 texture = ExtResource("1_q8jsy")
 
@@ -17,7 +17,7 @@ position = Vector2(914, 488)
 texture = ExtResource("2_cym22")
 
 [node name="Combover" type="Sprite2D" parent="."]
-z_index = 2
+z_index = 4
 position = Vector2(813.5, 111.5)
 scale = Vector2(1.3385416, 1.0104166)
 texture = ExtResource("3_ryo5n")

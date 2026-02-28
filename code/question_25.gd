@@ -13,3 +13,6 @@ func _ready() -> void:
 	$PowEffect.show();
 	await get_tree().create_timer(.25).timeout
 	$PowEffect.hide();
+	await get_tree().create_timer(.25).timeout
+	var t2 = create_tween().set_parallel(true)
+	t2.tween_property($GuyPunchesBackFist, "scale", Vector2(0,0), .5)

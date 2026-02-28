@@ -5,7 +5,7 @@
 [node name="Question21" type="Node2D"]
 
 [node name="TheGuyBodyShirtless" type="Sprite2D" parent="."]
-z_index = 1
+z_index = 2
 position = Vector2(837, 457)
 scale = Vector2(0.6641124, 0.68115944)
 texture = ExtResource("1_qhn6r")
