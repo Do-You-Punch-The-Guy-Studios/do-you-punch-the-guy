@@ -355,7 +355,11 @@ func _on_timer_timeout():
 	_gameLoss()
 	
 func _gameLoss():
-	print("you lose!")
+	self.add_child(questionScenes["question25"].instantiate())
+	$YouLosePow.show();
+	$YouLosePow/YouLoseLabel.show();
+	
+
 	
 func winTheGame():
 	#winTheGame
