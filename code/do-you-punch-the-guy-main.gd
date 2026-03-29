@@ -160,9 +160,8 @@ func changeQuestion() -> void:
 		option3button.show()
 	
 func animatePunch():
-	#TODO the punch arm slowly creeps up the screen :(
-	var initialX = punchArm.position.x;
-	var initialY = punchArm.position.y;
+	var initialX = punchArm.position.x +2;
+	var initialY = punchArm.position.y +4.5;
 	var initialPosition = Vector2(initialX, initialY)
 	var newYPosition = punchArm.position.y - 250;
 	var newXPosition = punchArm.position.x - 100;
