@@ -354,11 +354,11 @@
 		"question":"$500,000... do you punch the guy?",
 		"yes": true,
 		"no": true,
-		"option3": "Phone a friend",
+		"option3": false,
 		"yesTags":["MEAN", "UNDERSTANDABLE"],
 		"noTags":[],
 		"onQuestion": false,
-		"onOption3":{"inventory":false,"setTimer": false, "shop": false,"animate":"PhonePunch"},
+		"onOption3":false,
 		"onYes":{"money":500000, "inventory":false,"setTimer": false, "shop": false,"animate":false},
 		"onNo": false,
 		"isActive": true
