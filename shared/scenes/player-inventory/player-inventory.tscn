@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://byq300qt4sjkt"]
+
+[ext_resource type="Script" uid="uid://cmjvatvultk05" path="res://shared/scenes/player-inventory/player_inventory.gd" id="1_6uo77"]
+[ext_resource type="Texture2D" uid="uid://ua1incwr5lqd" path="res://shared/assets/inventory-background.png" id="7_1tuda"]
+
+[node name="PlayerInventory" type="Node2D"]
+script = ExtResource("1_6uo77")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 97.0
+offset_top = 544.0
+offset_right = 816.0
+offset_bottom = 657.0
+
+[node name="Inventory" type="BoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="InventoryLabel" type="Label" parent="."]
+z_index = 1
+offset_left = 4.0
+offset_top = 582.0
+offset_right = 340.0
+offset_bottom = 646.0
+text = "Inventory:"
+metadata/_edit_use_anchors_ = true
+
+[node name="InventoryBackground" type="Sprite2D" parent="."]
+position = Vector2(425.49994, 297.12497)
+scale = Vector2(0.37082937, 0.40080687)
+texture = ExtResource("7_1tuda")

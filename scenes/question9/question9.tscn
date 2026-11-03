@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://c26817adagghx"]
+
+[ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="1_44isj"]
+[ext_resource type="Script" uid="uid://dbb7curvkfia6" path="res://scenes/question9/question_9.gd" id="1_w0vy8"]
+[ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="2_w0vy8"]
+[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="3_oruw7"]
+[ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://shared/assets/theGuyfacePunched.png" id="4_1jdi2"]
+[ext_resource type="Texture2D" uid="uid://tbe0xvf1gpql" path="res://scenes/question9/assets/door.png" id="5_pm5wy"]
+
+[node name="Question 9" type="Node2D"]
+script = ExtResource("1_w0vy8")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
+
+[node name="theAction" type="Sprite2D" parent="."]
+z_index = 1
+
+[node name="TheGuyface" type="Sprite2D" parent="theAction"]
+z_index = 2
+position = Vector2(836, 249)
+scale = Vector2(2, 2)
+texture = ExtResource("1_44isj")
+
+[node name="TheGuyBody" type="Sprite2D" parent="theAction"]
+z_index = 1
+position = Vector2(837, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("2_w0vy8")
+
+[node name="PowEffect" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 4
+position = Vector2(843, 254.75)
+scale = Vector2(1.1240741, 1.1207455)
+texture = ExtResource("3_oruw7")
+
+[node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 2
+position = Vector2(845, 249)
+scale = Vector2(2.1323528, 1.9565217)
+texture = ExtResource("4_1jdi2")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(300, 125)
+offset_left = 39.0
+offset_top = 57.0
+offset_right = 364.5
+offset_bottom = 192.5
+scale = Vector2(2, 2)
+
+[node name="Question" type="Label" parent="ScrollContainer"]
+z_index = 10
+custom_minimum_size = Vector2(300, 125)
+layout_mode = 2
+text = "Question 9: There is a knock at your door, you open the door and there is a guy, do you punch the guy?"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="YesButton" type="Button" parent="."]
+z_index = 10
+offset_left = 71.0
+offset_top = 359.0
+offset_right = 148.0
+offset_bottom = 400.0
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="."]
+z_index = 10
+offset_left = 72.0
+offset_top = 418.0
+offset_right = 139.0
+offset_bottom = 466.0
+text = "No"
+
+[node name="Door" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(693, -453)
+scale = Vector2(1.8191667, 1.8783336)
+texture = ExtResource("5_pm5wy")

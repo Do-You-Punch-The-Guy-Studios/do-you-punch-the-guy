@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxhcnuniqple5"]
+
+[ext_resource type="Texture2D" uid="uid://duvkxno3ung3l" path="res://scenes/question12/assets/mikeTysonFace.png" id="1_40grj"]
+[ext_resource type="Script" uid="uid://cxh3vdlntmg7v" path="res://scenes/question12/question_12.gd" id="1_r6xvv"]
+[ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="2_n83d1"]
+[ext_resource type="Texture2D" uid="uid://dxgmd057anmp4" path="res://scenes/question12/assets/mikeTysonHurtFace.png" id="2_vtt1a"]
+[ext_resource type="Texture2D" uid="uid://6wxse0tkv7q8" path="res://shared/assets/punch-arm.png" id="3_hmig8"]
+[ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="4_nifbs"]
+[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="5_7dg5i"]
+[ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://shared/assets/theGuyfacePunched.png" id="6_8xosj"]
+
+[node name="Question 12" type="Node2D"]
+script = ExtResource("1_r6xvv")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
+
+[node name="theAction" type="Sprite2D" parent="."]
+z_index = 1
+
+[node name="TheGuyface" type="Sprite2D" parent="theAction"]
+z_index = 2
+position = Vector2(836, 249)
+scale = Vector2(2, 2)
+texture = ExtResource("2_n83d1")
+
+[node name="PunchArm" type="Sprite2D" parent="theAction"]
+z_index = 5
+position = Vector2(977, 732)
+scale = Vector2(2, 2)
+texture = ExtResource("3_hmig8")
+
+[node name="TheGuyBody" type="Sprite2D" parent="theAction"]
+z_index = 1
+position = Vector2(837, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("4_nifbs")
+
+[node name="PowEffect" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 4
+position = Vector2(843, 254.75)
+scale = Vector2(1.1240741, 1.1207455)
+texture = ExtResource("5_7dg5i")
+
+[node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 2
+position = Vector2(845, 249)
+scale = Vector2(2.1323528, 1.9565217)
+texture = ExtResource("6_8xosj")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(300, 125)
+offset_left = 39.0
+offset_top = 57.0
+offset_right = 364.5
+offset_bottom = 192.5
+scale = Vector2(2, 2)
+
+[node name="Question" type="Label" parent="ScrollContainer"]
+z_index = 10
+custom_minimum_size = Vector2(300, 125)
+layout_mode = 2
+text = "Question 12: June 28, 1997 Tyson vs Holyfield, Tyson comes in on the aggressive, do you punch the guy?"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="YesButton" type="Button" parent="."]
+z_index = 10
+offset_left = 71.0
+offset_top = 359.0
+offset_right = 148.0
+offset_bottom = 400.0
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="."]
+z_index = 10
+offset_left = 72.0
+offset_top = 418.0
+offset_right = 139.0
+offset_bottom = 466.0
+text = "No"
+
+[node name="MikeTysonFace" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(838, 252)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_40grj")
+
+[node name="MikeTysonHurtFace" type="Sprite2D" parent="."]
+visible = false
+z_index = 4
+position = Vector2(842.55, 252.00002)
+scale = Vector2(0.73259807, 0.7)
+texture = ExtResource("2_vtt1a")

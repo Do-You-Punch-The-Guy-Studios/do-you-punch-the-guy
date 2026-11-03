@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2v2w0rlhflxm"]
+
+[ext_resource type="Script" uid="uid://e5q7pcvvbf57" path="res://scenes/question27/question_27.gd" id="1_5e701"]
+[ext_resource type="Texture2D" uid="uid://dxkfxejwasric" path="res://scenes/question27/assets/storbunksSmock.png" id="1_6bk6k"]
+[ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="2_6fnc2"]
+[ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="3_n66rj"]
+[ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://shared/assets/theGuyfacePunched.png" id="4_okeuk"]
+
+[node name="Question27" type="Node2D"]
+script = ExtResource("1_5e701")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
+
+[node name="theAction" type="Sprite2D" parent="."]
+z_index = 1
+
+[node name="TheGuyface" type="Sprite2D" parent="theAction"]
+z_index = 2
+position = Vector2(836, 249)
+scale = Vector2(2, 2)
+texture = ExtResource("2_6fnc2")
+
+[node name="TheGuyBody" type="Sprite2D" parent="theAction"]
+z_index = 1
+position = Vector2(837, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("3_n66rj")
+
+[node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 2
+position = Vector2(845, 249)
+scale = Vector2(2.1323528, 1.9565217)
+texture = ExtResource("4_okeuk")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(300, 125)
+offset_left = 39.0
+offset_top = 57.0
+offset_right = 364.5
+offset_bottom = 192.5
+scale = Vector2(2, 2)
+
+[node name="Question" type="Label" parent="ScrollContainer"]
+z_index = 10
+custom_minimum_size = Vector2(300, 125)
+layout_mode = 2
+text = "Question 1: Do you punch the guy?"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="YesButton" type="Button" parent="."]
+z_index = 10
+offset_left = 71.0
+offset_top = 359.0
+offset_right = 148.0
+offset_bottom = 400.0
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="."]
+z_index = 10
+offset_left = 72.0
+offset_top = 418.0
+offset_right = 139.0
+offset_bottom = 466.0
+text = "No"
+
+[node name="StorbunksSmock" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(839.00006, 515)
+scale = Vector2(0.66155803, 0.6840278)
+texture = ExtResource("1_6bk6k")

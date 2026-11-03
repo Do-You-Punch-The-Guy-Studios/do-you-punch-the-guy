@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpdgxfjdkjtu0"]
+
+[ext_resource type="Script" uid="uid://bkwkjs1yg0mt4" path="res://scenes/you-loose-scene/you-lose-scene.gd" id="1_cbjsk"]
+[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="6_wvlwk"]
+
+[node name="You Lose Scene" type="Node2D"]
+script = ExtResource("1_cbjsk")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
+
+[node name="YouLosePow" type="Sprite2D" parent="."]
+z_index = 20
+position = Vector2(655.5, 353.00003)
+scale = Vector2(1.6453704, 1.41329)
+texture = ExtResource("6_wvlwk")
+
+[node name="YouLoseLabel" type="RichTextLabel" parent="YouLosePow"]
+offset_left = -231.03378
+offset_top = -118.0905
+offset_right = -144.81064
+offset_bottom = -86.35559
+scale = Vector2(5, 5)
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+text = "You Lose!"

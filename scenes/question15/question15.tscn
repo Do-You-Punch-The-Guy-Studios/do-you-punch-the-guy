@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6idocuoxqt0u"]
+
+[ext_resource type="Texture2D" uid="uid://yiuiwhnfh4lo" path="res://scenes/question15/assets/babyHair.png" id="1_fplqb"]
+[ext_resource type="Script" uid="uid://ckvigkrtiokg0" path="res://scenes/question15/question_15.gd" id="1_pskg2"]
+[ext_resource type="Texture2D" uid="uid://cxwjos2446sgw" path="res://scenes/question15/assets/tongue.png" id="2_7d4v1"]
+[ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="2_fs1cp"]
+[ext_resource type="Texture2D" uid="uid://bactjkusdjs05" path="res://shared/assets/items/icecream.png" id="3_3oc1r"]
+[ext_resource type="Texture2D" uid="uid://6wxse0tkv7q8" path="res://shared/assets/punch-arm.png" id="3_o7jmi"]
+[ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="4_3gat1"]
+[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="5_60sw3"]
+[ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://shared/assets/theGuyfacePunched.png" id="6_dsm3r"]
+
+[node name="Question15" type="Node2D"]
+script = ExtResource("1_pskg2")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
+
+[node name="theAction" type="Sprite2D" parent="."]
+z_index = 1
+
+[node name="TheGuyface" type="Sprite2D" parent="theAction"]
+z_index = 2
+position = Vector2(836, 249)
+scale = Vector2(2, 2)
+texture = ExtResource("2_fs1cp")
+
+[node name="PunchArm" type="Sprite2D" parent="theAction"]
+z_index = 5
+position = Vector2(977, 732)
+scale = Vector2(2, 2)
+texture = ExtResource("3_o7jmi")
+
+[node name="TheGuyBody" type="Sprite2D" parent="theAction"]
+z_index = 1
+position = Vector2(837, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("4_3gat1")
+
+[node name="PowEffect" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 4
+position = Vector2(843, 254.75)
+scale = Vector2(1.1240741, 1.1207455)
+texture = ExtResource("5_60sw3")
+
+[node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 2
+position = Vector2(845, 249)
+scale = Vector2(2.1323528, 1.9565217)
+texture = ExtResource("6_dsm3r")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(300, 125)
+offset_left = 39.0
+offset_top = 57.0
+offset_right = 364.5
+offset_bottom = 192.5
+scale = Vector2(2, 2)
+
+[node name="Question" type="Label" parent="ScrollContainer"]
+z_index = 10
+custom_minimum_size = Vector2(300, 125)
+layout_mode = 2
+text = "Question 15: A baby guy has an ice cream, do you punch the guy?"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="YesButton" type="Button" parent="."]
+z_index = 10
+offset_left = 71.0
+offset_top = 359.0
+offset_right = 148.0
+offset_bottom = 400.0
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="."]
+z_index = 10
+offset_left = 72.0
+offset_top = 418.0
+offset_right = 139.0
+offset_bottom = 466.0
+text = "No"
+
+[node name="YOUMONSTER" type="Button" parent="."]
+z_index = 10
+offset_left = 72.0
+offset_top = 488.0
+offset_right = 154.0
+offset_bottom = 536.0
+text = "YOU MONSTER!"
+
+[node name="BabyHair" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(818, 114)
+scale = Vector2(0.3263889, 0.3090278)
+texture = ExtResource("1_fplqb")
+
+[node name="Tongue" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(774.00006, 352.00003)
+scale = Vector2(0.5868056, 0.5347222)
+texture = ExtResource("2_7d4v1")
+flip_h = true
+
+[node name="Icecream" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(755.99994, 424.00003)
+scale = Vector2(1.525, 1.57)
+texture = ExtResource("3_3oc1r")

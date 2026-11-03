@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2ow0pv1yvonc"]
+
+[ext_resource type="Script" uid="uid://lw00w5h7ohal" path="res://scenes/question16/question_16.gd" id="1_60244"]
+[ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="2_ulvh0"]
+[ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="4_y0p0y"]
+[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="5_kd54w"]
+[ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://shared/assets/theGuyfacePunched.png" id="6_3ni5o"]
+[ext_resource type="Script" uid="uid://ortly7sb2uvu" path="res://scenes/question16/rutabagas.gd" id="6_p8sxu"]
+[ext_resource type="Texture2D" uid="uid://mg2gtc8cocdd" path="res://shared/assets/items/Rudabega.png" id="7_s0tjm"]
+
+[node name="Question16" type="Node2D"]
+script = ExtResource("1_60244")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
+
+[node name="theAction" type="Sprite2D" parent="."]
+z_index = 1
+
+[node name="TheGuyface" type="Sprite2D" parent="theAction"]
+z_index = 2
+position = Vector2(836, 249)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ulvh0")
+
+[node name="TheGuyBody" type="Sprite2D" parent="theAction"]
+z_index = 1
+position = Vector2(837, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("4_y0p0y")
+
+[node name="PowEffect" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 4
+position = Vector2(843, 254.75)
+scale = Vector2(1.1240741, 1.1207455)
+texture = ExtResource("5_kd54w")
+
+[node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 2
+position = Vector2(845, 249)
+scale = Vector2(2.1323528, 1.9565217)
+texture = ExtResource("6_3ni5o")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(300, 125)
+offset_left = 39.0
+offset_top = 57.0
+offset_right = 364.5
+offset_bottom = 192.5
+scale = Vector2(2, 2)
+horizontal_scroll_mode = 0
+
+[node name="Control" type="Control" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Question" type="Label" parent="ScrollContainer/Control"]
+z_index = 10
+custom_minimum_size = Vector2(300, 125)
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 335.0
+text = "Question 16: Darkness falls, you are home alone. Crickets chirp all around your house. Suddenly the power goes out. The neighbors are fine, it's just you. You head to the garadge and check the fuse box. Nothing is out of the ordinary. You check your land line (which you have for some reason, get with the program nobody has those anymore) the line is dead, someone has cut it.  Suddenly from around the corner there is a GUY! DO YOU PUNCH THE GUY!??:!?!?!?>"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Rudabega" type="Container" parent="ScrollContainer/Control"]
+layout_mode = 0
+script = ExtResource("6_p8sxu")
+
+[node name="RudabegaSprite" type="Sprite2D" parent="ScrollContainer/Control/Rudabega"]
+position = Vector2(236, 426)
+texture = ExtResource("7_s0tjm")
+
+[node name="YesButton" type="Button" parent="."]
+z_index = 10
+offset_left = 71.0
+offset_top = 359.0
+offset_right = 148.0
+offset_bottom = 400.0
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="."]
+z_index = 10
+offset_left = 72.0
+offset_top = 418.0
+offset_right = 139.0
+offset_bottom = 466.0
+text = "No"

@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://fdm1874ryuyi"]
+
+[ext_resource type="Script" uid="uid://x32hvidgw80u" path="res://scenes/question14/question_14.gd" id="1_ua8cf"]
+[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="5_kd54w"]
+
+[node name="Question14" type="Node2D"]
+script = ExtResource("1_ua8cf")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
+
+[node name="theAction" type="Sprite2D" parent="."]
+z_index = 1
+
+[node name="PowEffect" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 4
+position = Vector2(843, 254.75)
+scale = Vector2(1.1240741, 1.1207455)
+texture = ExtResource("5_kd54w")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(300, 125)
+offset_left = 39.0
+offset_top = 57.0
+offset_right = 364.5
+offset_bottom = 192.5
+scale = Vector2(2, 2)
+
+[node name="Question" type="Label" parent="ScrollContainer"]
+z_index = 10
+custom_minimum_size = Vector2(300, 125)
+layout_mode = 2
+text = "Question 14: It's totally pitch black, you hear a guy behind you, do you punch the guy?"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="YesButton" type="Button" parent="."]
+z_index = 10
+offset_left = 71.0
+offset_top = 359.0
+offset_right = 148.0
+offset_bottom = 400.0
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="."]
+z_index = 10
+offset_left = 72.0
+offset_top = 418.0
+offset_right = 139.0
+offset_bottom = 466.0
+text = "No"

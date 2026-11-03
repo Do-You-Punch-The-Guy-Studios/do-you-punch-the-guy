@@ -1,0 +1,228 @@
+[gd_scene load_steps=18 format=3 uid="uid://cj7gefr831b4b"]
+
+[ext_resource type="Script" uid="uid://d3hklrj7t0r2n" path="res://scenes/opening-credits-scene/opening_credits_scene.gd" id="1_4rj4j"]
+[ext_resource type="Texture2D" uid="uid://bbp8vffcv7lyj" path="res://shared/assets/aDoYouPunchTheGuyGame.png" id="2_cavni"]
+[ext_resource type="Texture2D" uid="uid://nvdt852kng0x" path="res://shared/assets/LOGO.png" id="3_u05i6"]
+[ext_resource type="Texture2D" uid="uid://dot2mfa3oc187" path="res://shared/assets/Studios.png" id="4_doidc"]
+[ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="5_doidc"]
+[ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="6_xg62f"]
+
+[sub_resource type="Animation" id="Animation_43jqh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8qrrn"]
+resource_name = "gameAnimation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.02, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ujgst"]
+_data = {
+&"RESET": SubResource("Animation_43jqh"),
+&"gameAnimation": SubResource("Animation_8qrrn")
+}
+
+[sub_resource type="Animation" id="Animation_xg62f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3pop8"]
+resource_name = "Studios"
+
+[sub_resource type="Animation" id="Animation_doidc"]
+resource_name = "fade logo"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yxdwk"]
+resource_name = "logoAnimation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.99, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bom1k"]
+_data = {
+&"RESET": SubResource("Animation_xg62f"),
+&"Studios": SubResource("Animation_3pop8"),
+&"fade logo": SubResource("Animation_doidc"),
+&"logoAnimation": SubResource("Animation_yxdwk")
+}
+
+[sub_resource type="Animation" id="Animation_fk8q6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Studios:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bom1k"]
+resource_name = "studiosFade"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Studios:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.01, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3pop8"]
+_data = {
+&"RESET": SubResource("Animation_fk8q6"),
+&"studiosFade": SubResource("Animation_bom1k")
+}
+
+[node name="OpeningCreditsScene" type="Node2D"]
+script = ExtResource("1_4rj4j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1157.0
+offset_bottom = 655.0
+color = Color(0, 0, 0, 1)
+
+[node name="ADoYouPunchTheGuyGame" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(632, 326)
+texture = ExtResource("2_cavni")
+
+[node name="GameAnimationPlayer" type="AnimationPlayer" parent="ADoYouPunchTheGuyGame"]
+libraries = {
+&"": SubResource("AnimationLibrary_ujgst")
+}
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(557, 332)
+texture = ExtResource("3_u05i6")
+
+[node name="LogoAnimationPlayer" type="AnimationPlayer" parent="Logo"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_bom1k")
+}
+
+[node name="LogosMALL" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(301, 156)
+scale = Vector2(0.7173228, 0.657277)
+texture = ExtResource("3_u05i6")
+
+[node name="Studios" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(650, 336)
+texture = ExtResource("4_doidc")
+
+[node name="StudiosAnimationPlayer" type="AnimationPlayer" parent="Studios"]
+root_node = NodePath("../../Logo/LogoAnimationPlayer")
+libraries = {
+&"": SubResource("AnimationLibrary_3pop8")
+}
+
+[node name="TheGuyface" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+position = Vector2(836, 249)
+scale = Vector2(2, 2)
+texture = ExtResource("5_doidc")
+
+[node name="TheGuyBody" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(837, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("6_xg62f")
+
+[node name="newGameButton" type="Button" parent="."]
+visible = false
+z_index = 10
+offset_left = 71.0
+offset_top = 359.0
+offset_right = 148.0
+offset_bottom = 400.0
+text = "Let the Punching Begin"
+
+[node name="AchevementsButton" type="Button" parent="."]
+visible = false
+z_index = 10
+offset_left = 72.0
+offset_top = 418.0
+offset_right = 139.0
+offset_bottom = 466.0
+text = "Show me the ways I have puncheth before"
+
+[node name="LevelSelectButton" type="Button" parent="."]
+visible = false
+z_index = 2
+offset_left = 71.0
+offset_top = 485.0
+offset_right = 139.0
+offset_bottom = 526.0
+text = "The many ways to punch yonder guy"
+
+[node name="Timer" type="Timer" parent="."]

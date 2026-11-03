@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://cgrn0pgpk7p0g"]
+
+[ext_resource type="Script" uid="uid://buppbefc5n2sr" path="res://scenes/question25/question_25.gd" id="1_4yfcc"]
+[ext_resource type="Texture2D" uid="uid://cqrl6cumim8el" path="res://shared/assets/GuyPunchesBackFist.png" id="2_kwiwm"]
+[ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="2_pnc4w"]
+[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="3_kwiwm"]
+[ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="4_7gmp4"]
+[ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://shared/assets/theGuyfacePunched.png" id="6_j87nh"]
+
+[node name="Question25" type="Node2D"]
+script = ExtResource("1_4yfcc")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
+
+[node name="theAction" type="Sprite2D" parent="."]
+z_index = 1
+
+[node name="TheGuyface" type="Sprite2D" parent="theAction"]
+z_index = 2
+position = Vector2(836, 249)
+scale = Vector2(2, 2)
+texture = ExtResource("2_pnc4w")
+
+[node name="TheGuyBody" type="Sprite2D" parent="theAction"]
+z_index = 1
+position = Vector2(837, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("4_7gmp4")
+
+[node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 2
+position = Vector2(845, 249)
+scale = Vector2(2.1323528, 1.9565217)
+texture = ExtResource("6_j87nh")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(300, 125)
+offset_left = 39.0
+offset_top = 57.0
+offset_right = 364.5
+offset_bottom = 192.5
+scale = Vector2(2, 2)
+
+[node name="Question" type="Label" parent="ScrollContainer"]
+z_index = 10
+custom_minimum_size = Vector2(300, 125)
+layout_mode = 2
+text = "Question 1: Do you punch the guy?"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="YesButton" type="Button" parent="."]
+z_index = 10
+offset_left = 71.0
+offset_top = 359.0
+offset_right = 148.0
+offset_bottom = 400.0
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="."]
+z_index = 10
+offset_left = 72.0
+offset_top = 418.0
+offset_right = 139.0
+offset_bottom = 466.0
+text = "No"
+
+[node name="GuyPunchesBackFist" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(654, 464)
+scale = Vector2(0.4, 0.417)
+texture = ExtResource("2_kwiwm")
+flip_h = true
+
+[node name="PowEffect" type="Sprite2D" parent="."]
+visible = false
+z_index = 6
+position = Vector2(704, 480)
+texture = ExtResource("3_kwiwm")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

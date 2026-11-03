@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=3 uid="uid://bsqpy4xj8jnus"]
+
+[ext_resource type="Script" uid="uid://dg02lfsmranwv" path="res://scenes/question10/question_10.gd" id="1_43ma1"]
+[ext_resource type="Texture2D" uid="uid://dir7gj04igw2u" path="res://scenes/question10/assets/glasses.png" id="1_q8jsy"]
+[ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="2_4164o"]
+[ext_resource type="Texture2D" uid="uid://dh6qblpplmjg5" path="res://scenes/question10/assets/pocket.png" id="2_cym22"]
+[ext_resource type="Texture2D" uid="uid://ceytn6u7c7ru1" path="res://scenes/question10/assets/combover.png" id="3_ryo5n"]
+[ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="4_a254e"]
+[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="5_r0yow"]
+[ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://shared/assets/theGuyfacePunched.png" id="6_ukcwv"]
+
+[node name="Question 1" type="Node2D"]
+script = ExtResource("1_43ma1")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
+
+[node name="theAction" type="Sprite2D" parent="."]
+z_index = 1
+
+[node name="TheGuyface" type="Sprite2D" parent="theAction"]
+z_index = 2
+position = Vector2(836, 249)
+scale = Vector2(2, 2)
+texture = ExtResource("2_4164o")
+
+[node name="TheGuyBody" type="Sprite2D" parent="theAction"]
+z_index = 1
+position = Vector2(837, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("4_a254e")
+
+[node name="PowEffect" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 4
+position = Vector2(843, 254.75)
+scale = Vector2(1.1240741, 1.1207455)
+texture = ExtResource("5_r0yow")
+
+[node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 2
+position = Vector2(845, 249)
+scale = Vector2(2.1323528, 1.9565217)
+texture = ExtResource("6_ukcwv")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(300, 125)
+offset_left = 39.0
+offset_top = 57.0
+offset_right = 364.5
+offset_bottom = 192.5
+scale = Vector2(2, 2)
+
+[node name="Question" type="Label" parent="ScrollContainer"]
+z_index = 10
+custom_minimum_size = Vector2(300, 125)
+layout_mode = 2
+text = "Question 10: Oh man, it's Gary what an asshole, do you punch the guy?"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="YesButton" type="Button" parent="."]
+z_index = 10
+offset_left = 71.0
+offset_top = 359.0
+offset_right = 148.0
+offset_bottom = 400.0
+text = "Yes"
+
+[node name="Glasses" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(810, 201)
+texture = ExtResource("1_q8jsy")
+
+[node name="Pocket" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(914, 488)
+texture = ExtResource("2_cym22")
+
+[node name="Combover" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(813.5, 111.5)
+scale = Vector2(1.3385416, 1.0104166)
+texture = ExtResource("3_ryo5n")

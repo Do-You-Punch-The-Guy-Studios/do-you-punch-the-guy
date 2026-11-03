@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=3 uid="uid://bw4rw14c6kc21"]
+
+[ext_resource type="Texture2D" uid="uid://c42d6basuithe" path="res://scenes/question4/assets/pool.png" id="1_ls6fl"]
+[ext_resource type="Script" uid="uid://cfwlu6ou1afea" path="res://scenes/question4/question_4.gd" id="1_x5esx"]
+[ext_resource type="Texture2D" uid="uid://c5onhkdluyppw" path="res://scenes/question4/assets/cracker.png" id="2_bnihy"]
+[ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="2_ee0vh"]
+[ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="3_wdxu4"]
+[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="4_65272"]
+[ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://shared/assets/theGuyfacePunched.png" id="5_h4qcx"]
+
+[node name="Question 4" type="Node2D"]
+script = ExtResource("1_x5esx")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
+
+[node name="theAction" type="Sprite2D" parent="."]
+z_index = 1
+
+[node name="TheGuyface" type="Sprite2D" parent="theAction"]
+z_index = 2
+position = Vector2(836, 249)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ee0vh")
+
+[node name="TheGuyBody" type="Sprite2D" parent="theAction"]
+z_index = 1
+position = Vector2(837, 430)
+scale = Vector2(2, 2)
+texture = ExtResource("3_wdxu4")
+
+[node name="PowEffect" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 4
+position = Vector2(843, 254.75)
+scale = Vector2(1.1240741, 1.1207455)
+texture = ExtResource("4_65272")
+
+[node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
+visible = false
+z_index = 2
+position = Vector2(845, 249)
+scale = Vector2(2.1323528, 1.9565217)
+texture = ExtResource("5_h4qcx")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(300, 125)
+offset_left = 39.0
+offset_top = 57.0
+offset_right = 364.5
+offset_bottom = 192.5
+scale = Vector2(2, 2)
+
+[node name="Question" type="Label" parent="ScrollContainer"]
+z_index = 10
+custom_minimum_size = Vector2(300, 125)
+layout_mode = 2
+text = "Question 4: A guy is sitting with his feet dangling in the pool, eating crackers. Do you punch the guy?"
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="YesButton" type="Button" parent="."]
+z_index = 10
+offset_left = 71.0
+offset_top = 359.0
+offset_right = 148.0
+offset_bottom = 400.0
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="."]
+z_index = 10
+offset_left = 72.0
+offset_top = 418.0
+offset_right = 139.0
+offset_bottom = 466.0
+text = "No"
+
+[node name="Pool" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(240, 278)
+scale = Vector2(2.8975005, 1.5199999)
+texture = ExtResource("1_ls6fl")
+
+[node name="Cracker" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(661, 467)
+scale = Vector2(7.265625, 6.09375)
+texture = ExtResource("2_bnihy")
