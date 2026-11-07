@@ -2,7 +2,16 @@ extends Node2D
 
 var tween: Tween
 
-var assets = {"BEER":{}, "ICECREAM":{}, "PUNCH":{}, "RUTABAGA":{}, "TACO":{}, "HOLYGRAIL":{}, "GUY":{}, "COFFEE":{}}
+var assets = {
+	"BEER": preload("res://shared/assets/items/beer.png"), 
+	"ICECREAM": preload("res://shared/assets/items/icecream.png"), 
+	"PUNCH": preload("res://shared/assets/items/Punch.png"), 
+	"RUTABAGA": preload("res://shared/assets/items/Rudabega.png"), 
+	"TACO": preload("res://shared/assets/items/taco.png"), 
+	"HOLYGRAIL": preload("res://shared/assets/items/HolyGrail.png"), 
+	"GUY": preload("res://shared/assets/items/GUY.png"), 
+	"COFFEE": preload("res://shared/assets/items/StorBunksCoffee.png")
+	}
 var inventoryState = {"BEER":0, "ICECREAM":0, "PUNCH":0, "RUTABAGA":0, "TACO":0, "HOLYGRAIL":0, "GUY": 0, "COFFEE":0, "TOTAL": 0}
 
 @onready var inventoryContainer = $ScrollContainer/Inventory;
@@ -37,12 +46,14 @@ func createItemIconAndNumberAsset(itemName):
 	var grid = GridContainer.new()
 	grid.columns = 2
 	var texture_display = TextureRect.new()
+	texture_display.color = Color("#ff3333");
 	texture_display.name = itemName
 	texture_display.texture = assets[itemName]
 	texture_display.z_index = 5
-	texture_display.scale = Vector2(0.7, 0.7)
+
+	grid.add_child(texture_display)	
+	texture_display.scale = Vector2(120, 120)
 	texture_display.position = Vector2(0, 500)
-	grid.add_child(texture_display)
 	if(itemName != "HOLYGRAIL"):
 		var label = Label.new();
 		label.name = itemName + 'label'

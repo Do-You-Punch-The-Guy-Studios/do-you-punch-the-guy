@@ -87,7 +87,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =2;
+	currentQuestionIndex =3;
 	currentQuestion = questionScenes["question" + str(currentQuestionIndex)].instantiate()
 	self.add_child(currentQuestion)
 	nextButton.move_to_front();
@@ -118,6 +118,8 @@ func openShop(shop):
 	$TheShop.stockItems(shop);
 		
 func modifyInventory(addOrRemove: String, itemName: String):
+	print(addOrRemove)
+	print(itemName)
 	if(addOrRemove == 'add'):
 		if(!$PlayerInventory.visible):
 			$PlayerInventory.show();
