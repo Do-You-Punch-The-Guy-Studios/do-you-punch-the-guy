@@ -4,11 +4,6 @@ extends Node2D
 @onready var punchAudio = preload("res://shared/assets/sound/797925__artninja__tmnt_2012_brad_myers_inspired_punches_04072025.wav")
 @onready var audioPlayer = $AudioStreamPlayer2D;
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
 func animatePunch():
 	var initialX = punchArm.position.x +2;
 	var initialY = punchArm.position.y +4.5;
@@ -22,10 +17,10 @@ func animatePunch():
 	audioPlayer.stream = punchAudio
 	audioPlayer.play()
 	await get_tree().create_timer(.25).timeout
-	#powEffectSprite.show();
+	powEffectSprite.show();
 	#theGuyFaceSprite.hide();
 	#theGuyFacePunchedSprite.show();
 	await get_tree().create_timer(.25).timeout
-	#powEffectSprite.hide();
+	powEffectSprite.hide();
 	await get_tree().create_timer(.25).timeout
 	punchArm.position = punchArm.position.lerp(initialPosition, 1 - exp(-4))

@@ -48,10 +48,6 @@ var questionInfo = {}
 @onready var punchArmScene = $PunchArmScene;
 #@onready var timerText = $TimerText;
 #@onready var timer = $TimerText/Timer;
-#@onready var theQuestion = $ScrollContainer/Question;
-
-#@onready var theGuyFaceSprite = $theAction/TheGuyface;
-#@onready var theGuyFacePunchedSprite = $theAction/TheGuyfacePunched;
 
 func _ready():
 	nextButton.pressed.connect(_nextButtonPressed);
@@ -89,6 +85,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex =1;
 	print("question" + str(currentQuestionIndex));
 	self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
+	$NextButton.move_to_front();
 	
 func _yes_pressed():
 	punchArmScene.animatePunch()

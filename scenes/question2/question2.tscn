@@ -10,6 +10,14 @@
 [node name="Question2" type="Node2D"]
 script = ExtResource("1_emimh")
 
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
+
 [node name="theAction" type="Sprite2D" parent="."]
 z_index = 1
 

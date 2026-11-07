@@ -1,13 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxanpa8luqmma"]
+[gd_scene load_steps=5 format=3 uid="uid://cxanpa8luqmma"]
 
 [ext_resource type="Script" uid="uid://0rsfmov3umq5" path="res://scenes/question1/question_1.gd" id="1_6r7tc"]
 [ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="2_n1i0t"]
 [ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="4_2k1s0"]
-[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="5_fw8h3"]
 [ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://shared/assets/theGuyfacePunched.png" id="6_ont5q"]
 
 [node name="Question 1" type="Node2D"]
 script = ExtResource("1_6r7tc")
+
+[node name="background" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -2.0
+offset_right = 1373.0
+offset_bottom = 831.0
+color = Color(0, 0, 0, 1)
 
 [node name="theAction" type="Sprite2D" parent="."]
 z_index = 1
@@ -23,13 +30,6 @@ z_index = 1
 position = Vector2(837, 430)
 scale = Vector2(2, 2)
 texture = ExtResource("4_2k1s0")
-
-[node name="PowEffect" type="Sprite2D" parent="theAction"]
-visible = false
-z_index = 4
-position = Vector2(843, 254.75)
-scale = Vector2(1.1240741, 1.1207455)
-texture = ExtResource("5_fw8h3")
 
 [node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
 visible = false

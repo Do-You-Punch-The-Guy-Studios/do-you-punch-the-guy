@@ -8,14 +8,6 @@
 [node name="The Guy Root Scene" type="Node2D"]
 script = ExtResource("1_t8bab")
 
-[node name="background" type="ColorRect" parent="."]
-z_index = 1
-offset_left = -28.0
-offset_top = -2.0
-offset_right = 1373.0
-offset_bottom = 831.0
-color = Color(0, 0, 0, 1)
-
 [node name="PowEffect" type="Sprite2D" parent="."]
 visible = false
 z_index = 4
@@ -31,15 +23,6 @@ position = Vector2(27, -4)
 [node name="PunchArmScene" parent="." instance=ExtResource("3_phoeg")]
 position = Vector2(0, -3)
 
-[node name="NextButton" type="Button" parent="."]
-visible = false
-z_index = 2
-offset_left = 48.0
-offset_top = 485.0
-offset_right = 116.0
-offset_bottom = 526.0
-text = "Next"
-
 [node name="Money" type="Label" parent="."]
 visible = false
 z_index = 9
@@ -50,3 +33,12 @@ offset_bottom = 51.333336
 scale = Vector2(3, 3)
 text = "$0"
 horizontal_alignment = 2
+
+[node name="NextButton" type="Button" parent="."]
+visible = false
+z_index = 2
+offset_left = 48.0
+offset_top = 485.0
+offset_right = 116.0
+offset_bottom = 526.0
+text = "Next"
