@@ -1,5 +1,149 @@
 {
-
+	"1":{
+		"yesTags":["WIN"],
+		"noTags":["LOSE"],
+		"option3Tags": [],
+	},
+	"2": {
+		"yesTags":["HITSKIDS", "ASSHOLE"],
+		"noTags":["NICE"],
+		"option3Tags": [],
+	},	
+	"3": {
+		"yesTags":["BARFIGHT", "MEAN"],
+		"noTags":["PARTY"],
+	},	
+	"4": {
+		"yesTags":["ASSHOLE", "HITSKIDS"],
+		"noTags":[],
+	},	
+	"5": {
+		"yesTags":["ASSHOLE"],
+		"noTags":[],
+		"option3Tags":["RUTABAGA"],
+	},	
+	"6": {
+		
+		"yesTags":["WIN"],
+		"noTags":["LOSE"],
+	},
+	"7": {
+		"yesTags":["ASSHOLE"],
+		"noTags":[],
+	},		
+	"8": {
+		"yesTags":["HITSKIDS", "ASSHOLE"],
+		"noTags":["NICE"],
+	},	
+	"9": {
+		"yesTags":["ASSHOLE"],
+		"noTags":[],
+	},		
+	"10": {
+		"yesTags":["UNDERSTANDABLE"],
+		"noTags":[],
+	},		
+	"11": {
+		"yesTags":["UNDERSTANDABLE"],
+		"noTags":[],
+	},
+	"12": {
+		"yesTags":["WIN"],
+		"noTags":["LOSE"],
+	},
+	"13": {
+		"yesTags":["UNDERSTANDABLE", "MEAN", "HITSKIDS"],
+		"noTags":[],
+	},
+	"14": {
+		"yesTags":[],
+		"noTags":[],
+	},
+	"15": {
+		"yesTags":["MEAN", "HITSKIDS"],
+		"noTags":["NICE"],
+		"option3Tags":["NICE"],
+	},
+	"16": {
+		"yesTags":["PANIC", "WIN"],
+		"noTags":["LOSE"],
+	},
+	"17": {
+		"yesTags":[],
+		"noTags":[],
+	},
+	"18": { 
+		"yesTags":["ASSHOLE", "WIN"],
+		"noTags":["LOSE"],
+		"onQuestion": false,
+		"onYes": {"inventory": "HOLYGRAIL", "setTimer": false, "animate": false, "shop": false},
+		"onNo": false,
+		"isActive": true
+	},
+	"19": {
+		"question":"The zombie apocalypse has arrived, society is in total chaos, a guy shambles up to you. Do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3": false,
+		"yesTags":["PANIC"],
+		"noTags":["LOSE"],
+		"onQuestion": {"setTimer": 30, "inventory": false,  "animate": false, "shop": false},
+		"onYes": {"setTimer": false, "inventory": false,  "animate": "punchZombie", "shop": false},
+		"onNo": false,
+		"isActive": true
+	},
+	"20": {
+		"question":"Space... the final frontier, these are the voyages of the DO YOU PUNCH THE GUY?",
+		"yes": true,
+		"no": true,
+		"option3": false,
+		"yesTags":[],
+		"noTags":[],
+		"onQuestion": false,
+		"onYes": false,
+		"onNo": false,
+		"isActive": true
+	},
+	"21": {
+		"question":"You are on planet Zurn with your away team, the captain decides to remove his shirt in a gratuatist beefcake manner, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3": false,
+		"yesTags":["ASSHOLE", "UNDERSTANDABLE"],
+		"noTags":[],
+		"onQuestion": false,
+		"onYes": false,
+		"onNo": false,
+		"isActive": true
+	},
+	"22": {
+		"question":"You see a guy with a taco truck, do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3": "WAIT, THEY HAVE TACOS?!",
+		"yesTags":["ASSHOLE"],
+		"noTags":[],
+		"option3Tags":[],
+		"onOption3":{"inventory":"TACO","setTimer": false, "animate": false, "shop": false},
+		"onQuestion": false,
+		"onYes": false,
+		"onNo": false,
+		"isActive": true
+	},
+	"23": {
+		"question":"You head to the club to get your dance on. A guy says \"What'll ya have?\" do you punch the guy?",
+		"yes": true,
+		"no": true,
+		"option3": "Whaddaya Got?",
+		"yesTags":["ASSHOLE", "BARFIGHT"],
+		"noTags":[],
+		"option3Tags":[],
+		"onOption3":{"shop":[{"item":"BEER", "quantity": 1}, {"item":"PUNCH", "quantity": 1}], "inventory": false, "animate": false, "setTimer":false},
+		"onQuestion": {"shop":false, "inventory": false, "animate": "lightswitchRave", "setTimer":false},
+		"onYes": {"shop":false, "inventory": false, "animate": false, "setTimer":false},
+		"onNo": {"shop":false, "inventory": false, "animate": false, "setTimer":false},
+		"isActive": true
+	},
 	"24": {
 		"question":"Some guy tries to kiss your girlfriend, do you punch the guy?",
 		"yes": true,

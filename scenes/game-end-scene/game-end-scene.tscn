@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgtokbjppt6yv"]
+
+[ext_resource type="Script" uid="uid://dtmc2732giqvh" path="res://scenes/game-end-scene/game_end_scene.gd" id="1_bk7ds"]
+
+[node name="GameEndScene" type="Node2D"]
+script = ExtResource("1_bk7ds")

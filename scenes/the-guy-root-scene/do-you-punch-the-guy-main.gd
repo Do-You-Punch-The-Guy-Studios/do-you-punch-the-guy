@@ -2,12 +2,28 @@ extends Node
 
 var currentQuestionIndex = 0;
 var currentQuestion: Variant;
-var nextQuestionIndex  = 1 ;
-var questionIndexes: Array = []
-var rng = RandomNumberGenerator.new()
-var questionInfo = {}
+var nextQuestionIndex  = 1;
+var questionIndexes: Array = [];
+var rng = RandomNumberGenerator.new();
+var questionInfo = {};
+var skip = true;
+var choices = [
+	false, false, false, false, false, false, false, false, false, false, false,
+	false, false, false, false, false, false, false, false, false, false, false,
+	false, false, false, false, false, false, false, false, false, false, false,
+	false, false, false, false, false, false, false, false, false, false, false,
+	false, false, false, false, false, false, false, false, false, false, false,
+	false, false, false, false, false, false, false, false, false, false, false,
+	false, false, false, false, false, false, false, false, false, false, false,
+	false, false, false, false, false, false, false, false, false, false, false,
+	false, false, false, false, false, false, false, false, false, false, false,
+	false, false, false, false, false, false, false, false, false, false, false,
+];
 
-@onready var theShop = preload("res://shared/scenes/shop/theShop.tscn")
+@onready var nextButton = $NextButton;
+@onready var punchArmScene = $PunchArmScene;
+@onready var theShop = preload("res://shared/scenes/shop/theShop.tscn");
+@onready var youLoseScene = preload("res://scenes/you-loose-scene/you-lose-scene.tscn")
 @onready var questionScenes = {
 	"question1":preload("res://scenes/question1/question1.tscn"), 
 	"question2":preload("res://scenes/question2/question2.tscn"), 
@@ -44,10 +60,6 @@ var questionInfo = {}
 	"question33":preload("res://scenes/question33/question33.tscn"),
 
 	};
-@onready var nextButton = $NextButton;
-@onready var punchArmScene = $PunchArmScene;
-#@onready var timerText = $TimerText;
-#@onready var timer = $TimerText/Timer;
 
 func _ready():
 	nextButton.pressed.connect(_nextButtonPressed);
@@ -59,18 +71,11 @@ func _ready():
 	questionIndexes.shuffle();
 	changeQuestion();
 	
-#func _process(_delta):
-	#if(timerText && timerText.visible):
-		#timerText.text = "%02d:%02d" % timeLeft()
-
-	
-#func timeLeft():
-	#var time_left = timer.time_left;
-	#var minute = floor(time_left / 60)
-	#var seconds = int(time_left) % 60
-	#return [minute, seconds]
-
-func changeQuestion() -> void:
+func changeQuestion() -> void:		
+	if(!skip):
+		self.remove_child(currentQuestion)
+	else:
+		skip=false;
 	if(currentQuestionIndex > 1):
 		var path = "Question%d" % currentQuestionIndex
 		var node = get_node_or_null(path)
@@ -82,25 +87,24 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =1;
-	print("question" + str(currentQuestionIndex));
-	self.add_child(questionScenes["question" + str(currentQuestionIndex)].instantiate())
-	$NextButton.move_to_front();
+	currentQuestionIndex =2;
+	currentQuestion = questionScenes["question" + str(currentQuestionIndex)].instantiate()
+	self.add_child(currentQuestion)
+	nextButton.move_to_front();
 	
 func _yes_pressed():
 	punchArmScene.animatePunch()
 	await get_tree().create_timer(.25).timeout
-	#tallyResults('yes', questionNumber);
+	choices[currentQuestionIndex]='yes'
 	nextButton.show();
 	
 func _no_pressed():
 
-	#tallyResults('no', questionNumber)
+	choices[currentQuestionIndex]='no'
 	nextButton.show()
 	
-func _option_3_pressed():
-
-	#tallyResults('option3', questionNumber)
+func _option_3_pressed(option3String):
+	choices[currentQuestionIndex]=option3String
 	nextButton.show()
 	
 func _nextButtonPressed():
@@ -119,7 +123,20 @@ func modifyInventory(addOrRemove: String, itemName: String):
 			$PlayerInventory.show();
 	$PlayerInventory.updateInventory(addOrRemove, itemName);
 	
+#@onready var timerText = $TimerText;
+#@onready var timer = $TimerText/Timer;
 
+#func _process(_delta):
+	#if(timerText && timerText.visible):
+		#timerText.text = "%02d:%02d" % timeLeft()
+
+	
+#func timeLeft():
+	#var time_left = timer.time_left;
+	#var minute = floor(time_left / 60)
+	#var seconds = int(time_left) % 60
+	#return [minute, seconds]
+	
 #func setTimer(numberOfSeconds):
 		#timer.wait_time = numberOfSeconds
 		#timer.one_shot = true
@@ -128,12 +145,10 @@ func modifyInventory(addOrRemove: String, itemName: String):
 		#timer.start()
 		#
 
-
 #func _on_timer_timeout():
 	#_gameLoss()
 	#
-#func _gameLoss():
-	#self.add_child(questionScenes["question25"].instantiate())
-	#$YouLosePow.show();
-	#$YouLosePow/YouLoseLabel.show();
+func _gameLoss():
+	self.add_child(youLoseScene.instantiate())
+	
  
