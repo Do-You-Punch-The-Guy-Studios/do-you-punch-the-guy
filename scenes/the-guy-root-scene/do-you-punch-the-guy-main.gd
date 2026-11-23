@@ -87,7 +87,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =5;
+	currentQuestionIndex =6;
 	currentQuestion = questionScenes["question" + str(currentQuestionIndex)].instantiate()
 	self.add_child(currentQuestion)
 	nextButton.move_to_front();
