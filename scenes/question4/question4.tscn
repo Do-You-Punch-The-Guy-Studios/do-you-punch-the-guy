@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bw4rw14c6kc21"]
+[gd_scene load_steps=7 format=3 uid="uid://bw4rw14c6kc21"]
 
 [ext_resource type="Texture2D" uid="uid://c42d6basuithe" path="res://scenes/question4/assets/pool.png" id="1_ls6fl"]
 [ext_resource type="Script" uid="uid://cfwlu6ou1afea" path="res://scenes/question4/question_4.gd" id="1_x5esx"]
 [ext_resource type="Texture2D" uid="uid://c5onhkdluyppw" path="res://scenes/question4/assets/cracker.png" id="2_bnihy"]
 [ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="2_ee0vh"]
 [ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="3_wdxu4"]
-[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="4_65272"]
 [ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://shared/assets/theGuyfacePunched.png" id="5_h4qcx"]
 
 [node name="Question 4" type="Node2D"]
@@ -17,6 +16,7 @@ offset_left = -28.0
 offset_top = -2.0
 offset_right = 1373.0
 offset_bottom = 831.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="theAction" type="Sprite2D" parent="."]
@@ -33,13 +33,6 @@ z_index = 1
 position = Vector2(837, 430)
 scale = Vector2(2, 2)
 texture = ExtResource("3_wdxu4")
-
-[node name="PowEffect" type="Sprite2D" parent="theAction"]
-visible = false
-z_index = 4
-position = Vector2(843, 254.75)
-scale = Vector2(1.1240741, 1.1207455)
-texture = ExtResource("4_65272")
 
 [node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
 visible = false
