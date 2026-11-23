@@ -7,10 +7,10 @@
 script = ExtResource("1_6uo77")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_left = 97.0
-offset_top = 544.0
-offset_right = 816.0
-offset_bottom = 657.0
+offset_left = 90.0
+offset_top = 564.0
+offset_right = 804.0
+offset_bottom = 633.0
 
 [node name="Inventory" type="BoxContainer" parent="ScrollContainer"]
 layout_mode = 2
@@ -25,6 +25,6 @@ text = "Inventory:"
 metadata/_edit_use_anchors_ = true
 
 [node name="InventoryBackground" type="Sprite2D" parent="."]
-position = Vector2(425.49994, 297.12497)
+position = Vector2(335.00003, 599)
 scale = Vector2(0.37082937, 0.40080687)
 texture = ExtResource("7_1tuda")

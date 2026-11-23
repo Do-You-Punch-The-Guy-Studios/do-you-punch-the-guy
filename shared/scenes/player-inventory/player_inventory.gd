@@ -10,11 +10,12 @@ var assets = {
 	"TACO": preload("res://shared/assets/items/taco.png"), 
 	"HOLYGRAIL": preload("res://shared/assets/items/HolyGrail.png"), 
 	"GUY": preload("res://shared/assets/items/GUY.png"), 
-	"COFFEE": preload("res://shared/assets/items/StorBunksCoffee.png")
+	"COFFEE": preload("res://shared/assets/items/StorBunksCoffee.png"),
+	"RedSquare": preload("res://shared/assets/redSquareForNoReason.png")
 	}
-var inventoryState = {"BEER":0, "ICECREAM":0, "PUNCH":0, "RUTABAGA":0, "TACO":0, "HOLYGRAIL":0, "GUY": 0, "COFFEE":0, "TOTAL": 0}
+var inventoryState = {"BEER":0, "ICECREAM":0, "PUNCH":0, "RUTABAGA":0, "TACO":0, "HOLYGRAIL":0, "GUY": 0, "COFFEE":0, "TOTAL": 0, "RedSquare":0}
 
-@onready var inventoryContainer = $ScrollContainer/Inventory;
+@onready var inventoryContainer = $ScrollContainer;
 
 func updateInventory(addOrRemove: String, itemName: String):
 	if(addOrRemove == "add"):
@@ -46,19 +47,20 @@ func createItemIconAndNumberAsset(itemName):
 	var grid = GridContainer.new()
 	grid.columns = 2
 	var texture_display = TextureRect.new()
-	texture_display.color = Color("#ff3333");
+	texture_display.expand_mode = TextureRect.EXPAND_IGNORE_SIZE;    
+	#texture_display.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	texture_display.z_index = 5
 	texture_display.name = itemName
 	texture_display.texture = assets[itemName]
-	texture_display.z_index = 5
-
+	texture_display.size = Vector2(640, 640)
+	texture_display.position = Vector2(64, 64)
 	grid.add_child(texture_display)	
-	texture_display.scale = Vector2(120, 120)
-	texture_display.position = Vector2(0, 500)
+
 	if(itemName != "HOLYGRAIL"):
 		var label = Label.new();
 		label.name = itemName + 'label'
 		label.text = 'x 1'
-		label.scale = Vector2(3, 3)
+		label.add_theme_font_size_override("font_size", 30)
 		#WHY DOESNT SCALE WORK
 		label.z_index = 5	
 		grid.add_child(label)
