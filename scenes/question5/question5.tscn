@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmsj0htpjyfgs"]
+[gd_scene load_steps=5 format=3 uid="uid://bmsj0htpjyfgs"]
 
 [ext_resource type="Script" uid="uid://cr8s8t160g18k" path="res://scenes/question5/question_5.gd" id="1_0ugpp"]
 [ext_resource type="Texture2D" uid="uid://bggywibmcgm6f" path="res://shared/assets/theGuyface.png" id="2_4164o"]
 [ext_resource type="Texture2D" uid="uid://b62op58vfseyn" path="res://shared/assets/theGuyBody.png" id="4_a254e"]
-[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="5_r0yow"]
 [ext_resource type="Texture2D" uid="uid://bdakvotptkdq6" path="res://shared/assets/theGuyfacePunched.png" id="6_ukcwv"]
 
 [node name="Question 5" type="Node2D"]
@@ -15,6 +14,7 @@ offset_left = -28.0
 offset_top = -2.0
 offset_right = 1373.0
 offset_bottom = 831.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="theAction" type="Sprite2D" parent="."]
@@ -31,13 +31,6 @@ z_index = 1
 position = Vector2(837, 430)
 scale = Vector2(2, 2)
 texture = ExtResource("4_a254e")
-
-[node name="PowEffect" type="Sprite2D" parent="theAction"]
-visible = false
-z_index = 4
-position = Vector2(843, 254.75)
-scale = Vector2(1.1240741, 1.1207455)
-texture = ExtResource("5_r0yow")
 
 [node name="TheGuyfacePunched" type="Sprite2D" parent="theAction"]
 visible = false
