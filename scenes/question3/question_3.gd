@@ -9,7 +9,7 @@ extends Node2D
 func _ready():
 	yesButton.pressed.connect(_yes_pressed);
 	noButton.pressed.connect(_no_pressed);
-	parent.modifyInventory('add', "RedSquare");
+	parent.modifyInventory('add', "BEER");
 
 func _yes_pressed():
 	parent._yes_pressed()

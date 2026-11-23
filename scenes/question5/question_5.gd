@@ -24,4 +24,4 @@ func _no_pressed():
 	noButton.hide()
 	
 func _rutabaga_pressed():
-		parent.modifyInventory("RUTABAGA");
+		parent.modifyInventory("add", "RUTABAGA");
