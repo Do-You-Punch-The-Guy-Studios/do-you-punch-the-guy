@@ -87,7 +87,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =7;
+	currentQuestionIndex =11;
 	currentQuestion = questionScenes["question" + str(currentQuestionIndex)].instantiate()
 	self.add_child(currentQuestion)
 	nextButton.move_to_front();
@@ -151,6 +151,7 @@ func modifyInventory(addOrRemove: String, itemName: String):
 	#_gameLoss()
 	#
 func _gameLoss():
+	nextButton.hide();
 	self.add_child(youLoseScene.instantiate())
 	
  
