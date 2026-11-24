@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn7q5ilya854g"
-path="res://.godot/imported/redSquareForNoReason.png-77a8456d0b73ddcc4734c21cb896c121.ctex"
+uid="uid://6wxse0tkv7q8"
+path="res://.godot/imported/punch-arm.png-d3cb1aaa4c35ed5fb1ae9933eaeb8591.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/assets/redSquareForNoReason.png"
-dest_files=["res://.godot/imported/redSquareForNoReason.png-77a8456d0b73ddcc4734c21cb896c121.ctex"]
+source_file="res://shared/scenes/punch-arm-scene/assets/punch-arm.png"
+dest_files=["res://.godot/imported/punch-arm.png-d3cb1aaa4c35ed5fb1ae9933eaeb8591.ctex"]
 
 [params]
 

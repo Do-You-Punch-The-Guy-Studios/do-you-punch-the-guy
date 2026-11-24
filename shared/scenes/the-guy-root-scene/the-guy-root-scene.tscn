@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://hbjdordd1epg"]
 
-[ext_resource type="Script" uid="uid://cxr8ri44jlfdg" path="res://scenes/the-guy-root-scene/do-you-punch-the-guy-main.gd" id="1_t8bab"]
+[ext_resource type="Script" uid="uid://cxr8ri44jlfdg" path="res://shared/scenes/the-guy-root-scene/do-you-punch-the-guy-main.gd" id="1_t8bab"]
 [ext_resource type="PackedScene" uid="uid://byq300qt4sjkt" path="res://shared/scenes/player-inventory/player-inventory.tscn" id="2_fh1cr"]
 [ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="2_phoeg"]
-[ext_resource type="PackedScene" uid="uid://decyyidmqqfx4" path="res://shared/scenes/punch-arm-scene.tscn" id="3_phoeg"]
+[ext_resource type="PackedScene" uid="uid://decyyidmqqfx4" path="res://shared/scenes/punch-arm-scene/punch-arm-scene.tscn" id="3_phoeg"]
 
 [node name="The Guy Root Scene" type="Node2D"]
 script = ExtResource("1_t8bab")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqrl6cumim8el"
-path="res://.godot/imported/GuyPunchesBackFist.png-f73bee12c7d58ae26dff7750a945977e.ctex"
+uid="uid://ua1incwr5lqd"
+path="res://.godot/imported/inventory-background.png-a86b691b78f77b2dbefcc2224925dcf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/you-loose-scene/assets/GuyPunchesBackFist.png"
-dest_files=["res://.godot/imported/GuyPunchesBackFist.png-f73bee12c7d58ae26dff7750a945977e.ctex"]
+source_file="res://shared/scenes/player-inventory/assets/inventory-background.png"
+dest_files=["res://.godot/imported/inventory-background.png-a86b691b78f77b2dbefcc2224925dcf2.ctex"]
 
 [params]
 

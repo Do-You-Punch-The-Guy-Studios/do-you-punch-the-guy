@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6wxse0tkv7q8"
-path="res://.godot/imported/punch-arm.png-98beeae318d39546b6bb0de89d4f2e1f.ctex"
+uid="uid://cqrl6cumim8el"
+path="res://.godot/imported/GuyPunchesBackFist.png-285811c805ac8193b631e5e88c2bf869.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/assets/punch-arm.png"
-dest_files=["res://.godot/imported/punch-arm.png-98beeae318d39546b6bb0de89d4f2e1f.ctex"]
+source_file="res://shared/scenes/you-loose-scene/assets/GuyPunchesBackFist.png"
+dest_files=["res://.godot/imported/GuyPunchesBackFist.png-285811c805ac8193b631e5e88c2bf869.ctex"]
 
 [params]
 

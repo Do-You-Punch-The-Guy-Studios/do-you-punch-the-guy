@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dpdgxfjdkjtu0"]
 
-[ext_resource type="Script" uid="uid://bkwkjs1yg0mt4" path="res://scenes/you-loose-scene/you-lose-scene.gd" id="1_cbjsk"]
-[ext_resource type="Texture2D" uid="uid://cqrl6cumim8el" path="res://scenes/you-loose-scene/assets/GuyPunchesBackFist.png" id="2_s4flq"]
+[ext_resource type="Script" uid="uid://bkwkjs1yg0mt4" path="res://shared/scenes/you-loose-scene/you-lose-scene.gd" id="1_cbjsk"]
+[ext_resource type="Texture2D" uid="uid://cqrl6cumim8el" path="res://shared/scenes/you-loose-scene/assets/GuyPunchesBackFist.png" id="2_s4flq"]
 [ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="6_wvlwk"]
 
 [node name="You Lose Scene" type="Node2D"]

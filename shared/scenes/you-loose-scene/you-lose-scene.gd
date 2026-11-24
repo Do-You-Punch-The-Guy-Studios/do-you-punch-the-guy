@@ -12,5 +12,6 @@ func _ready() -> void:
 	audioPlayer.stream = punchAudio
 	audioPlayer.play()
 	await get_tree().create_timer(.25).timeout
+	#lose unless you have an extra mans
 	$YouLosePow.show();
 	$YouLosePow/YouLoseLabel.show();

@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://cj7gefr831b4b"]
 
-[ext_resource type="Script" uid="uid://d3hklrj7t0r2n" path="res://scenes/opening-credits-scene/opening_credits_scene.gd" id="1_4rj4j"]
+[ext_resource type="Script" uid="uid://d3hklrj7t0r2n" path="res://shared/scenes/opening-credits-scene/opening_credits_scene.gd" id="1_4rj4j"]
 [ext_resource type="Texture2D" uid="uid://bbp8vffcv7lyj" path="res://shared/assets/aDoYouPunchTheGuyGame.png" id="2_cavni"]
 [ext_resource type="Texture2D" uid="uid://nvdt852kng0x" path="res://shared/assets/LOGO.png" id="3_u05i6"]
 [ext_resource type="Texture2D" uid="uid://dot2mfa3oc187" path="res://shared/assets/Studios.png" id="4_doidc"]

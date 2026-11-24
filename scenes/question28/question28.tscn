@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://68h2wibrp7y3" path="res://scenes/question28/assets/questionBox.png" id="5_nfd5v"]
 [ext_resource type="Texture2D" uid="uid://duvy01kpxybbp" path="res://scenes/question28/assets/PhoneReciever.png" id="8_nfd5v"]
 [ext_resource type="Texture2D" uid="uid://g3udp3dc14mo" path="res://scenes/question28/assets/Phone Base.png" id="9_yx4yn"]
-[ext_resource type="Texture2D" uid="uid://cqrl6cumim8el" path="res://scenes/you-loose-scene/assets/GuyPunchesBackFist.png" id="10_lrv8x"]
+[ext_resource type="Texture2D" uid="uid://cqrl6cumim8el" path="res://shared/scenes/you-loose-scene/assets/GuyPunchesBackFist.png" id="10_lrv8x"]
 [ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="11_we6nv"]
 
 [node name="Question28" type="Node2D"]

@@ -23,7 +23,7 @@ var choices = [
 @onready var nextButton = $NextButton;
 @onready var punchArmScene = $PunchArmScene;
 @onready var theShop = preload("res://shared/scenes/shop/theShop.tscn");
-@onready var youLoseScene = preload("res://scenes/you-loose-scene/you-lose-scene.tscn")
+@onready var youLoseScene = preload("res://shared/scenes/you-loose-scene/you-lose-scene.tscn")
 @onready var questionScenes = {
 	"question1":preload("res://scenes/question1/question1.tscn"), 
 	"question2":preload("res://scenes/question2/question2.tscn"), 
@@ -87,7 +87,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =6;
+	currentQuestionIndex =7;
 	currentQuestion = questionScenes["question" + str(currentQuestionIndex)].instantiate()
 	self.add_child(currentQuestion)
 	nextButton.move_to_front();

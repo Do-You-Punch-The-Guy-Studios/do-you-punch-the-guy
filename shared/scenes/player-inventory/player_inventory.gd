@@ -11,7 +11,7 @@ var assets = {
 	"HOLYGRAIL": preload("res://shared/assets/items/HolyGrail.png"), 
 	"GUY": preload("res://shared/assets/items/GUY.png"), 
 	"COFFEE": preload("res://shared/assets/items/StorBunksCoffee.png"),
-	"RedSquare": preload("res://shared/assets/redSquareForNoReason.png")
+	"RedSquare": preload("res://shared/assets/items/redSquareForNoReason.png")
 	}
 var inventoryState = {"BEER":0, "ICECREAM":0, "PUNCH":0, "RUTABAGA":0, "TACO":0, "HOLYGRAIL":0, "GUY": 0, "COFFEE":0, "TOTAL": 0, "RedSquare":0}
 

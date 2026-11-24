@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1knuqlkrc17"
-path="res://.godot/imported/shop.png-ffdbec298139a22c5e47998221261c9d.ctex"
+uid="uid://bn7q5ilya854g"
+path="res://.godot/imported/redSquareForNoReason.png-3b3f746f35a65c70d568613ae756cba4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shared/assets/shop.png"
-dest_files=["res://.godot/imported/shop.png-ffdbec298139a22c5e47998221261c9d.ctex"]
+source_file="res://shared/assets/items/redSquareForNoReason.png"
+dest_files=["res://.godot/imported/redSquareForNoReason.png-3b3f746f35a65c70d568613ae756cba4.ctex"]
 
 [params]
 
