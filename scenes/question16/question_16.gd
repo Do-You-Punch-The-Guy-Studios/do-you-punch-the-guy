@@ -1,10 +1,5 @@
 extends Node2D
 @onready var rutabaga = $ScrollContainer/VBoxContainer/Rutabaga
-#"yesTags":["PANIC", "WIN"],
-		#"noTags":["LOSE"],
-		#"onQuestion": {"setTimer": 10,
-		#RUTABAGA IN SCROLL BOX
-
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
 @onready var parent = get_parent()

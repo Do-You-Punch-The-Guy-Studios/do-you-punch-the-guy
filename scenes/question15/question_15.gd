@@ -1,8 +1,3 @@
-#"option3":"YOU MONSTER!",
-		#"yesTags":["MEAN", "HITSKIDS"],
-		#"noTags":["NICE"],
-		#"option3Tags":["NICE"],
-		
 extends Node2D
 
 @onready var yesButton = $YesButton;

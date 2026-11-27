@@ -74,11 +74,13 @@ func _ready():
 
 	for i in range(2, 32):
 		questionIndexes.append(i);
+		#Account for Unhinged Questions and the grail Here
 	
 	questionIndexes.shuffle();
 	changeQuestion();
 	
 func changeQuestion() -> void:		
+	hideTimer()
 	if(!skip):
 		self.remove_child(currentQuestion)
 	else:
@@ -94,7 +96,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =16;
+	currentQuestionIndex =18;
 	currentQuestion = questionScenes["question" + str(currentQuestionIndex)].instantiate()
 	self.add_child(currentQuestion)
 	nextButton.move_to_front();

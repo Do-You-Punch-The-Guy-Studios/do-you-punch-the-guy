@@ -6,11 +6,6 @@ extends Node2D
 @onready var tysonPunched = $MikeTysonHurtFace
 @onready var parent = get_parent()
 
-		#"yesTags":["WIN"],
-		#"noTags":["LOSE"],
-		#"onYes": {"animate":"TysonTKO",},
-		#"onNo": {"animate":"TysonPunch",},
-
 func _ready():
 	yesButton.pressed.connect(_yes_pressed);
 	noButton.pressed.connect(_no_pressed);

@@ -1,17 +1,5 @@
 extends Node2D
 
-#"20": {
-		#"question":"",
-		#"yes": true,
-		#"no": true,
-		#"option3": false,
-		#"yesTags":[],
-		#"noTags":[],
-		#"onQuestion": false,
-		#"onYes": false,
-		#"onNo": false,
-		#"isActive": true
-	#},
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
 @onready var parent = get_parent()

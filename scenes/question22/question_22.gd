@@ -1,10 +1,5 @@
 extends Node2D
 
-#"22": {
-		
-		#"yesTags":["ASSHOLE"],
-		
-	#},
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
 @onready var taco = $Tacos;

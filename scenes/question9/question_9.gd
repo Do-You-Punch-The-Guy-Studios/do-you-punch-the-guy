@@ -6,8 +6,6 @@ extends Node2D
 @onready var theGuyFacePunchedSprite = $theAction/TheGuyfacePunched;
 @onready var parent = get_parent()
 
-#"yesTags":["ASSHOLE"],
-
 func _ready():
 	yesButton.pressed.connect(_yes_pressed);
 	noButton.pressed.connect(_no_pressed);

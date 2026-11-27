@@ -18,8 +18,6 @@ func animatePunch():
 	audioPlayer.play()
 	await get_tree().create_timer(.25).timeout
 	powEffectSprite.show();
-	#theGuyFaceSprite.hide();
-	#theGuyFacePunchedSprite.show();
 	await get_tree().create_timer(.25).timeout
 	powEffectSprite.hide();
 	await get_tree().create_timer(.25).timeout

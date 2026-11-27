@@ -6,8 +6,6 @@ extends Node2D
 @onready var theGuyFaceSprite = $theAction/TheGuyface;
 @onready var theGuyFacePunchedSprite = $theAction/TheGuyfacePunched;
 
-#"yesTags":["ASSHOLE", "HITSKIDS"],
-
 func _ready():
 	yesButton.pressed.connect(_yes_pressed);
 	noButton.pressed.connect(_no_pressed);

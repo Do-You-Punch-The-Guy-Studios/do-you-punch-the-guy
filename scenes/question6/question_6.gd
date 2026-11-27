@@ -6,11 +6,6 @@ extends Node2D
 @onready var theGuyFacePunchedSprite = $theAction/TheGuyfacePunched;
 @onready var parent = get_parent()
 
-		#"yesTags":["WIN"],
-		#"noTags":["LOSE"],
-		#
-		#"onNo": {"animate":"VillainKill", }, - You lose the game if you choose no and there is an animation	
-
 func _ready():
 	yesButton.pressed.connect(_yes_pressed);
 	noButton.pressed.connect(_no_pressed);

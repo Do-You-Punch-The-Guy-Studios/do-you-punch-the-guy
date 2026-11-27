@@ -4,7 +4,6 @@ extends Node2D
 @onready var parent = get_parent()
 @onready var theGuyFaceSprite = $theAction/TheGuyface;
 @onready var theGuyFacePunchedSprite = $theAction/TheGuyfacePunched;
-#		"yesTags":["UNDERSTANDABLE"],
 
 
 func _ready():

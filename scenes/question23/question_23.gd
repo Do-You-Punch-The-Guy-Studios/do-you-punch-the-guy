@@ -3,7 +3,7 @@ extends Node2D
 	#"23": {
 		#"yesTags":["ASSHOLE", "BARFIGHT"],
 	
-		#"onOption3":{"shop":[{"item":"BEER", "quantity": 1}, {"item":"PUNCH", "quantity": 1}], "inventory": false, "animate": false, "setTimer":false},
+		#"onOption3":{"shop":[{"item":"BEER", "quantity": 1}, {"item":"PUNCH", "quantity": 1}]
 		#"onQuestion": "lightswitchRave", "setTimer":false},
 	#},
 	
