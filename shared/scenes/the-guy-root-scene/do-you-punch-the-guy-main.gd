@@ -96,7 +96,7 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =18;
+	currentQuestionIndex =20;
 	currentQuestion = questionScenes["question" + str(currentQuestionIndex)].instantiate()
 	self.add_child(currentQuestion)
 	nextButton.move_to_front();
@@ -129,8 +129,6 @@ func openShop(shop):
 	$TheShop.stockItems(shop);
 		
 func modifyInventory(addOrRemove: String, itemName: String):
-	print(addOrRemove)
-	print(itemName)
 	if(addOrRemove == 'add'):
 		if(!$PlayerInventory.visible):
 			$PlayerInventory.show();
@@ -139,6 +137,8 @@ func modifyInventory(addOrRemove: String, itemName: String):
 func _gameLoss(params = ""):
 	nextButton.hide();
 	var youLoseInstance = youLoseScene.instantiate()
+	if (currentQuestionIndex == 19):
+		params = "noFist"
 	youLoseInstance.params = params
 	self.add_child(youLoseInstance)	
 
@@ -159,6 +159,8 @@ func timeLeft():
 	return [minute, seconds]
 	
 func _on_timer_timeout():
+	for button in find_children("*", "BaseButton", true, false):
+		button.hide()
 	_gameLoss()
 
  

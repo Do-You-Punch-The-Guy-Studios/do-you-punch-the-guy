@@ -1,10 +1,8 @@
 extends Node2D
 
-	#"23": {
-		#"yesTags":["ASSHOLE", "BARFIGHT"],
-	
-		#"onOption3":{"shop":[{"item":"BEER", "quantity": 1}, {"item":"PUNCH", "quantity": 1}]
-		#"onQuestion": "lightswitchRave", "setTimer":false},
+
+		#shop":[{"item":"BEER", "quantity": 1}, {"item":"PUNCH", "quantity": 1}]
+		#lightswitchRave", "setTimer":false},
 	#},
 	
 @onready var yesButton = $YesButton;
