@@ -15,8 +15,9 @@ func _yes_pressed():
 	parent._yes_pressed()
 	yesButton.hide()
 	noButton.hide()
-	$Question13/Purpledinoface.hide();
-	$Question13/PurpleDinoPunched.show();
+	await get_tree().create_timer(.25).timeout
+	$Purpledinoface.hide();
+	$PurpleDinoPunched.show();
 	
 func _no_pressed():
 	parent._no_pressed()

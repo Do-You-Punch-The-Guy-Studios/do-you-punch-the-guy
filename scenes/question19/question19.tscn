@@ -78,14 +78,3 @@ offset_top = 418.0
 offset_right = 139.0
 offset_bottom = 466.0
 text = "No"
-
-[node name="Timer" type="Timer" parent="."]
-
-[node name="TimerText" type="Label" parent="."]
-z_index = 1
-offset_left = 351.0
-offset_top = 354.0
-offset_right = 474.0
-offset_bottom = 421.0
-theme_override_font_sizes/font_size = 47
-text = "0:00	"

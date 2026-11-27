@@ -1,7 +1,8 @@
-extends Container
+extends TextureButton
 
-func _input(event):
+@onready var parent = get_tree().current_scene;
+
+func _gui_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		var parent_node = get_parent().get_parent()
-		if parent_node != null and parent_node.has_method("getARutabaga"):
-			parent_node.getARutabaga()
+		parent.modifyInventory('add', "RUTABAGA");
+		hide()

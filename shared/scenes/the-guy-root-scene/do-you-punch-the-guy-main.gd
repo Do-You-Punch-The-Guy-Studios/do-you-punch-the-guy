@@ -22,6 +22,8 @@ var choices = [
 
 @onready var nextButton = $NextButton;
 @onready var punchArmScene = $PunchArmScene;
+@onready var timerText = $TimerText;
+@onready var timer = $Timer;
 @onready var theShop = preload("res://shared/scenes/shop/theShop.tscn");
 @onready var youLoseScene = preload("res://shared/scenes/you-loose-scene/you-lose-scene.tscn")
 @onready var questionScenes = {
@@ -60,8 +62,13 @@ var choices = [
 	"question33":preload("res://scenes/question33/question33.tscn"),
 
 	};
+	
+func _process(_delta):
+	if(timerText && timerText.visible):
+		timerText.text = "%02d:%02d" % timeLeft()
 
 func _ready():
+	timer.timeout.connect(_on_timer_timeout)
 	nextButton.pressed.connect(_nextButtonPressed);
 	rng.randomize()
 
@@ -87,23 +94,25 @@ func changeQuestion() -> void:
 	currentQuestionIndex = nextQuestionIndex
 	nextQuestionIndex = questionIndexes.back()
 	questionIndexes.pop_back()
-	currentQuestionIndex =12;
+	currentQuestionIndex =16;
 	currentQuestion = questionScenes["question" + str(currentQuestionIndex)].instantiate()
 	self.add_child(currentQuestion)
 	nextButton.move_to_front();
 	
 func _yes_pressed():
+	hideTimer()
 	punchArmScene.animatePunch()
 	await get_tree().create_timer(.25).timeout
 	choices[currentQuestionIndex]='yes'
 	nextButton.show();
 	
 func _no_pressed():
-
+	hideTimer()
 	choices[currentQuestionIndex]='no'
 	nextButton.show()
 	
 func _option_3_pressed(option3String):
+	hideTimer()
 	choices[currentQuestionIndex]=option3String
 	nextButton.show()
 	
@@ -124,36 +133,30 @@ func modifyInventory(addOrRemove: String, itemName: String):
 		if(!$PlayerInventory.visible):
 			$PlayerInventory.show();
 	$PlayerInventory.updateInventory(addOrRemove, itemName);
-	
-#@onready var timerText = $TimerText;
-#@onready var timer = $TimerText/Timer;
 
-#func _process(_delta):
-	#if(timerText && timerText.visible):
-		#timerText.text = "%02d:%02d" % timeLeft()
-
-	
-#func timeLeft():
-	#var time_left = timer.time_left;
-	#var minute = floor(time_left / 60)
-	#var seconds = int(time_left) % 60
-	#return [minute, seconds]
-	
-#func setTimer(numberOfSeconds):
-		#timer.wait_time = numberOfSeconds
-		#timer.one_shot = true
-		#timer.timeout.connect(_on_timer_timeout)
-		#timerText.show()
-		#timer.start()
-		#
-
-#func _on_timer_timeout():
-	#_gameLoss()
-	#
-func _gameLoss(params = false):
+func _gameLoss(params = ""):
 	nextButton.hide();
 	var youLoseInstance = youLoseScene.instantiate()
 	youLoseInstance.params = params
-	self.add_child(youLoseInstance)
+	self.add_child(youLoseInstance)	
+
+func setTimer(numberOfSeconds):
+	timer.wait_time = numberOfSeconds
+	timer.one_shot = true
+	timerText.show()
+	timer.start()
+	
+func hideTimer():
+	timer.stop()
+	timerText.hide()
+
+func timeLeft():
+	var time_left = timer.time_left;
+	var minute = floor(time_left / 60)
+	var seconds = int(time_left) % 60
+	return [minute, seconds]
+	
+func _on_timer_timeout():
+	_gameLoss()
 
  

@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://fdm1874ryuyi"]
+[gd_scene load_steps=2 format=3 uid="uid://fdm1874ryuyi"]
 
 [ext_resource type="Script" uid="uid://x32hvidgw80u" path="res://scenes/question14/question_14.gd" id="1_ua8cf"]
-[ext_resource type="Texture2D" uid="uid://ch242dcvooimx" path="res://shared/assets/pow-effect.png" id="5_kd54w"]
 
 [node name="Question14" type="Node2D"]
 script = ExtResource("1_ua8cf")
@@ -12,17 +11,8 @@ offset_left = -28.0
 offset_top = -2.0
 offset_right = 1373.0
 offset_bottom = 831.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
-
-[node name="theAction" type="Sprite2D" parent="."]
-z_index = 1
-
-[node name="PowEffect" type="Sprite2D" parent="theAction"]
-visible = false
-z_index = 4
-position = Vector2(843, 254.75)
-scale = Vector2(1.1240741, 1.1207455)
-texture = ExtResource("5_kd54w")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 z_index = 1

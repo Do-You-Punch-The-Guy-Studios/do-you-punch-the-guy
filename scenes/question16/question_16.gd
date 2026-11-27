@@ -1,5 +1,5 @@
 extends Node2D
-
+@onready var rutabaga = $ScrollContainer/VBoxContainer/Rutabaga
 #"yesTags":["PANIC", "WIN"],
 		#"noTags":["LOSE"],
 		#"onQuestion": {"setTimer": 10,
@@ -7,21 +7,23 @@ extends Node2D
 
 @onready var yesButton = $YesButton;
 @onready var noButton = $NoButton;
-@onready var youMonster = $YOUMONSTER;
 @onready var parent = get_parent()
 
 		
 func _ready():
+	parent.setTimer(12)
 	yesButton.pressed.connect(_yes_pressed);
 	noButton.pressed.connect(_no_pressed);
 	
 
 func _yes_pressed():
+	rutabaga.hide()
 	parent._yes_pressed()
 	yesButton.hide()
 	noButton.hide()
 		
 func _no_pressed():
+	rutabaga.hide()
 	parent._no_pressed()
 	yesButton.hide()
 	noButton.hide()
